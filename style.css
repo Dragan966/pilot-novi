@@ -29,8 +29,11 @@
 
 
 /* ------------- NAVIGACIJA ----------------- */
+
+/* gornji deo navigacije */
 .topNav { 
     margin-top: 25px;
+    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
 }
@@ -74,4 +77,29 @@
     height: 38px;
     border-radius: 40px;
     background-color: #CCCCCC;
+}
+
+
+/* sama navigacija */
+
+nav > .container > ul {
+    border-top: 2px solid #CCCCCC;
+    border-bottom: 2px solid #CCCCCC;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav > .container > ul > a > li{
+    padding: 20px 20px 21px 20px;
+    font-size: 21px;
+    height: 60px;
+    text-align: center;
+    /* background-color: yellow; */
+}
+
+nav > .container > ul > a:link, nav > .container > ul > a:visited{
+    text-decoration: none;
+    color: black;
 }
