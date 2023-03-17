@@ -49,36 +49,12 @@
 }
 
 .socialAndLang {
-    width: 360px;
-    display: flex;
-    justify-content: space-between;
+    display: none;
 }
 
-.socialAndLang > .social > img {
-    height: 30px;
+.rightCorn > .searchbox {
+    display: none;
 }
-
-.socialAndLang > .lang > span {
-    font-size: 12px;
-    font-weight: bold;
-    color: #0C71C3;
-}
-
-.vl {
-    display: inline;
-    margin: 0 5px;
-    border-left: 2px solid green;
-    height: 10px;
-}
-
-.rightCorn > .searchbox{
-    margin-top: 10px;
-    width: 380px;
-    height: 38px;
-    border-radius: 40px;
-    background-color: #CCCCCC;
-}
-
 
 /* sama navigacija */
 
@@ -102,4 +78,39 @@ nav > .container > ul > a > li{
 nav > .container > ul > a:link, nav > .container > ul > a:visited{
     text-decoration: none;
     color: black;
+}
+
+@media only screen and (min-width: 1024px) {
+    .socialAndLang {
+        display: block;
+        width: 360px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .socialAndLang > .social > img {
+        height: 30px;
+    }
+    
+    .socialAndLang > .lang > span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #0C71C3;
+    }
+    
+    .vl {
+        display: inline;
+        margin: 0 5px;
+        border-left: 2px solid green;
+        height: 10px;
+    }
+    
+    .rightCorn > .searchbox{
+        display: block;
+        margin-top: 10px;
+        width: 380px;
+        height: 38px;
+        border-radius: 40px;
+        background-color: #CCCCCC;
+    }
 }
