@@ -67,3 +67,11 @@
     border-left: 2px solid green;
     height: 10px;
 }
+
+.rightCorn > .searchbox{
+    margin-top: 10px;
+    width: 380px;
+    height: 38px;
+    border-radius: 40px;
+    background-color: gray;
+}
