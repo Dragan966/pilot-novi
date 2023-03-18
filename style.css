@@ -39,13 +39,14 @@
 }
 
 .logo {
-    width: 318px;
-    height: 96px;
+    margin-left: 20px;
+    width: 212px;
+    height: 64px;
 }
 
 .logo > img{
-    width: 318px;
-    height: 96px;
+    width: 212px;
+    height: 64px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -103,6 +104,18 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     color: black;
 }
 
+@media only screen and (min-width: 768px) {
+    .logo {
+        margin-left: 0px;
+        width: 318px;
+        height: 96px;
+    }
+    
+    .logo > img{
+        width: 318px;
+        height: 96px;
+    }
+}
 
 @media only screen and (min-width: 1024px) {
     .hamburgerIcon {
