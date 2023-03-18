@@ -48,6 +48,13 @@
     height: 96px;
 }
 
+@media only screen and (max-width: 1024px) {
+    .rightCorn {
+        display: flex;
+        align-items: center;
+    }
+}
+
 .socialAndLang {
     display: none;
 }
@@ -56,15 +63,31 @@
     display: none;
 }
 
+.hamburgerIcon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    /* background-color: yellow; */
+}
+
+nav > .container {
+    /* display: none; */
+}
+
 /* sama navigacija */
 
-nav > .container > ul {
+/* nav > .container > ul {
     border-top: 2px solid #CCCCCC;
     border-bottom: 2px solid #CCCCCC;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+} */
+
+nav > .container > ul {
+    list-style-type: none;
 }
 
 nav > .container > ul > a > li{
@@ -80,7 +103,12 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     color: black;
 }
 
+
 @media only screen and (min-width: 1024px) {
+    .hamburgerIcon {
+        display: none;
+    }
+
     .socialAndLang {
         display: block;
         width: 360px;
@@ -112,5 +140,14 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         height: 38px;
         border-radius: 40px;
         background-color: #CCCCCC;
+    }
+
+    nav > .container > ul {
+        border-top: 2px solid #CCCCCC;
+        border-bottom: 2px solid #CCCCCC;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }
