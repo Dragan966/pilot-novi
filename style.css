@@ -75,11 +75,6 @@
 
 /* sama navigacija */
 
-nav > .container {
-    /* display: none; */
-    /* background-color: green; */
-}
-
 nav > .container > ul {
     position: absolute;
     list-style-type: none;
