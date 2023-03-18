@@ -69,7 +69,7 @@
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    /* background-color: yellow; */
+    /* background-color: green; */
 }
 
 
@@ -88,10 +88,6 @@ nav > .container > ul {
     left: -110%;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-}
-
-#hamburgerMenuActive {
-    left: 0;
 }
 
 nav > .container > ul > a > li{
@@ -178,5 +174,5 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 main {
     background-color: gray;
     width: 100%;
-    min-height: 500px;
+    min-height: 800px;
 }
