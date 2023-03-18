@@ -175,7 +175,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 main {
     /* background-color: gray; */
-    background-image: url(SLIKE/za\ probu\ pozadina.jpg);
+    /* background-image: url(SLIKE/za\ probu\ pozadina.jpg); */
     width: 100%;
     min-height: 800px;
 }
