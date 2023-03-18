@@ -72,23 +72,27 @@
     /* background-color: yellow; */
 }
 
-nav > .container {
-    /* display: none; */
-}
 
 /* sama navigacija */
 
-/* nav > .container > ul {
-    border-top: 2px solid #CCCCCC;
-    border-bottom: 2px solid #CCCCCC;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-} */
+nav > .container {
+    /* display: none; */
+    /* background-color: green; */
+}
 
 nav > .container > ul {
+    position: absolute;
     list-style-type: none;
+    width: 100%;
+    height: 101%;
+    left: -100%;
+    /* left: 0; */
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#hamburgerMenuActive {
+    /* left: 0; */
 }
 
 nav > .container > ul > a > li{
@@ -156,11 +160,24 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     }
 
     nav > .container > ul {
-        border-top: 2px solid #CCCCCC;
-        border-bottom: 2px solid #CCCCCC;
-        list-style-type: none;
+        position: static;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        border-top: 2px solid #CCCCCC;
+        border-bottom: 2px solid #CCCCCC;
+        list-style-type: none;
+        box-shadow: none;
     }
+}
+
+
+
+
+/* POCETAK MAIN */
+
+main {
+    background-color: gray;
+    width: 100%;
+    min-height: 500px;
 }
