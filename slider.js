@@ -1,11 +1,12 @@
 const slider = document.querySelector('.slider-items');
 // const progressBar = document.querySelector('.prog-bar-inner');
-
+// slider.parentElement.clientWidth =  10;
+console.log(slider.scrollLeft);
 let sliderGrabbed = false;
 
-// slider.parentElement.addEventListener('scroll', (e) => {
-//     progressBar.style.width  = `${getScrollPercentage()}%`
-// })
+slider.parentElement.addEventListener('scroll', (e) => {
+    //console.log(getScrollPercentage());
+})
 
 slider.addEventListener('mousedown', (e) => {
     sliderGrabbed = true;

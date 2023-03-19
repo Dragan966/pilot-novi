@@ -189,6 +189,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     height: 100%;
     /* background-color: green; */
     overflow: scroll;
+    /* scroll-padding: 50%; */
 }
 
 .slider-items {
@@ -222,14 +223,14 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
+/* .slider::-webkit-scrollbar {
     display: none;
-}
+} */
   
 /* Hide scrollbar for IE, Edge and Firefox */
 .slider {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    /* -ms-overflow-style: none;  IE and Edge */
+    /* scrollbar-width: none; /* Firefox */
 }
 
 @media only screen and (max-width: 768px) {
