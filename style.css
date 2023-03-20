@@ -256,7 +256,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 @media only screen and (max-width: 768px) {
     .slider-items {
-        width: calc(10 * (288px + 72px));
+        width: calc(10 * (288px + 20px));
     }
     
     .sliderItem {
