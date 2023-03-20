@@ -52,8 +52,19 @@ rightBtnMain.addEventListener('click', () => {
 let sliderGrabbed = false;
 
 slider.parentElement.addEventListener('scroll', (e) => {
+    if (slider.parentElement.scrollLeft === 0) {
+        leftBtnMain.style.display = 'none';
+    } else {
+        leftBtnMain.style.display = 'block';
+    }
+
+    if (slider.parentElement.scrollLeft === (slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) {
+        rightBtnMain.style.display = 'none';
+    } else {
+        rightBtnMain.style.display = 'block';
+    }
     // console.log(getScrollPercentage());
-    console.log(`${slider.parentElement.scrollLeft} trenutni slajd: ${currentSlide + 1}`);
+    // console.log(`${slider.parentElement.scrollLeft} trenutni slajd: ${currentSlide + 1}`);
 })
 
 slider.addEventListener('mousedown', (e) => {
