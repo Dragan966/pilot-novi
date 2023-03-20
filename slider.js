@@ -8,19 +8,19 @@ const rightBtnMain = document.querySelector('#rightMainSlider');
 let slidesPositions = [0];
 let numberOfSlides = 10;
 // slidesPositions.push(slide.offsetWidth / 2);
-slidesPositions.push(345);
+// slidesPositions.push(345);
 do {
-    slidesPositions.push(slidesPositions[slidesPositions.length - 1] + slide.offsetWidth);
-} while (slidesPositions.length < numberOfSlides - 1)
-slidesPositions.push(slider.parentElement.scrollWidth);
+    slidesPositions.push(slidesPositions[slidesPositions.length - 1] + slide.offsetWidth + 20);
+} while (slidesPositions.length <= numberOfSlides)
+// slidesPositions.push(slider.parentElement.scrollWidth);
 console.log(slidesPositions);
 
 let currentSlide = 1;
-slider.parentElement.scrollLeft = slidesPositions[currentSlide];
+slider.parentElement.scrollLeft = (slidesPositions[currentSlide] + slidesPositions[currentSlide - 1]) / 2;
 leftBtnMain.addEventListener('click', () => {
     if(currentSlide > 0) {
         --currentSlide;
-        slider.parentElement.scrollLeft = slidesPositions[currentSlide];
+        slider.parentElement.scrollLeft = (slidesPositions[currentSlide] + slidesPositions[currentSlide - 1]) / 2;
     }
 });
 
@@ -28,7 +28,7 @@ leftBtnMain.addEventListener('click', () => {
 rightBtnMain.addEventListener('click', () => {
     if(currentSlide < numberOfSlides - 1) {
         ++currentSlide;
-        slider.parentElement.scrollLeft = slidesPositions[currentSlide];
+        slider.parentElement.scrollLeft = (slidesPositions[currentSlide] + slidesPositions[currentSlide + 1]) / 2;
     }
 });
 // OVO RADI POSAO 

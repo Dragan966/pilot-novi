@@ -200,7 +200,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     top: 0;
     left: 0;
     /* width: 3000px; */
-    width: calc(10 * (635px + 20px));
+    width: calc(10 * (600px + 20px));
     /* e sad ovde ide fora - ide broj komada koliko ima u slideru,
      ali na desktopu ici na 350 a na mobilnom (do 768px) mozda ici na 
      80% od 360px */
@@ -213,7 +213,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 635px;
+    width: 600px;
     height: 98%;
     top: 1%;
     background-color: rgba(245, 245, 245, 0.747);
