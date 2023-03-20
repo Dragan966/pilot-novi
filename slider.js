@@ -25,6 +25,7 @@ leftBtnMain.addEventListener('click', () => {
     if(currentSlide > 0) {
         let test = slidesPositions.filter(postion => slider.parentElement.scrollLeft > postion);
         slider.parentElement.scrollLeft = slidesPositions[test.length - 1];
+        currentSlide = test.length - 1;
     }
 });
 
@@ -33,6 +34,7 @@ rightBtnMain.addEventListener('click', () => {
     if(currentSlide < numberOfSlides - 1) {
         let test = slidesPositions.filter(postion => slider.parentElement.scrollLeft > postion);
         slider.parentElement.scrollLeft = slidesPositions[test.length + 1];
+        currentSlide = test.length + 1;
     }
 });
 // OVO RADI POSAO 
