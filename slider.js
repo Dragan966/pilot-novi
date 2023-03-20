@@ -48,7 +48,7 @@ let sliderGrabbed = false;
 
 slider.parentElement.addEventListener('scroll', (e) => {
     // console.log(getScrollPercentage());
-    console.log(`${slider.parentElement.scrollLeft} trenutni slajd: ${currentSlide + 1}`);
+    // console.log(`${slider.parentElement.scrollLeft} trenutni slajd: ${currentSlide + 1}`);
 })
 
 slider.addEventListener('mousedown', (e) => {
@@ -79,7 +79,3 @@ slider.addEventListener('wheel', (e) =>{
 function getScrollPercentage(){
    return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
 }
-
-function proba(broj){
-    return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
- }

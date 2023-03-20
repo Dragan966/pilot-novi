@@ -241,6 +241,11 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     height: 45px;
 }
 
+.btnSlider:hover {
+    background-color: rgba(134, 132, 132, 0.555);
+    border-radius: 10px;
+}
+
 .leftBtnSlider {
     left: 0;
 }
