@@ -218,7 +218,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     height: 98%;
     top: 1%;
     background-color: rgba(245, 245, 245, 0.747);
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
+    overflow: hidden;
     /* box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
     -moz-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
     -webkit-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; */
@@ -235,11 +236,44 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
      scrollbar-width: none; /*Firefox */
 }
 
+.sliderItem > img {
+    height: 100%;
+}
+
+.h3slider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background-color: rgba(243, 255, 255, 0.664);
+    padding: 10px;
+}
+
+.h3slider > p {
+    font-weight: 600;
+}
+
+.h3slider > hr {
+    border-top: 1px solid red;
+    margin-bottom: 5px;
+}
+
+.h3slider > a {
+    font-size: 25px;
+}
+
+.h3slider > a:link, .h3slider > a:visited{
+    text-decoration: none;
+    color: black;
+}
+
 .btnSlider {
     position: absolute;
     top: 41%;
     width: 55px;
     height: 55px;
+    background-color: rgba(235, 231, 231, 0.555);
+    border-radius: 10px;
 }
 
 .btnSlider:hover {
