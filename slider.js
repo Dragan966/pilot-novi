@@ -37,13 +37,7 @@ rightBtnMain.addEventListener('click', () => {
         currentSlide = test.length + 1;
     }
 });
-// OVO RADI POSAO 
-// slider.parentElement.scrollLeft += 500;
-// slider.parentElement.scrollLeft += 0;
-// console.log(`sirina diva: ${pojedinacni.offsetWidth}`)
-// console.log(slider.scrollLeft);
-// console.log(slider.parentElement.scrollWidth);
-// console.log(slider.parentElement.clientWidth);
+
 let sliderGrabbed = false;
 
 slider.parentElement.addEventListener('scroll', (e) => {
