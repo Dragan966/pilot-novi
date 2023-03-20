@@ -5,22 +5,28 @@ const leftBtnMain = document.querySelector('#leftMainSlider');
 const rightBtnMain = document.querySelector('#rightMainSlider');
 
 // pripremanje niza
+let sum = 0;
 let slidesPositions = [0];
 let numberOfSlides = 10;
-// slidesPositions.push(slide.offsetWidth / 2);
-// slidesPositions.push(345);
-do {
-    slidesPositions.push(slidesPositions[slidesPositions.length - 1] + slide.offsetWidth + 20);
-} while (slidesPositions.length <= numberOfSlides)
+sum += (slide.offsetWidth + 20) / 2;
+slidesPositions.push(sum);
+// do {
+//     slidesPositions.push(slidesPositions[slidesPositions.length - 1] + slide.offsetWidth + 20);
+// } while (slidesPositions.length <= numberOfSlides)
+while (sum < (slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) {
+    sum += slide.offsetWidth + 20;
+    slidesPositions.push(sum);
+}
+// slidesPositions.splice(1, 0, 285);
 // slidesPositions.push(slider.parentElement.scrollWidth);
 console.log(slidesPositions);
 
 let currentSlide = 1;
-slider.parentElement.scrollLeft = (slidesPositions[currentSlide] + slidesPositions[currentSlide - 1]) / 2;
+slider.parentElement.scrollLeft = slidesPositions[currentSlide];
 leftBtnMain.addEventListener('click', () => {
     if(currentSlide > 0) {
         --currentSlide;
-        slider.parentElement.scrollLeft = (slidesPositions[currentSlide] + slidesPositions[currentSlide - 1]) / 2;
+        slider.parentElement.scrollLeft = slidesPositions[currentSlide];
     }
 });
 
@@ -28,7 +34,7 @@ leftBtnMain.addEventListener('click', () => {
 rightBtnMain.addEventListener('click', () => {
     if(currentSlide < numberOfSlides - 1) {
         ++currentSlide;
-        slider.parentElement.scrollLeft = (slidesPositions[currentSlide] + slidesPositions[currentSlide + 1]) / 2;
+        slider.parentElement.scrollLeft = slidesPositions[currentSlide];
     }
 });
 // OVO RADI POSAO 
@@ -42,7 +48,7 @@ let sliderGrabbed = false;
 
 slider.parentElement.addEventListener('scroll', (e) => {
     // console.log(getScrollPercentage());
-    console.log(slider.parentElement.scrollLeft);
+    console.log(`${slider.parentElement.scrollLeft} trenutni slajd: ${currentSlide + 1}`);
 })
 
 slider.addEventListener('mousedown', (e) => {
