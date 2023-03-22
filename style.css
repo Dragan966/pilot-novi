@@ -178,8 +178,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 .sliderContainer {
     position: relative;
     width: 100%;
+    /* slider height --------  */
     height: 350px;
-    /* background-color: blue; */
     margin-top: 25px;
 }
 
@@ -189,9 +189,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     left: 0;
     width: 100%;
     height: 100%;
-    /* background-color: green; */
     overflow: scroll;
-    /* scroll-padding: 50%; */
 }
 
 .slider-items {
@@ -200,13 +198,16 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     justify-content: space-around;
     top: 0;
     left: 0;
+    height: 100%;
+
+    /* ========================== */
+
     /* width: 3000px; */
     width: calc(10 * (600px + 20px));
     /* e sad ovde ide fora - ide broj komada koliko ima u slideru,
      ali na desktopu ici na 350 a na mobilnom (do 768px) mozda ici na 
      80% od 360px */
-    height: 100%;
-    display: flex;
+
 }
 
 .sliderItem {
@@ -214,12 +215,15 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 600px;
     height: 98%;
     top: 1%;
+    overflow: hidden;
+
+    /* ============================== */
+
+    width: 600px;
     background-color: rgba(245, 245, 245, 0.747);
     /* border: 1px solid rgb(0, 0, 0); */
-    overflow: hidden;
     /* box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
     -moz-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
     -webkit-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; */
@@ -237,9 +241,11 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 .sliderItem > img {
+    /* ovo je diskutabilno mnogo  */
     height: 100%;
 }
 
+/* OVO NIJE BITNO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 .h3slider {
     position: absolute;
     bottom: 0;
@@ -266,6 +272,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     text-decoration: none;
     color: black;
 }
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<   */
+
 
 .btnSlider {
     position: absolute;
