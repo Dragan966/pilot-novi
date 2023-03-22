@@ -179,8 +179,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     position: relative; /*zasto je ovo relative?*/
     width: 100%;
     /* slider height --------  */
-    height: 350px;
-    margin-top: 25px;
+    /* height: 350px;
+    margin-top: 25px; */
 }
 
 .slider {
@@ -200,10 +200,10 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     left: 0;
     height: 100%;
 
-    /* ========================== */
+    /* ========================== sliderFullWidth*/
 
     /* width: 3000px; */
-    width: calc(10 * (600px + 20px));
+    /* width: calc(10 * (600px + 20px)); */
     /* e sad ovde ide fora - ide broj komada koliko ima u slideru,
      ali na desktopu ici na 350 a na mobilnom (do 768px) mozda ici na 
      80% od 360px */
@@ -219,10 +219,10 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     top: 1%;
     overflow: hidden;
 
-    /* ============================== */
+    /* ============================== sliderWidth*/
 
-    width: 600px;
-    background-color: rgba(245, 245, 245, 0.747);
+    /* width: 600px;
+    background-color: rgba(245, 245, 245, 0.747); */
     /* border: 1px solid rgb(0, 0, 0); */
     /* box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
     -moz-box-shadow: 6px 0 4px -4px #999, -6px 0 4px -4px #999; 
@@ -307,4 +307,39 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     .sliderItem {
         width: 288px;
     }    
+}
+
+
+/* ovde bi trebalo da ide svaki posebno slider  */
+
+/* prvi slider  */
+
+.sliderHeight {
+    height: 350px;
+    margin-top: 25px; 
+}
+
+.sliderFullWidth {
+    width: calc(10 * (600px + 20px));
+}
+
+.sliderWidth {
+    width: 600px;
+    background-color: rgba(245, 245, 245, 0.747);
+}
+
+/* drugi slider  */
+
+.sliderHeightDrugi {
+    height: 350px;
+    margin-top: 25px; 
+}
+
+.sliderFullWidthDrugi {
+    width: calc(4 * (600px + 20px));
+}
+
+.sliderWidthDrugi {
+    width: 600px;
+    background-color: rgba(245, 245, 245, 0.747);
 }
