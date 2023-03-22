@@ -176,7 +176,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 /* SLIDER PRVI - GLAVNI*/
 
 .sliderContainer {
-    position: relative;
+    position: relative; /*zasto je ovo relative?*/
     width: 100%;
     /* slider height --------  */
     height: 350px;
@@ -184,7 +184,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 .slider {
-    position: relative;
+    position: relative; /*i ovo mozda nije trebalo da ide na relative, pogledas top i left su nula*/
     top: 0;
     left: 0;
     width: 100%;
@@ -244,6 +244,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     /* ovo je diskutabilno mnogo  */
     height: 100%;
 }
+
+
 
 /* OVO NIJE BITNO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
 .h3slider {

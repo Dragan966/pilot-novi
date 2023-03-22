@@ -5,21 +5,21 @@ const leftBtnMain = document.querySelector('#leftMainSlider');
 const rightBtnMain = document.querySelector('#rightMainSlider');
 
 // let sigma = 1 + window.innerWidth / ((window.innerWidth - slide.offsetWidth - 20) / 2);
-let sigma;
-sigma = sigmaSetup(window.innerWidth);
-console.log(sigma);
+// let sigma;
+// sigma = sigmaSetup(window.innerWidth);
+// console.log(sigma);
 
-window.addEventListener('resize', () => {
-    sigma = sigmaSetup(window.innerWidth);
-    console.log(sigma);
-});
+// window.addEventListener('resize', () => {
+//     sigma = sigmaSetup(window.innerWidth);
+//     console.log(sigma);
+// });
 
 
 // pripremanje niza
 let sum = 0;
 let slidesPositions = [0];
 let numberOfSlides = 10;
-sum += (slide.offsetWidth + 20) / sigma;
+sum += (slide.offsetWidth + 20); // / sigma;
 slidesPositions.push(sum);
 
 while (sum < (slider.parentElement.scrollWidth - slider.parentElement.clientWidth)) {
@@ -92,17 +92,17 @@ slider.addEventListener('wheel', (e) =>{
     slider.parentElement.scrollLeft += e.deltaY;
 })
 
-// function getScrollPercentage(){
-//    return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
-// }
-
-function sigmaSetup(window){
-    if(window < 400) {
-        return 1.1;
-    } else if (window < 768) {
-        return  1.2;
-    } else if (window < 1024) {
-        return  1.1;
-    }
-    return  2;
+function getScrollPercentage(){
+   return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
 }
+
+// function sigmaSetup(window){
+//     if(window < 400) {
+//         return 1.1;
+//     } else if (window < 768) {
+//         return  1.2;
+//     } else if (window < 1024) {
+//         return  1.1;
+//     }
+//     return  2;
+// }
