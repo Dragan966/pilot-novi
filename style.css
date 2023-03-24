@@ -330,16 +330,16 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 /* drugi slider  */
 
-.sliderHeightDrugi {
+.sliderContainer.drugi {
     height: 350px;
     margin-top: 25px; 
 }
 
-.sliderFullWidthDrugi {
+.slider-items.drugi {
     width: calc(4 * (600px + 20px));
 }
 
-.sliderWidthDrugi {
+.sliderItem.drugi {
     width: 600px;
     background-color: rgba(245, 245, 245, 0.747);
 }
