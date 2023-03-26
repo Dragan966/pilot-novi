@@ -453,7 +453,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 /* bigSlider  */
 .sliderContainer.bigSlider {
-   margin-top: 25px;
+    position: relative;
+    margin-top: 25px;
 }
 
 .slider.bigSlider {
@@ -469,5 +470,17 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 .sliderItem.bigSlider {
     width: 100%;
     background-color: rgba(250, 44, 44, 0.747);
+}
+
+.sliderContainer.bigSlider > .sliderNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    border: 2px solid #CCCCCC;
+}
+
+.sliderContainer.bigSlider > .sliderNav > .sliderButton:hover {
+    background-color: red;
 }
 
