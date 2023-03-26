@@ -356,9 +356,53 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 
 
-/* ======================================================================================================================== */
-/* SLIDER PRVI - GLAVNI*/
-/* ======================================================== */
+/* ======================================================================================================================== 
+                                            =====================================       
+                                                        SLIDER
+                                            =====================================
+
+
+                                               ==========================
+                                                    SABLON U HTML-u
+                                               ==========================
+                                               
+                                                sliderContainer naziv
+                                                    slider naziv
+                                                        slider-items naziv
+                                                            sliderItem naziv
+
+
+
+
+                                               ==========================
+                                                MINIMUM ZA POPUNJAVANJE
+                                               ==========================
+
+                                                .sliderContainer.naziv {
+
+                                                }
+
+                                                mora biti popunjeno: 
+                                                .slider.naziv {
+                                                    height:
+                                                }
+
+                                                .slider-items.naziv {
+                                                    ovo je ukupna sirina
+                                                    width: calc(broj-slajdova * (sirina-slajda + razmak-izmedju-slajdova);
+                                                }
+
+                                                .sliderItem.naziv {
+                                                    ovo je pojedinacna sirina
+                                                    width: 600px;
+                                                    background-color:
+                                                } 
+
+                                            
+
+============================================================================================================================ */
+
+/* OSNOVA SVAKOG SLIDERA */
 .sliderContainer {
     
 }
@@ -380,58 +424,6 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 }
 
-/*
-                MINIMUM ZA POPUNJAVANJE
-
-.sliderContainer.naziv {
-
-}
-
-mora biti popunjeno: 
-.slider.naziv {
-    height:
-}
-
-.slider-items.naziv {
-    ovo je ukupna sirina
-    width: calc(broj-slajdova * (sirina-slajda + razmak-izmedju-slajdova);
-}
-
-.sliderItem.naziv {
-    ovo je pojedinacna sirina
-    width: 600px;
-    background-color:
-} 
-
-*/
-
-
-/* ========================================================= */
-.sliderContainer.bigSlider {
-   margin-top: 25px;
-}
-
-.slider.bigSlider {
-    height: 500px;
-}
-
-.slider-items.bigSlider {
-    /* height: 550px; */
-    background-color: yellow;
-    width: 400%;
-    justify-content: space-between;
-}
-
-.sliderItem.bigSlider {
-    width: 100%;
-    background-color: rgba(250, 44, 44, 0.747);
-}
-
-/* sliderContainer.bigSlider
-    slider
-        slider-items drugi
-            sliderItem drugi */
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .slider::-webkit-scrollbar {
     display: none;
@@ -443,6 +435,7 @@ mora biti popunjeno:
      scrollbar-width: none; /*Firefox */
 }
 
+/* OVAJ DEO TREBA DA SE JOS MENJA */
 @media only screen and (max-width: 768px) {
     .slider-items {
         width: calc(10 * (288px + 20px));
@@ -452,3 +445,29 @@ mora biti popunjeno:
         width: 288px;
     }    
 }
+
+/* ========================================================= */
+/* ZASEBNA PODESAVANJA SLIDERA  */
+
+
+
+/* bigSlider  */
+.sliderContainer.bigSlider {
+   margin-top: 25px;
+}
+
+.slider.bigSlider {
+    height: 500px;
+}
+
+.slider-items.bigSlider {
+    background-color: yellow;
+    width: 400%;
+    justify-content: space-between;
+}
+
+.sliderItem.bigSlider {
+    width: 100%;
+    background-color: rgba(250, 44, 44, 0.747);
+}
+
