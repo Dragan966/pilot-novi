@@ -1,4 +1,6 @@
 const sliders = document.querySelectorAll('.slider-items');
+const leftBtn = document.querySelectorAll('.leftBtn');
+const rightBtn = document.querySelectorAll('.rightBtn');
 // const progressBar = document.querySelector('.prog-bar-inner');
 
 let sliderGrabbed = false;
@@ -6,6 +8,8 @@ let sliderGrabbed = false;
 sliders.forEach((slider) => {
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
+        // console.log(slider.parentElement.scrollLeft);
+        // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
     })
     
     slider.addEventListener('mousedown', (e) => {
@@ -36,5 +40,30 @@ sliders.forEach((slider) => {
     function getScrollPercentage(){
        return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
     }
+
+    const positions = [0];
+    while(positions[positions.length - 1] < slider.parentElement.scrollWidth){
+        positions.push(positions[positions.length - 1] + slider.parentElement.clientWidth)
+    }
+
+
+    function currentSlide () {
+        let test = positions.filter(postion => slider.parentElement.scrollLeft >= postion);
+        console.log('slider.parentElement.scrollLeft: ' + slider.parentElement.scrollLeft)
+        console.log('test: ' + test);
+        return test.length;
+    }
+
+    rightBtn.forEach((R) => {
+        R.addEventListener('click', (e) => {     
+            slider.parentElement.scrollLeft = positions[currentSlide()];
+        });
+    });
+    
+    leftBtn.forEach((L) => {
+        L.addEventListener('click', (e) => {
+            slider.parentElement.scrollLeft = positions[currentSlide() - 2];
+        });
+    });
 });
 

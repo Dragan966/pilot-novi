@@ -484,3 +484,36 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     background-color: red;
 }
 
+/* ================== */
+/* bigSlider  */
+.sliderContainer.proba {
+    position: relative;
+    margin-top: 25px;
+}
+
+.slider.proba {
+    height: 500px;
+}
+
+.slider-items.proba {
+    background-color: yellow;
+    width: 4200px;
+    justify-content: space-between;
+}
+
+.sliderItem.proba {
+    width: 400px;
+    background-color: rgba(250, 44, 44, 0.747);
+}
+
+.sliderContainer.proba > .sliderNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    border: 2px solid #CCCCCC;
+}
+
+.sliderContainer.proba > .sliderNav > .sliderButton:hover {
+    background-color: red;
+}
