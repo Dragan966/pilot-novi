@@ -6,7 +6,7 @@ let sliderGrabbed = false;
 sliders.forEach((slider) => {
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
-        console.log(slider.parentElement.scrollLeft);
+        // console.log(slider.parentElement.scrollLeft);
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
     })
     
@@ -47,6 +47,7 @@ sliders.forEach((slider) => {
 
     function currentSlide () {
         let test = positions.filter(postion => slider.parentElement.scrollLeft >= postion);
+        console.log('test' + test);
         return test.length;
     }
 
@@ -80,8 +81,11 @@ sliders.forEach((slider) => {
     slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
         const currentIndex = currentSlide();
         if (currentIndex > 0) {
+            
+            console.log('scrolleft' + slider.parentElement.scrollLeft)
             const prevSlide = slider.parentElement.scrollLeft - slider.parentElement.clientWidth;
             slideAnimation(prevSlide);
+            console.log('prev' + prevSlide)
         }
     });
 
