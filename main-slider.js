@@ -6,7 +6,7 @@ let sliderGrabbed = false;
 sliders.forEach((slider) => {
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
-        // console.log(slider.parentElement.scrollLeft);
+        console.log(slider.parentElement.scrollLeft);
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
     })
     
@@ -50,16 +50,44 @@ sliders.forEach((slider) => {
         return test.length;
     }
 
+    
+
+    function slideAnimation(position) {
+        const startPosition = slider.parentElement.scrollLeft;
+        const distance = position - startPosition;
+        const duration = 500;
+        let start = null;
+      
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          const progress = timestamp - start;
+          const ease = (progress / duration) ** 2; // ease-in-out
+          const scrollLeft = startPosition + distance * ease;
+          if ((distance > 0 && scrollLeft >= position) || (distance < 0 && scrollLeft <= position)) {
+            slider.parentElement.scrollLeft = position;
+            return;
+          }
+          slider.parentElement.scrollLeft = scrollLeft;
+          if (progress < duration) {
+            window.requestAnimationFrame(step);
+          }
+        }
+      
+        window.requestAnimationFrame(step);
+    }
+      
     // leftBtn 
     slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
-        console.log(slider.parentElement.nextElementSibling.childNodes[1])
-        slider.parentElement.scrollLeft = positions[currentSlide() - 2];
+        const currentIndex = currentSlide();
+        if (currentIndex > 0) {
+            const prevSlide = slider.parentElement.scrollLeft - slider.parentElement.clientWidth;
+            slideAnimation(prevSlide);
+        }
     });
 
     // rightBtn 
     slider.parentElement.nextElementSibling.childNodes[3].addEventListener('click', () => {
-        console.log(slider.parentElement.nextElementSibling.childNodes[3])
-        slider.parentElement.scrollLeft = positions[currentSlide()];
+        slideAnimation(positions[currentSlide()]);
     });
 });
 

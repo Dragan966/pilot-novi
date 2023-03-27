@@ -465,6 +465,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     background-color: yellow;
     width: 400%;
     justify-content: space-between;
+    transition: all 1s ease-in-out;
 }
 
 .sliderItem.bigSlider {
@@ -482,6 +483,10 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 .sliderContainer.bigSlider > .sliderNav > .sliderButton:hover {
     background-color: red;
+}
+
+.sliderItem.bigSlider:nth-child(odd){
+    background-color: green;
 }
 
 /* ================== */
@@ -517,3 +522,5 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 .sliderContainer.proba > .sliderNav > .sliderButton:hover {
     background-color: red;
 }
+
+
