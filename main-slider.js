@@ -65,6 +65,7 @@ sliders.forEach((slider) => {
           const scrollLeft = startPosition + distance * ease;
           if ((distance > 0 && scrollLeft >= position) || (distance < 0 && scrollLeft <= position)) {
             slider.parentElement.scrollLeft = position;
+            slider.parentElement.style.overflow = 'hidden';
             return;
           }
           slider.parentElement.scrollLeft = scrollLeft;
@@ -91,6 +92,7 @@ sliders.forEach((slider) => {
     let touchEndX = 0;
 
     slider.addEventListener("touchstart", (event) => {
+        slider.parentElement.style.overflow = 'scroll';
         touchStartX = event.touches[0].clientX;
         console.log('touchStartX' + touchStartX)
     });
