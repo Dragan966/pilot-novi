@@ -74,13 +74,23 @@ sliders.forEach((slider) => {
     function slideAnimation(position) {
         const startPosition = slider.parentElement.scrollLeft;
         const distance = position - startPosition;
-        const duration = 800;
+        let duration;
+        if(window.innerWidth > 1000) {
+            duration = 300;
+        } else {
+            duration = 500;
+        }
         let start = null;
       
         function step(timestamp) {
           if (!start) start = timestamp;
           const progress = timestamp - start;
-          const ease = (progress / duration)// ** 2; // ease-in-out
+          let ease;
+          if (window.innerWidth > 1000) {
+            ease = (progress / duration) ** 2; //ease-in-out
+          } else {
+            ease = (progress / duration);// ** 2; //ease-in-out
+          }
           const scrollLeft = startPosition + distance * ease;
           if ((distance > 0 && scrollLeft >= position) || (distance < 0 && scrollLeft <= position)) {
             slider.parentElement.scrollLeft = position;
