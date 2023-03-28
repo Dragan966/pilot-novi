@@ -75,6 +75,12 @@ sliders.forEach((slider) => {
       
         window.requestAnimationFrame(step);
     }
+
+
+    
+      
+      
+      
       
     // leftBtn 
     slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
@@ -88,24 +94,26 @@ sliders.forEach((slider) => {
 
 
     // --------------------THIS LINE-----------------------------
-    const bigSlider = document.querySelector('.slider-items.bigSlider');
+    // const bigSlider = document.querySelector('#bigSlider');
     let touchStartX = 0;
     let touchEndX = 0;
 
-    bigSlider.addEventListener("touchstart", (event) => {
+    slider.addEventListener("touchstart", (event) => {
         touchStartX = event.touches[0].clientX;
         console.log('touchStartX' + touchStartX)
     });
 
-    bigSlider.addEventListener("touchend", (event) => {
+    slider.addEventListener("touchend", (event) => {
         touchEndX = event.changedTouches[0].clientX;
         console.log('touchEndX' + touchEndX)
-        if (touchEndX < touchStartX && touchStartX - touchEndX > 100) {
-            slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
-        } else if (touchEndX > touchStartX && touchEndX - touchStartX > 100) {
-            slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft - 1)]);
-        } else {
-            slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft)]);
+        if (slider.classList.contains('bigSlider')) {
+            if (touchEndX < touchStartX && touchStartX - touchEndX > 50) {
+                slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
+            } else if (touchEndX > touchStartX && touchEndX - touchStartX > 50) {
+                slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft - 1)]);
+            } else {
+                slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft)]);
+            }
         }
     });
 });

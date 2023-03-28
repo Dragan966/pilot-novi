@@ -490,7 +490,6 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 /* ================== */
-/* bigSlider  */
 .sliderContainer.proba {
     position: relative;
     margin-top: 25px;
@@ -502,12 +501,13 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 .slider-items.proba {
     background-color: yellow;
-    width: 4200px;
+    width: 700%;
     justify-content: space-between;
+    transition: all 1s ease-in-out;
 }
 
 .sliderItem.proba {
-    width: 400px;
+    width: 100%;
     background-color: rgba(250, 44, 44, 0.747);
 }
 
@@ -523,4 +523,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     background-color: red;
 }
 
+.sliderItem.proba:nth-child(odd){
+    background-color: green;
+}
 
