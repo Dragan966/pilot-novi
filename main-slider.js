@@ -89,7 +89,7 @@ sliders.forEach((slider) => {
           if (window.innerWidth > 1000) {
             ease = (progress / duration) ** 2; //ease-in-out
           } else {
-            ease = (progress / duration);// ** 2; //ease-in-out
+            ease = (progress / duration); //linear
           }
           const scrollLeft = startPosition + distance * ease;
           if ((distance > 0 && scrollLeft >= position) || (distance < 0 && scrollLeft <= position)) {
