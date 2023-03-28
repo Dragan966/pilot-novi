@@ -8,32 +8,32 @@ sliders.forEach((slider) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
         // console.log(slider.parentElement.scrollLeft);
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
-    })
+    });
     
     slider.addEventListener('mousedown', (e) => {
         sliderGrabbed = true;
         slider.style.cursor = 'grabbing';
-    })
+    });
     
     slider.addEventListener('mouseup', (e) => {
         sliderGrabbed = false;
         slider.style.cursor = 'grab';
-    })
+    });
     
     slider.addEventListener('mouseleave', (e) => {
         sliderGrabbed = false;
-    })
+    });
     
     slider.addEventListener('mousemove', (e) => {
         if(sliderGrabbed){
             slider.parentElement.scrollLeft -= e.movementX;
         }
-    })
+    });
     
     slider.addEventListener('wheel', (e) =>{
         e.preventDefault()
         slider.parentElement.scrollLeft += e.deltaY;
-    })
+    });
     
     function getScrollPercentage(){
        return ((slider.parentElement.scrollLeft / (slider.parentElement.scrollWidth - slider.parentElement.clientWidth) ) * 100);
@@ -43,12 +43,11 @@ sliders.forEach((slider) => {
     while(positions[positions.length - 1] < slider.parentElement.scrollWidth){
         positions.push(positions[positions.length - 1] + slider.parentElement.clientWidth)
     }
+    console.log(positions);
 
-
-    function currentSlide () {
-        let test = positions.filter(postion => slider.parentElement.scrollLeft >= postion);
-        console.log('test' + test);
-        return test.length;
+    function currentSlide (scrollLeft) {
+        let test = positions.filter(postion => scrollLeft >= postion);
+        return test.length - 1;
     }
 
     
@@ -79,21 +78,41 @@ sliders.forEach((slider) => {
       
     // leftBtn 
     slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
-        
-        // console.log(positions);
-        // const currentIndex = currentSlide();
-        // if (currentIndex > 0) {
-            
-        //     console.log('scrolleft' + slider.parentElement.scrollLeft)
-        //     const prevSlide = slider.parentElement.scrollLeft - slider.parentElement.clientWidth;
-            slideAnimation(positions[currentSlide() - 2]);
-        //     console.log('prev' + prevSlide)
-        // }
+            slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft - 1)]);
     });
 
     // rightBtn 
     slider.parentElement.nextElementSibling.childNodes[3].addEventListener('click', () => {
-        slideAnimation(positions[currentSlide()]);
+        slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
     });
+
+
+
+    // const bigSlider = document.querySelector('.slider-items.bigSlider');
+    // let touchStartX = 0;
+    // let touchEndX = 0;
+
+    // bigSlider.addEventListener("touchstart", (event) => {
+    //     touchStartX = event.touches[0].clientX;
+    // });
+
+    // bigSlider.addEventListener("touchend", (event) => {
+    // touchEndX = event.changedTouches[0].clientX;
+    // if (touchEndX < touchStartX && touchStartX - touchEndX > 50) {
+    //     // move slider to next slide
+    //     // const currentPosition = slider.parentElement.scrollLeft;
+    //     // const slideWidth = slider.offsetWidth;
+    //     // const nextPosition = currentPosition + slideWidth;
+    //     // slideAnimation(nextPosition);
+    //     slideAnimation(positions[currentSlide(touchEndX)]);
+    // } else if (touchEndX > touchStartX && touchEndX - touchStartX > 50) {
+    //     // move slider to previous slide
+    //     // const currentPosition = slider.parentElement.scrollLeft;
+    //     // const slideWidth = slider.offsetWidth;
+    //     // const prevPosition = currentPosition - slideWidth;
+    //     // slideAnimation(prevPosition);
+    //     slideAnimation(positions[currentSlide(touchEndX) - 2]);
+    // }
+    // });
 });
 
