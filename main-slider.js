@@ -6,7 +6,7 @@ let sliderGrabbed = false;
 sliders.forEach((slider) => {
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
-        console.log(slider.parentElement.scrollLeft);
+        // console.log(slider.parentElement.scrollLeft);
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
     });
     
@@ -76,11 +76,6 @@ sliders.forEach((slider) => {
         window.requestAnimationFrame(step);
     }
 
-
-    
-      
-      
-      
       
     // leftBtn 
     slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
@@ -92,9 +87,6 @@ sliders.forEach((slider) => {
         slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
     });
 
-
-    // --------------------THIS LINE-----------------------------
-    // const bigSlider = document.querySelector('#bigSlider');
     let touchStartX = 0;
     let touchEndX = 0;
 
