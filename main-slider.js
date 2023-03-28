@@ -76,9 +76,9 @@ sliders.forEach((slider) => {
         const distance = position - startPosition;
         let duration;
         if(window.innerWidth > 1000) {
-            duration = 300;
-        } else {
             duration = 500;
+        } else {
+            duration = 300;
         }
         let start = null;
       
