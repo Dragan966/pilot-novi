@@ -74,7 +74,7 @@ sliders.forEach((slider) => {
     function slideAnimation(position) {
         const startPosition = slider.parentElement.scrollLeft;
         const distance = position - startPosition;
-        const duration = 300;
+        const duration = 400;
         let start = null;
       
         function step(timestamp) {
