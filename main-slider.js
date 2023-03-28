@@ -87,7 +87,7 @@ sliders.forEach((slider) => {
     });
 
 
-
+    // --------------------THIS LINE-----------------------------
     const bigSlider = document.querySelector('.slider-items.bigSlider');
     let touchStartX = 0;
     let touchEndX = 0;
@@ -98,25 +98,15 @@ sliders.forEach((slider) => {
     });
 
     bigSlider.addEventListener("touchend", (event) => {
-    touchEndX = event.changedTouches[0].clientX;
-    console.log('touchEndX' + touchEndX)
-    if (touchEndX < touchStartX && touchStartX - touchEndX > 100) {
-        // move slider to next slide
-        // const currentPosition = slider.parentElement.scrollLeft;
-        // const slideWidth = slider.offsetWidth;
-        // const nextPosition = currentPosition + slideWidth;
-        // slideAnimation(nextPosition);
-        slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
-    } else if (touchEndX > touchStartX && touchEndX - touchStartX > 100) {
-        // move slider to previous slide
-        // const currentPosition = slider.parentElement.scrollLeft;
-        // const slideWidth = slider.offsetWidth;
-        // const prevPosition = currentPosition - slideWidth;
-        // slideAnimation(prevPosition);
-        slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft - 1)]);
-    } else {
-        slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft)]);
-    }
+        touchEndX = event.changedTouches[0].clientX;
+        console.log('touchEndX' + touchEndX)
+        if (touchEndX < touchStartX && touchStartX - touchEndX > 100) {
+            slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
+        } else if (touchEndX > touchStartX && touchEndX - touchStartX > 100) {
+            slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft - 1)]);
+        } else {
+            slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft)]);
+        }
     });
 });
 
