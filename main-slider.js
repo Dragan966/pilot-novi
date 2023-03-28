@@ -94,7 +94,9 @@ sliders.forEach((slider) => {
           const scrollLeft = startPosition + distance * ease;
           if ((distance > 0 && scrollLeft >= position) || (distance < 0 && scrollLeft <= position)) {
             slider.parentElement.scrollLeft = position;
-            slider.parentElement.style.overflow = 'hidden';
+            if (slider.classList.contains('bigSlider')) {
+                slider.parentElement.style.overflow = 'hidden';
+            }  
             return;
           }
           slider.parentElement.scrollLeft = scrollLeft;
