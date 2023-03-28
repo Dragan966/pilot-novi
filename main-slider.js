@@ -79,14 +79,16 @@ sliders.forEach((slider) => {
       
     // leftBtn 
     slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
-        const currentIndex = currentSlide();
-        if (currentIndex > 0) {
+        
+        // console.log(positions);
+        // const currentIndex = currentSlide();
+        // if (currentIndex > 0) {
             
-            console.log('scrolleft' + slider.parentElement.scrollLeft)
-            const prevSlide = slider.parentElement.scrollLeft - slider.parentElement.clientWidth;
-            slideAnimation(prevSlide);
-            console.log('prev' + prevSlide)
-        }
+        //     console.log('scrolleft' + slider.parentElement.scrollLeft)
+        //     const prevSlide = slider.parentElement.scrollLeft - slider.parentElement.clientWidth;
+            slideAnimation(positions[currentSlide() - 2]);
+        //     console.log('prev' + prevSlide)
+        // }
     });
 
     // rightBtn 
