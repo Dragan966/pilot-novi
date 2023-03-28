@@ -81,7 +81,7 @@ sliders.forEach((slider) => {
           if (!start) start = timestamp;
           const progress = timestamp - start;
           const ease = (progress / duration) ** 2; // ease-in-out
-          const scrollLeft = startPosition + distance// * ease;
+          const scrollLeft = startPosition + distance * ease;
           if ((distance > 0 && scrollLeft >= position) || (distance < 0 && scrollLeft <= position)) {
             slider.parentElement.scrollLeft = position;
             slider.parentElement.style.overflow = 'hidden';
