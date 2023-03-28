@@ -6,7 +6,7 @@ let sliderGrabbed = false;
 sliders.forEach((slider) => {
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
-        // console.log(slider.parentElement.scrollLeft);
+        console.log(slider.parentElement.scrollLeft);
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
     });
     
@@ -88,31 +88,35 @@ sliders.forEach((slider) => {
 
 
 
-    // const bigSlider = document.querySelector('.slider-items.bigSlider');
-    // let touchStartX = 0;
-    // let touchEndX = 0;
+    const bigSlider = document.querySelector('.slider-items.bigSlider');
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-    // bigSlider.addEventListener("touchstart", (event) => {
-    //     touchStartX = event.touches[0].clientX;
-    // });
+    bigSlider.addEventListener("touchstart", (event) => {
+        touchStartX = event.touches[0].clientX;
+        console.log('touchStartX' + touchStartX)
+    });
 
-    // bigSlider.addEventListener("touchend", (event) => {
-    // touchEndX = event.changedTouches[0].clientX;
-    // if (touchEndX < touchStartX && touchStartX - touchEndX > 50) {
-    //     // move slider to next slide
-    //     // const currentPosition = slider.parentElement.scrollLeft;
-    //     // const slideWidth = slider.offsetWidth;
-    //     // const nextPosition = currentPosition + slideWidth;
-    //     // slideAnimation(nextPosition);
-    //     slideAnimation(positions[currentSlide(touchEndX)]);
-    // } else if (touchEndX > touchStartX && touchEndX - touchStartX > 50) {
-    //     // move slider to previous slide
-    //     // const currentPosition = slider.parentElement.scrollLeft;
-    //     // const slideWidth = slider.offsetWidth;
-    //     // const prevPosition = currentPosition - slideWidth;
-    //     // slideAnimation(prevPosition);
-    //     slideAnimation(positions[currentSlide(touchEndX) - 2]);
-    // }
-    // });
+    bigSlider.addEventListener("touchend", (event) => {
+    touchEndX = event.changedTouches[0].clientX;
+    console.log('touchEndX' + touchEndX)
+    if (touchEndX < touchStartX && touchStartX - touchEndX > 100) {
+        // move slider to next slide
+        // const currentPosition = slider.parentElement.scrollLeft;
+        // const slideWidth = slider.offsetWidth;
+        // const nextPosition = currentPosition + slideWidth;
+        // slideAnimation(nextPosition);
+        slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
+    } else if (touchEndX > touchStartX && touchEndX - touchStartX > 100) {
+        // move slider to previous slide
+        // const currentPosition = slider.parentElement.scrollLeft;
+        // const slideWidth = slider.offsetWidth;
+        // const prevPosition = currentPosition - slideWidth;
+        // slideAnimation(prevPosition);
+        slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft - 1)]);
+    } else {
+        slideAnimation(positions[currentSlide(bigSlider.parentElement.scrollLeft)]);
+    }
+    });
 });
 
