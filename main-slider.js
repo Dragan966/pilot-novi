@@ -4,6 +4,9 @@ const sliders = document.querySelectorAll('.slider-items');
 let sliderGrabbed = false;
 
 sliders.forEach((slider) => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
         // console.log(slider.parentElement.scrollLeft);
@@ -13,11 +16,27 @@ sliders.forEach((slider) => {
     slider.addEventListener('mousedown', (e) => {
         sliderGrabbed = true;
         slider.style.cursor = 'grabbing';
+        if (slider.classList.contains('bigSlider')) {
+            slider.parentElement.style.overflow = 'scroll';
+            touchStartX = e.clientX;
+            // console.log('touchStartX' + touchStartX)
+        }
     });
     
     slider.addEventListener('mouseup', (e) => {
         sliderGrabbed = false;
         slider.style.cursor = 'grab';
+        if (slider.classList.contains('bigSlider')) {
+            touchEndX = e.clientX;
+            // console.log('touchEndX' + touchEndX)
+            if (touchEndX < touchStartX && touchStartX - touchEndX > 50) {
+                slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
+            } else if (touchEndX > touchStartX && touchEndX - touchStartX > 50) {
+                slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft - 1)]);
+            } else {
+                slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft)]);
+            }
+        }
     });
     
     slider.addEventListener('mouseleave', (e) => {
@@ -88,19 +107,20 @@ sliders.forEach((slider) => {
         slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
     });
 
-    let touchStartX = 0;
-    let touchEndX = 0;
+    
 
     slider.addEventListener("touchstart", (event) => {
-        slider.parentElement.style.overflow = 'scroll';
-        touchStartX = event.touches[0].clientX;
-        console.log('touchStartX' + touchStartX)
+        if (slider.classList.contains('bigSlider')) {
+            slider.parentElement.style.overflow = 'scroll';
+            touchStartX = event.touches[0].clientX;
+            // console.log('touchStartX' + touchStartX)
+        }
     });
 
     slider.addEventListener("touchend", (event) => {
-        touchEndX = event.changedTouches[0].clientX;
-        console.log('touchEndX' + touchEndX)
         if (slider.classList.contains('bigSlider')) {
+            touchEndX = event.changedTouches[0].clientX;
+            // console.log('touchEndX' + touchEndX)
             if (touchEndX < touchStartX && touchStartX - touchEndX > 50) {
                 slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
             } else if (touchEndX > touchStartX && touchEndX - touchStartX > 50) {
