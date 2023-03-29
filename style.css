@@ -302,6 +302,28 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     background-color: white;
 }
 
+.sliderContainer > .sliderNav > .sliderButton:hover {
+    background-color: red;
+}
+
+.sliderContainer > .sliderNav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    border: 2px solid #CCCCCC;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
 /* ========================================================= */
 /* ZASEBNA PODESAVANJA SLIDERA  */
 
@@ -314,35 +336,58 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 .slider.bigSlider {
-    height: 500px;
+    height: 450px;
 }
 
 .slider-items.bigSlider {
-    background-color: yellow;
-    width: 500%;
+    /* background-color: yellow; */
+    width: calc( 5 * 100%);
     justify-content: space-between;
     transition: all 1s ease-in-out;
 }
 
 .sliderItem.bigSlider {
     width: 100%;
-    background-color: rgba(250, 44, 44, 0.747);
-}
-
-.sliderContainer.bigSlider > .sliderNav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
-    border: 2px solid #CCCCCC;
 }
 
-.sliderContainer.bigSlider > .sliderNav > .sliderButton:hover {
-    background-color: red;
+.sliderItem.bigSlider > .sliderText {
+    width: 40%;
+    height: inherit;
+    /* background-color: green; */
+    padding: 15px;
+    padding-top: 20px;
 }
 
-.sliderItem.bigSlider:nth-child(odd){
-    background-color: green;
+.sliderItem.bigSlider > .sliderText > h1 {
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+.sliderItem.bigSlider > .sliderText > p {
+    font-size: 18px;
+}
+
+.sliderItem.bigSlider > .sliderText > h3 {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.sliderItem.bigSlider > .sliderPhoto {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+.sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+    width: 95%;
+    height: 400px;
+    box-shadow: 10px 10px #CCCCCC;
+    transition: 0.1s;
+    overflow: hidden;
+}
+
+.sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace > img {
+    height: 100%;
 }
 
 /* ================== */
@@ -367,13 +412,13 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     background-color: rgba(250, 44, 44, 0.747);
 }
 
-.sliderContainer.proba > .sliderNav {
+/* .sliderContainer.proba > .sliderNav {
     position: absolute;
     bottom: 0;
     left: 0;
     display: flex;
     border: 2px solid #CCCCCC;
-}
+} */
 
 .sliderContainer.proba > .sliderNav > .sliderButton:hover {
     background-color: red;
