@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* --background-color: #FFFFFF; */
+    --sliderRed: #c7363d;
+    --navigationSilver: #CCCCCC;
+}
+  
+
 .container {
     width: 100%;
     margin: 0 auto;
@@ -28,7 +35,6 @@
 }
 
 /* ------------------------------------------ HEADER ------------------------------------------ */
-
 
 /* ------------- NAVIGACIJA ----------------- */
 
@@ -251,17 +257,6 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
      scrollbar-width: none; /*Firefox */
 }
 
-/* OVAJ DEO TREBA DA SE JOS MENJA */
-/* @media only screen and (max-width: 768px) {
-    .slider-items {
-        width: calc(10 * (288px + 20px));
-    }
-    
-    .sliderItem {
-        width: 288px;
-    }    
-} */
-
 .progress {
     position: absolute;
     margin-top: 2px;
@@ -303,7 +298,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 .sliderContainer > .sliderNav > .sliderButton:hover {
-    background-color: red;
+    background-color: var(--sliderRed);
 }
 
 .sliderContainer > .sliderNav {
@@ -333,6 +328,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 .sliderContainer.bigSlider {
     position: relative;
     margin-top: 25px;
+    margin-bottom: 60px;
 }
 
 .slider.bigSlider {
@@ -360,6 +356,16 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     margin-bottom: 20px;
     font-size: 35px;
 }
+
+.sliderItem.bigSlider > .sliderText > h1 a:link, .sliderItem.bigSlider > .sliderText > h1 a:visited{
+    text-decoration: none;
+    color: var(--sliderRed);
+    transition: 0.5s ease;
+}
+
+.sliderItem.bigSlider > .sliderText > h1 a:hover {
+    color: black;
+} 
 
 .sliderItem.bigSlider > .sliderText > p {
     font-size: 18px;

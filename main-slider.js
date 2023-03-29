@@ -6,6 +6,7 @@ let sliderGrabbed = false;
 sliders.forEach((slider) => {
     let touchStartX = 0;
     let touchEndX = 0;
+    let lastSlide = 0;
 
     const progress = slider.parentElement.parentElement.querySelector('.progress');
     const progressCenter = progress.querySelector('.progressCenter');
@@ -17,7 +18,7 @@ sliders.forEach((slider) => {
     }
 
     const progressSlides = progressCenter.querySelectorAll('.progressSlide');
-    // progressSlides[0].classList.toggle('activeS');
+    progressSlides[lastSlide].style.backgroundColor = '#c7363d';
 
 
     slider.parentElement.addEventListener('scroll', (e) => {
@@ -25,6 +26,11 @@ sliders.forEach((slider) => {
         // console.log(slider.parentElement.scrollLeft);
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);
         // console.log(currentSlide(slider.parentElement.scrollLeft))
+        if(lastSlide != currentSlide(slider.parentElement.scrollLeft)){
+            progressSlides[lastSlide].style.backgroundColor = '#CCCCCC';
+            lastSlide = currentSlide(slider.parentElement.scrollLeft);
+            progressSlides[lastSlide].style.backgroundColor = '#c7363d';
+        }
     });
     
     slider.addEventListener('mousedown', (e) => {
