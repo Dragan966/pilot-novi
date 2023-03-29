@@ -1,5 +1,5 @@
 const sliders = document.querySelectorAll('.slider-items');
-// const progressBar = document.querySelector('.prog-bar-inner');
+// const progress = document.querySelectorAll('.progress');
 
 let sliderGrabbed = false;
 
@@ -7,10 +7,24 @@ sliders.forEach((slider) => {
     let touchStartX = 0;
     let touchEndX = 0;
 
+    const progress = slider.parentElement.parentElement.querySelector('.progress');
+    const progressCenter = progress.querySelector('.progressCenter');
+
+    for(let i = 0; i < slider.childElementCount; i++) {
+        const newDiv = document.createElement('div');
+        newDiv.className = 'progressSlide' + ' ' + i;
+        progressCenter.appendChild(newDiv);
+    }
+
+    const progressSlides = progressCenter.querySelectorAll('.progressSlide');
+    // progressSlides[0].classList.toggle('activeS');
+
+
     slider.parentElement.addEventListener('scroll', (e) => {
         // progressBar.style.width  = `${getScrollPercentage()}%`
         // console.log(slider.parentElement.scrollLeft);
-        // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);s
+        // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);
+        // console.log(currentSlide(slider.parentElement.scrollLeft))
     });
     
     slider.addEventListener('mousedown', (e) => {
@@ -110,16 +124,22 @@ sliders.forEach((slider) => {
 
       
     // leftBtn 
-    slider.parentElement.nextElementSibling.childNodes[1].addEventListener('click', () => {
-            slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft - 1)]);
+    const leftBtn = slider.parentElement.nextElementSibling.querySelector('.leftBtn');
+    leftBtn.addEventListener('click', () => {
+        slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft - 1)]);
     });
 
     // rightBtn 
-    slider.parentElement.nextElementSibling.childNodes[3].addEventListener('click', () => {
+    const rightBtn = slider.parentElement.nextElementSibling.querySelector('.rightBtn');
+    rightBtn.addEventListener('click', () => {
         slideAnimation(positions[currentSlide(slider.parentElement.scrollLeft) + 1]);
     });
 
-    
+    progressSlides.forEach((ps) => {
+        ps.addEventListener('click', () => {
+            slideAnimation(positions[ps.className.slice(-1)]);
+        });
+    }); 
 
     slider.addEventListener("touchstart", (event) => {
         if (slider.classList.contains('bigSlider')) {
@@ -142,5 +162,8 @@ sliders.forEach((slider) => {
             }
         }
     });
+
+    
+ 
 });
 

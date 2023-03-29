@@ -252,7 +252,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 /* OVAJ DEO TREBA DA SE JOS MENJA */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .slider-items {
         width: calc(10 * (288px + 20px));
     }
@@ -260,6 +260,46 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     .sliderItem {
         width: 288px;
     }    
+} */
+
+.progress {
+    position: absolute;
+    margin-top: 2px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+.progressOne {
+
+}
+
+.progressCenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* sirina se mora namestit i za telefon i racunar posebno */
+    width: 50%;
+    height: 20px;
+    /* background-color: blue; */
+}
+
+.progressSlide {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    /* border: 3px solid #CCCCCC; */
+    background-color: #CCCCCC;
+    transition-timing-function: linear;
+}
+
+.activeS {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #CCCCCC;
+    background-color: white;
 }
 
 /* ========================================================= */
