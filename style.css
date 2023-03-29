@@ -336,25 +336,22 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 }
 
 .slider.bigSlider {
-    height: 450px;
+    height: 620px;
 }
 
 .slider-items.bigSlider {
-    /* background-color: yellow; */
     width: calc( 5 * 100%);
     justify-content: space-between;
-    transition: all 1s ease-in-out;
 }
 
 .sliderItem.bigSlider {
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .sliderItem.bigSlider > .sliderText {
-    width: 40%;
-    height: inherit;
-    /* background-color: green; */
+    width: 100%;
     padding: 15px;
     padding-top: 20px;
 }
@@ -376,19 +373,83 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 .sliderItem.bigSlider > .sliderPhoto {
     display: flex;
     align-items: center;
-    width: 60%;
+    justify-content: space-around;
+    width: 100%;
 }
 .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
-    width: 95%;
-    height: 400px;
-    box-shadow: 10px 10px #CCCCCC;
-    transition: 0.1s;
+    width: 360px;
     overflow: hidden;
 }
 
 .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace > img {
-    height: 100%;
+    width: 100%;
 }
+
+@media only screen and (min-width: 500px) {
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+        width: 500px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slider-items.bigSlider {
+        width: calc(5 * 768px);
+    }
+    
+    .sliderItem.bigSlider {
+        width: 768px;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+        width: 768px;
+    }
+}
+    
+@media only screen and (min-width: 1024px) {
+    .slider.bigSlider {
+        height: 450px;
+    }
+
+    .slider-items.bigSlider {
+        width: calc(5 * 1024px);
+    }
+    
+    .sliderItem.bigSlider {
+        width: 1024px;
+        flex-direction: row;
+    }
+
+    .sliderItem.bigSlider > .sliderText {
+        width: 40%;
+        height: inherit;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto {
+        width: 60%;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
+        width: 95%;
+        height: 400px;
+        box-shadow: 10px 10px #CCCCCC;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace > img {
+        height: 100%;
+        width: auto;
+    }
+}
+    
+@media only screen and (min-width: 1280px) {
+    .slider-items.bigSlider {
+        width: calc(5 * 1280px);
+    }
+    
+    .sliderItem.bigSlider {
+        width: 1280px;
+    }
+}
+    
 
 /* ================== */
 .sliderContainer.proba {
