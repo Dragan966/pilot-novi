@@ -385,9 +385,9 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     width: 100%;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 480px) {
     .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace {
-        width: 500px;
+        width: 480px;
     }
 }
 
