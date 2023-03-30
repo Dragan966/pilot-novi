@@ -18,7 +18,7 @@ sliders.forEach((slider) => {
     }
 
     const progressSlides = progressCenter.querySelectorAll('.progressSlide');
-    progressSlides[lastSlide].style.backgroundColor = '#c7363d';
+    progressSlides[lastSlide].style.backgroundColor = '#0C71C3';
 
 
     slider.parentElement.addEventListener('scroll', (e) => {
@@ -27,9 +27,9 @@ sliders.forEach((slider) => {
         // console.log(slider.parentElement.scrollWidth / slider.parentElement.clientWidth);
         // console.log(currentSlide(slider.parentElement.scrollLeft))
         if(lastSlide != currentSlide(slider.parentElement.scrollLeft)){
-            progressSlides[lastSlide].style.backgroundColor = '#CCCCCC';
+            progressSlides[lastSlide].style.backgroundColor = 'transparent';
             lastSlide = currentSlide(slider.parentElement.scrollLeft);
-            progressSlides[lastSlide].style.backgroundColor = '#c7363d';
+            progressSlides[lastSlide].style.backgroundColor = '#0C71C3';
         }
     });
     
