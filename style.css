@@ -171,6 +171,10 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         box-shadow: none;
     }
 
+    nav > .container > ul > a:hover{
+        background-color: red;
+    }
+
     nav {
         /* background-color: #c7363d; */
         /* position: sticky; */
@@ -445,6 +449,11 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         width: 95%;
         height: 400px;
         box-shadow: 10px 10px #CCCCCC;
+        transition: all 1s ease-out;
+    }
+
+    .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace:hover {
+        box-shadow: 10px 10px var(--sliderRed);
     }
 
     .sliderItem.bigSlider > .sliderPhoto > .sliderPhotoPlace > img {
