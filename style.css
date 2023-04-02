@@ -97,6 +97,7 @@ nav > .container > ul {
 }
 
 nav > .container > ul > a > li{
+    /* ==================================================================================== ZASTO JE OVDE 21 ? */
     padding: 20px 20px 21px 20px;
     font-size: 21px;
     height: 60px;
@@ -161,6 +162,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     }
 
     nav > .container > ul {
+        /* ========================================================= OVAJ DEO BI TREBAO DA SE MENJA NA STICKY  */
         position: static;
         display: flex;
         justify-content: space-around;
@@ -171,9 +173,21 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         box-shadow: none;
     }
 
-    nav > .container > ul > a:hover{
+    /* nav > .container > ul > a::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        height: calc(100% + 4px);
+        width: 100%;
         background-color: red;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
+
+    nav > .container > ul > a:hover::before {
+        opacity: 1;
+        transform: scaleY(1);
+    } */
 
     nav {
         /* background-color: #c7363d; */
