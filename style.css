@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 :root {
@@ -98,11 +99,12 @@ nav > .container > ul {
 
 nav > .container > ul > a > li{
     /* ==================================================================================== ZASTO JE OVDE 21 ? */
-    padding: 20px 20px 21px 20px;
-    font-size: 21px;
-    height: 60px;
-    text-align: center;
+    /* padding: 20px 20px 21px 20px; */
+    /* font-size: 21px; */
+    /* height: 60px; */
+    /* text-align: center; */
     /* background-color: yellow; */
+    /* font-weight: 500; */
 }
 
 nav > .container > ul > a:link, nav > .container > ul > a:visited{
@@ -162,15 +164,27 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     }
 
     nav > .container > ul {
-        /* ========================================================= OVAJ DEO BI TREBAO DA SE MENJA NA STICKY  */
+        /* ========================================================= OVAJ DEO BI TREBAO DA SE MENJA NA STICKY MOZDAAA */
         position: static;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         /* border-top: 2px solid #CCCCCC; */
         /* border-bottom: 2px solid #CCCCCC; */
         list-style-type: none;
         box-shadow: none;
+    }
+
+    nav > .container > ul > a {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav > .container > ul > a > li{
+        font-size: 21px;
     }
 
     /* nav > .container > ul > a::before {
@@ -394,6 +408,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
 
 .sliderItem.bigSlider > .sliderText > p {
     font-size: 18px;
+    text-align: justify;
 }
 
 .sliderItem.bigSlider > .sliderText > h3 {
@@ -711,6 +726,7 @@ main > .container > h1 {
 
 .statsCircle > .center > p{
     font-size: 15px;
+    text-align: justify;
 }
 
 .statsText {
@@ -726,6 +742,7 @@ main > .container > h1 {
 
 .statsText > p {
     margin-bottom: 30px;
+    text-align: justify;
 }
 
 .statsText > h1 a:link, .statsText > h1 a:visited{
