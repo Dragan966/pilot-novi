@@ -102,22 +102,26 @@ h1 {
     width: 50px;
     height: 50px;
     margin-right: 20px;
+    z-index: 999;
     /* background-color: green; */
 }
 
 
 /* sama navigacija */
 nav > .container > ul {
-    position: absolute;
+    position: fixed;
     list-style-type: none;
     width: 100%;
     height: 101%;
+    top: 0;
     left: -110%;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    z-index: 999;
+    z-index: 998;
+    padding-top: 25%;
+    padding-left: 20px;
 }
 
 nav > .container > ul > a > li{
@@ -196,6 +200,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         /* border-bottom: 2px solid #CCCCCC; */
         list-style-type: none;
         box-shadow: none;
+        height: 65px;
+        padding: 0;
     }
 
     nav > .container > ul > a {
@@ -206,12 +212,38 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         text-align: center;
     }
 
-    nav > .container > ul > a > li{
-        font-size: 17px;
-        font-weight: 400;
+    nav > .container > ul > a:hover {
+        background-color: #c7363d;
     }
 
-    /* nav > .container > ul > a::before {
+    nav > .container > ul > a > li{
+        position: relative;
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+
+    /* ===================================================  */
+    /* nav {
+        position: relative;
+    }
+
+    nav > .container::before {
+        content: '';
+        top: -2px;
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 4px);
+        background-color: rgba(0, 0, 0, 0.411);
+        opacity: 0;
+    }
+
+    nav > .container:hover::before {
+        opacity: 1;
+        transform: scaleY(1);
+    } */
+
+    /* nav > .container > ul > a > li::before {
         content: '';
         position: absolute;
         top: -2px;
@@ -222,7 +254,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
     }
 
-    nav > .container > ul > a:hover::before {
+    nav > .container > ul > a > li:hover::before {
         opacity: 1;
         transform: scaleY(1);
     } */
