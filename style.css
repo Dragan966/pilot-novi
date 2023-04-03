@@ -2,17 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
 }
 
+
+
+/* -------------------------- PODESAVANJA OKO FONTOVA ---------------------------  */
+* {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+}
+
+h1 {
+    font-weight: 700;
+    font-style: italic;
+}
+
+.noItalic {
+    font-style: normal;
+}
+
+
+
+/* ---------------------------------- BOJE --------------------------------------  */
 :root {
     /* --background-color: #FFFFFF; */
     --sliderRed: #c7363d;
     --navigationSilver: #CCCCCC;
     --simpleCardsBlue: #0C71C3;
 }
-  
+ 
 
+
+/* ---------------------------- OSNOVE RESPONSIVE --------------------------------  */
 .container {
     width: 100%;
     margin: 0 auto;
@@ -36,7 +56,10 @@
     }
 }
 
-/* ------------------------------------------ HEADER ------------------------------------------ */
+
+
+
+/* ===================================== HEADER ====================================== */
 
 /* ------------- NAVIGACIJA ----------------- */
 
@@ -150,7 +173,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     .vl {
         display: inline;
         margin: 0 5px;
-        border-left: 2px solid green;
+        border-left: 2px solid var(--simpleCardsBlue);
         height: 10px;
     }
     
@@ -160,7 +183,7 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         width: 380px;
         height: 38px;
         border-radius: 40px;
-        background-color: #CCCCCC;
+        background-color: var(--navigationSilver);
     }
 
     nav > .container > ul {
@@ -184,7 +207,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     }
 
     nav > .container > ul > a > li{
-        font-size: 21px;
+        font-size: 17px;
+        font-weight: 400;
     }
 
     /* nav > .container > ul > a::before {
@@ -206,14 +230,19 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     nav {
         /* background-color: #c7363d; */
         /* position: sticky; */
-        border-top: 2px solid #CCCCCC;
-        border-bottom: 2px solid #CCCCCC;
+        border-top: 2px solid var(--navigationSilver);
+        border-bottom: 2px solid var(--navigationSilver);
     }
 }
 
+@media only screen and (min-width: 1280px) {
 
+    nav > .container > ul > a > li{
+        font-size: 21px;
+        font-weight: 400;
+    }
 
-
+}
 /* ------------------------------------------ MAIN ---------------------------------------------- */
 
 
