@@ -19,3 +19,15 @@ function mobileMenu() {
     }
     
 }
+
+
+const expand = document.querySelectorAll('nav > .container > ul > a:has(.expand)');
+
+expand.forEach(exp => {
+    const subMenu = exp.nextElementSibling;
+    let isExpanded = false;
+
+    exp.addEventListener('click', () => {
+        subMenu.classList.toggle('shown');
+    });
+});
