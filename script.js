@@ -21,13 +21,23 @@ function mobileMenu() {
 }
 
 
-const expand = document.querySelectorAll('nav > .container > ul > a:has(.expand)');
 
-expand.forEach(exp => {
-    const subMenu = exp.nextElementSibling;
-    let isExpanded = false;
+window.addEventListener('resize', function() {
+    let windowWidth = window.innerWidth;
+    
+    if (windowWidth < 1024) {
+        console.log('manje od 1024 - radi .expand promena');
 
-    exp.addEventListener('click', () => {
-        subMenu.classList.toggle('shown');
-    });
+        const expand = document.querySelectorAll('nav > .container > ul > a:has(.expand)');
+    
+        expand.forEach(exp => {
+            const subMenu = exp.nextElementSibling;
+            let isExpanded = false;
+    
+            exp.addEventListener('click', () => {
+                subMenu.classList.toggle('shown');
+            });
+        });
+    }
 });
+  
