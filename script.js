@@ -38,6 +38,8 @@ window.addEventListener('resize', function() {
                 subMenu.classList.toggle('shown');
             });
         });
-    }
+    } //else if (windowWidth >= 1024) {
+        //const nav = this.document.querySelectorAll()
+    //}
 });
   

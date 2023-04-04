@@ -237,6 +237,11 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         background-color: var(--navigationSilver);
     }
 
+    nav {
+        border-top: 2px solid var(--navigationSilver);
+        border-bottom: 2px solid var(--navigationSilver);
+    }
+
     nav > .container > ul {
         position: static;
         display: flex;
@@ -269,9 +274,59 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         color: black;
     }
 
+    .subMenu {
+        display: none;
+        position: absolute;
+        top: 200px;
+        width: 1024px;
+        height: 450px;
+        background-color: aqua;
+        z-index: 999;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
+        padding-top: 20px;
+        align-content: flex-start;
+    }
+
+    nav > .container > ul > a:has(.expand):hover + .subMenu {
+        display: flex;
+        opacity: 1;
+        /* align-content: flex-start; */
+    }
+
+    @media only screen and (min-width: 1280px) {
+        nav > .container > ul > a:hover + .subMenu {
+            width: 1280px;
+        }
+    }
+
+    .subMenu > h3 {
+        flex-basis: 50%;
+        margin-bottom: 15px;
+    }
+
+    .subMenu:has(h3)  > ul {
+        display: none;
+    }
+
+    .subMenu:not(:has(h3)) > ul {
+        font-weight: 700;
+        font-size: 19px;
+    }
+
+    .subMenu > h3:hover + .subMenu > ul {
+        display: block;
+    }
+
     .expand {
         display: none;
     }
+
+
+
+
     /* ===================================================  */
     /* nav {
         position: relative;
@@ -307,15 +362,6 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         opacity: 1;
         transform: scaleY(1);
     } */
-
-    nav {
-        border-top: 2px solid var(--navigationSilver);
-        border-bottom: 2px solid var(--navigationSilver);
-    }
-
-    .subMenu {
-        display: none;
-    }
 }
 
 @media only screen and (min-width: 1280px) {
