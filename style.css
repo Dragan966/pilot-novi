@@ -110,6 +110,7 @@ h1 {
 /* sama navigacija */
 nav > .container > ul {
     position: fixed;
+    /* overflow: scroll; */
     list-style-type: none;
     width: 100%;
     height: 101%;
@@ -170,8 +171,8 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
     
     .socialAndLang > .lang > span {
         font-size: 12px;
-        font-weight: bold;
-        color: #0C71C3;
+        font-weight: 700;
+        color: var(--simpleCardsBlue);
     }
     
     .vl {
@@ -264,6 +265,10 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         /* position: sticky; */
         border-top: 2px solid var(--navigationSilver);
         border-bottom: 2px solid var(--navigationSilver);
+    }
+
+    .subMenu {
+        display: none;
     }
 }
 
