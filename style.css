@@ -290,16 +290,15 @@ nav > .container > ul > a:link, nav > .container > ul > a:visited{
         align-content: flex-start;
     }
 
-    nav > .container > ul > a:has(.expand):hover + .subMenu {
-        display: flex;
-        opacity: 1;
-        /* align-content: flex-start; */
-    }
-
     @media only screen and (min-width: 1280px) {
         nav > .container > ul > a:hover + .subMenu {
             width: 1280px;
         }
+    }
+
+    nav > .container > ul > a:has(.expand):hover + .subMenu {
+        display: flex;
+        opacity: 1;
     }
 
     .subMenu > h3 {
