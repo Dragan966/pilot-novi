@@ -282,3 +282,66 @@ nav > .container > ul > li ul li{
     overflow: visible;
     opacity: 1;
 }
+
+@media only screen and (min-width: 1024px) {
+    nav {
+        border-top: 2px solid var(--navigationSilver);
+        border-bottom: 2px solid var(--navigationSilver);
+    }
+
+    nav > .container > ul {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: none;
+        height: 70px;
+        padding: 0;
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    nav > .container > ul > li:has(> .subMenu) h2::after {
+        content: '';
+        display: none;
+        margin: 0;
+    }
+
+    nav > .container > ul > li h2,
+    nav > .container > ul > li > h2 > a {
+        font-size: 17px;
+        font-weight: 500;
+        color: black !important;
+    }
+
+    nav > .container > ul > li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        width: auto;
+        height: 100%;
+        margin: 0 10px;
+    }
+
+    nav > .container > ul > li .expand,
+    nav > .container > ul > li h3 {
+        display: none;
+    }
+
+    nav > .container > ul > li:hover {
+        background-color: #c7363d;
+        border-bottom:1px solid #0C71C3;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+
+    nav > .container > ul > li h2,
+    nav > .container > ul > li > h2 > a {
+        font-size: 21px;
+        font-weight: 400;
+    }
+
+}
