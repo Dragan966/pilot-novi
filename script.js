@@ -2,9 +2,23 @@ const hamburgerIconDIV = document.querySelector('.hamburgerIcon');
 const hamburgerIcon = document.querySelector('.hamburgerIcon > img');
 const navigation = document.querySelector('nav > .container > ul');
 const body = document.querySelector('body');
-const subMenu = document.querySelectorAll('.expand');
+const allExpandElements = document.querySelectorAll('.expand');
 
+// glavna funkcionalnost hamburger menija 
 hamburgerIcon.addEventListener('click', mobileMenu);
+
+// prikazivanje/sakrivanje dropDown menija na telefonu
+if (window.innerWidth < 1024) {
+    allExpandElements.forEach(expEl => {
+        const expandBtn = expEl.previousElementSibling;
+        expandBtn.addEventListener('click', () => {
+            expEl.classList.toggle('shown');
+        });
+    });
+} 
+
+
+
 
 function mobileMenu() {
     if(navigation.style.left !== '0%') {
@@ -13,8 +27,8 @@ function mobileMenu() {
         navigation.style.overflow = 'scroll';
         body.style.overflow = 'hidden';
 
-        subMenu.forEach(sub => {
-            sub.classList.remove('shown');
+        allExpandElements.forEach(expEl => {
+            expEl.classList.remove('shown');
         });
     } else {
         navigation.style.left = '-110%';
@@ -24,18 +38,3 @@ function mobileMenu() {
     }
     
 }
-
-
-  
-if (window.innerWidth < 1024) {
-    // OVDE JE PROBLEM -> JER REAGUJE I NA KONTAKT I SL (sve sto nema dropmenu) 
-    const expandBtn = document.querySelectorAll('h2, h3');
-    console.log(expandBtn);
-
-    expandBtn.forEach(exp => {
-        exp.addEventListener('click', () => {
-            exp.nextElementSibling.classList.toggle('shown');
-        });
-    });
-} 
-  
