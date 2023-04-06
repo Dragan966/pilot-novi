@@ -16,6 +16,11 @@ h1 {
     font-style: italic;
 }
 
+h2 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
 .noItalic {
     font-style: normal;
 }
@@ -76,7 +81,7 @@ h1 {
     width: 60%;
 }
 
-.logo > img{
+.logo img{
     width: 100%;
 }
 
@@ -84,11 +89,11 @@ h1 {
     margin-right: 5%;
 }
 
-.rightCorn > .socialAndLang {
+.rightCorn .socialAndLang {
     display: none;
 }
 
-.rightCorn > .searchbox {
+.rightCorn .searchbox {
     display: none;
 }
 
@@ -100,8 +105,18 @@ h1 {
     z-index: 999;
 }
 
-.hamburgerIcon > img {
+.hamburgerIcon img {
     width: 100%;
+}
+
+/* za search icon  */
+.searchbox > .material-symbols-outlined {
+    font-size: 30px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }
 
 @media only screen and (min-width: 450px) {
@@ -122,7 +137,7 @@ h1 {
         height: 96px;
     }
     
-    .logo > img{
+    .logo img{
         width: 318px;
         height: 96px;
     }
@@ -140,18 +155,18 @@ h1 {
         display: none;
     }
 
-    .rightCorn > .socialAndLang {
+    .rightCorn .socialAndLang {
         display: block;
         width: 360px;
         display: flex;
         justify-content: space-between;
     }
     
-    .socialAndLang > .social > img {
+    .socialAndLang > .social img {
         height: 30px;
     }
     
-    .socialAndLang > .lang > span {
+    .socialAndLang > .lang span {
         font-size: 12px;
         font-weight: 700;
         color: var(--simpleCardsBlue);
@@ -165,12 +180,101 @@ h1 {
     }
     
     .rightCorn > .searchbox{
-        display: block;
+        display: flex;
+        padding: 3px;
         margin-top: 10px;
         width: 380px;
         height: 38px;
         border-radius: 40px;
         background-color: var(--navigationSilver);
     }
+}
 
+
+        /* GLAVNI DEO NAVIGACIJE*/
+nav > .container > ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* overflow: scroll; */
+    list-style-type: none;
+    width: 100%;
+    height: 101%;
+    top: 0;
+    left: -110%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 998;
+    padding-top: 25%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20%;
+}
+
+nav > .container > ul a,
+nav > .container > ul a:link,
+nav > .container > ul a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav > .container > ul > li {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+nav > .container > ul > li h2 {
+    color: var(--sliderRed);
+}
+
+nav > .container > ul > li > h2 > a {
+    color: var(--sliderRed) !important;
+}
+
+nav > .container > ul > li:has(> .subMenu) h2{
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+}
+
+/* expand icon */
+h2 > .material-symbols-outlined {
+    font-size: 1.5em;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+nav > .container > ul > li:has(> .subMenu) h2::after {
+    content: url('SLIKE/expand_more_FILL0_wght400_GRAD0_opsz48.svg');
+    display: inline-block;
+    margin-left: 5px;
+}
+
+nav > .container > ul > li ul {
+    list-style-type: none;
+    padding-left: 10px;
+    width: 80%;
+}
+
+nav > .container > ul > li ul li{
+    font-size: 1.1em;
+    margin: 5px 0px;
+}
+
+.expand {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.expand.shown {
+    height: auto;
+    overflow: visible;
+    opacity: 1;
 }
