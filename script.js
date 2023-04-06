@@ -28,10 +28,11 @@ function mobileMenu() {
 
   
 if (window.innerWidth < 1024) {
-    const expand = document.querySelectorAll('h2, h3');
-    console.log(expand);
+    // OVDE JE PROBLEM -> JER REAGUJE I NA KONTAKT I SL (sve sto nema dropmenu) 
+    const expandBtn = document.querySelectorAll('h2, h3');
+    console.log(expandBtn);
 
-    expand.forEach(exp => {
+    expandBtn.forEach(exp => {
         exp.addEventListener('click', () => {
             exp.nextElementSibling.classList.toggle('shown');
         });
