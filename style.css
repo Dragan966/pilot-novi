@@ -31,6 +31,7 @@ h2 {
 :root {
     /* --background-color: #FFFFFF; */
     --sliderRed: #c7363d;
+    --navigationRed: rgba(199, 54, 61, 0.1);
     --navigationSilver: #CCCCCC;
     --simpleCardsBlue: #0C71C3;
 }
@@ -300,6 +301,9 @@ nav > .container > ul > li ul li{
         padding: 0;
         -webkit-transition: none;
         transition: none;
+        overflow: visible;
+        /* top: 0;
+        left: 0; */
     }
 
     nav > .container > ul > li:has(> .subMenu) h2::after {
@@ -316,6 +320,7 @@ nav > .container > ul > li ul li{
     }
 
     nav > .container > ul > li {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -325,15 +330,28 @@ nav > .container > ul > li ul li{
         margin: 0 10px;
     }
 
+    nav > .container > ul > li:hover::before{
+        content: '';
+        position: absolute;
+        top: -1.5px;
+        width: 100%;
+        height: 100%;
+        background-color: var(--navigationRed);
+        border-top: 2px solid var(--sliderRed);
+        border-bottom: 2px solid var(--sliderRed);
+        z-index: 1;
+    }
+
+    nav > .container > ul > li h2,
+    nav > .container > ul > li a {
+        z-index: 2;
+    }
+
     nav > .container > ul > li .expand,
     nav > .container > ul > li h3 {
         display: none;
     }
 
-    nav > .container > ul > li:hover {
-        background-color: #c7363d;
-        border-bottom:1px solid #0C71C3;
-    }
 }
 
 @media only screen and (min-width: 1280px) {
