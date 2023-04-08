@@ -277,7 +277,7 @@ nav > .container > ul > li ul li{
     overflow: hidden;
     transition: all 0.5s ease;
 }
-
+    
 .expand.shown {
     height: auto;
     overflow: visible;
@@ -350,6 +350,32 @@ nav > .container > ul > li ul li{
     nav > .container > ul > li .expand,
     nav > .container > ul > li h3 {
         display: none;
+    }
+
+    /* .subMenu {
+        display: none;
+        position: absolute;
+        top: 200px;
+        width: 1024px;
+        height: 450px;
+        background-color: aqua;
+        z-index: 999;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
+        padding-top: 20px;
+        align-content: flex-start;
+    } */
+
+    nav > .container > ul > li:hover .expand{
+        display: flex;
+        position: fixed;
+        width: 1024px;
+        height: auto;
+        background-color: aqua;
+        overflow: visible;
+        opacity: 1;
     }
 
 }
