@@ -353,6 +353,7 @@ nav > .container > ul > li ul li{
 
     nav > .container > ul > li:hover {
         background: linear-gradient(0deg, rgba(199,54,61,0.4) 0%, transparent 10%);
+        border-radius: 2px;
     }
 
     nav > .container > ul > li:hover h2,
@@ -457,6 +458,11 @@ nav > .container > ul > li ul li{
         opacity: 1;
         overflow: visible;
     } */
+
+    .subMenu > h3:hover + ul.expand{
+        background-color: green;
+        opacity: 1;
+    }
 }
 
 @media only screen and (min-width: 1280px) {
