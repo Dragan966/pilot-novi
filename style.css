@@ -193,6 +193,8 @@ h2 {
 
 
         /* GLAVNI DEO NAVIGACIJE*/
+
+
 nav > .container > ul {
     position: fixed;
     display: flex;
@@ -288,22 +290,29 @@ nav > .container > ul > li ul li{
     nav {
         border-top: 2px solid var(--navigationSilver);
         border-bottom: 2px solid var(--navigationSilver);
+        height: 72px;
+    }
+
+    nav > .container {
+        position: relative;
     }
 
     nav > .container > ul {
-        position: static;
+        position: absolute;
+        top: -1.5px;
+        left: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         box-shadow: none;
-        height: 70px;
+        height: 72px;
         padding: 0;
         -webkit-transition: none;
         transition: none;
         overflow: visible;
-        /* top: 0;
-        left: 0; */
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
     }
 
     nav > .container > ul > li:has(> .subMenu) h2::after {
@@ -320,7 +329,7 @@ nav > .container > ul > li ul li{
     }
 
     nav > .container > ul > li {
-        position: relative;
+        position: static;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -330,7 +339,7 @@ nav > .container > ul > li ul li{
         margin: 0 10px;
     }
 
-    nav > .container > ul > li:hover::before{
+    /* nav > .container > ul > li:hover::before{
         content: '';
         position: absolute;
         top: -1.5px;
@@ -340,6 +349,15 @@ nav > .container > ul > li ul li{
         border-top: 2px solid var(--sliderRed);
         border-bottom: 2px solid var(--sliderRed);
         z-index: 1;
+    } */
+
+    nav > .container > ul > li:hover {
+        background: linear-gradient(0deg, rgba(199,54,61,0.4) 0%, transparent 10%);
+    }
+
+    nav > .container > ul > li:hover h2,
+    nav > .container > ul > li:hover > h2 > a {
+        color: var(--sliderRed)!important;
     }
 
     nav > .container > ul > li h2,
@@ -347,8 +365,7 @@ nav > .container > ul > li ul li{
         z-index: 2;
     }
 
-    nav > .container > ul > li .expand,
-    nav > .container > ul > li h3 {
+    nav > .container > ul > li .expand {
         display: none;
     }
 
@@ -368,16 +385,78 @@ nav > .container > ul > li ul li{
         align-content: flex-start;
     } */
 
-    nav > .container > ul > li:hover .expand{
+    /* nav > .container > ul > li:hover .expand{
         display: flex;
-        position: fixed;
-        width: 1024px;
-        height: auto;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        height: 300px;
         background-color: aqua;
         overflow: visible;
         opacity: 1;
+    } */
+
+    nav > .container > ul > li:hover .subMenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        background-color: white;
+        border-top: 2px solid var(--sliderRed);
+        overflow: visible;
+        opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        padding: 20px;
     }
 
+    nav > .container > ul > li:hover h3{
+        background-color: yellow;
+        display: flex;
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+    /* nav > .container > ul > h3:hover + ul.expand{
+        display: flex;
+        position: absolute;
+        background-color: black;
+    } */
+
+    nav > .container > ul > li:hover ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        right: 20px;
+        width: 50%;
+        height: 95%;
+        background-color: burlywood;
+    }
+
+    /* nav > .container > ul > li:hover .expand:not(.subMenu.expand){
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        height: 100%;
+        background-color: green;
+    } */
+
+    /* nav > .container > ul > li:hover .expand:not(.subMenu.expand){
+        display: flex;
+        flex-direction: column;
+        background-color: aquamarine;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100px;
+        position: absolute;
+        opacity: 1;
+        overflow: visible;
+    } */
 }
 
 @media only screen and (min-width: 1280px) {
@@ -388,4 +467,10 @@ nav > .container > ul > li ul li{
         font-weight: 400;
     }
 
+}
+
+
+main > .container {
+    background-color: gray;
+    min-height: 1000px;
 }
