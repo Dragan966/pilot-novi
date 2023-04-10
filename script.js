@@ -8,14 +8,14 @@ const allExpandElements = document.querySelectorAll('.expand');
 hamburgerIcon.addEventListener('click', mobileMenu);
 
 // prikazivanje/sakrivanje dropDown menija na telefonu
-if (window.innerWidth < 1024) {
-    allExpandElements.forEach(expEl => {
-        const expandBtn = expEl.previousElementSibling;
-        expandBtn.addEventListener('click', () => {
-            expEl.classList.toggle('shown');
-        });
-    });
-} 
+// if (window.innerWidth < 1024) {
+//     allExpandElements.forEach(expEl => {
+//         const expandBtn = expEl.previousElementSibling;
+//         expandBtn.addEventListener('click', () => {
+//             expEl.classList.toggle('shown');
+//         });
+//     });
+// } 
 
 
 
