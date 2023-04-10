@@ -214,11 +214,15 @@ nav > .container a:visited {
 
 @media only screen and (min-width: 1024px) {
     
-
     nav {
-        border-top: 2px solid var(--navigationSilver);
-        border-bottom: 2px solid var(--navigationSilver);
+        /* border-top: 2px solid var(--navigationSilver);
+        border-bottom: 2px solid var(--navigationSilver); */
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(90deg, transparent 0%, black 5%, black 95%, transparent 100%);
+        border-image-slice: 1;
         height: 72px;
+        margin-bottom: 10px;
     }
 
     nav > .container {
@@ -256,15 +260,15 @@ nav > .container a:visited {
 
     nav > .container > ul > li h2 {
         font-size: 15px;
-        font-weight: 500;
+        font-weight: 600;
         color: black;
     }
 
     nav > .container > ul > li:hover {
-        /* border-top: 2px solid transparent; */
-        /* border-bottom: 2px solid var(--sliderRed); */
-        background: linear-gradient(0deg, rgba(199,54,61,0.4) 0%, transparent 10%);
-        border-radius: 2px;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid black;
+        /* background: linear-gradient(0deg, rgba(199,54,61,0.4) 0%, transparent 10%); */
+        /* border-radius: 2px; */
     }
 
     nav > .container > ul > li:hover h2,
@@ -284,7 +288,7 @@ nav > .container a:visited {
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-around;
-        border-top: 2px solid var(--sliderRed);
+        border-top: 2px solid black;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
@@ -664,11 +668,21 @@ nav > .container > ul > li ul li{
     nav > .container > ul > li h2,
     nav > .container > ul > li > h2 > a {
         font-size: 18px;
-        font-weight: 400;
+        font-weight: 600;
     }
 
+    
 }
 
+@media only screen and (min-width: 1500px) {
+    nav {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
+        border-image-slice: 1;
+        height: 72px;
+    }
+}
 
 main > .container {
     background-color: gray;
