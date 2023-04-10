@@ -195,18 +195,25 @@ p {
 
 
         /* GLAVNI DEO NAVIGACIJE*/
+nav > .container ul {
+    list-style-type: none;
+}
+    
+nav > .container a,
+nav > .container a:link,
+nav > .container a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 1023px) {
+    
+
+
+}
 
 @media only screen and (min-width: 1024px) {
-    nav > .container ul {
-        list-style-type: none;
-    }
-
-    nav > .container a,
-    nav > .container a:link,
-    nav > .container a:visited {
-        text-decoration: none;
-        color: black;
-    }
+    
 
     nav {
         border-top: 2px solid var(--navigationSilver);
