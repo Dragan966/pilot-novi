@@ -220,7 +220,7 @@ p {
 
     nav > .container > ul {
         position: absolute;
-        top: -1.5px;
+        top: -2px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -267,7 +267,7 @@ p {
 
     nav > .container > ul > li:hover > ul {
         position: absolute;
-        top: 68.5px;
+        top: 68px;
         left: 0;
         width: 100%;
         height: 400px;
