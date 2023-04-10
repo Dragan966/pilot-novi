@@ -248,7 +248,7 @@ p {
     }
 
     nav > .container > ul > li h2 {
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 500;
         color: black;
     }
@@ -340,10 +340,11 @@ p {
 
     nav > .container > ul > li > h2 {
         margin: 0 20px;
+        text-align: center;
     }
 
     nav h3 {
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
         color: var(--sliderRed);
         font-style: italic;
@@ -655,7 +656,7 @@ nav > .container > ul > li ul li{
 
     nav > .container > ul > li h2,
     nav > .container > ul > li > h2 > a {
-        font-size: 21px;
+        font-size: 18px;
         font-weight: 400;
     }
 
