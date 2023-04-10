@@ -165,14 +165,42 @@ p {
         justify-content: space-between;
     }
     
-    .socialAndLang > .social img {
+    .socialAndLang > .social {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .socialAndLang > .social > a,
+    .socialAndLang > .social > a:visited,
+    .socialAndLang > .social > a:link {
+        text-decoration: none;
+    }
+
+    .socialAndLang > .social > a {
+        display: block;
         height: 30px;
+        width: 30px;
+        background-color: white;
+        margin: 0px 2px;
+    }
+
+    .socialAndLang > .social img {
+        height: 100%;
     }
     
+    .socialAndLang > .social img:hover {
+        opacity: 0.3;
+    }
+
     .socialAndLang > .lang span {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 700;
         color: var(--simpleCardsBlue);
+    }
+
+    .socialAndLang > .lang span:hover {
+        color: black;
     }
     
     .vl {
