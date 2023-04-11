@@ -256,6 +256,40 @@ nav > .container a:visited {
         padding-bottom: 20%;
     }
 
+    nav > .container > ul > li {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    nav > .container > ul > li > h2 {
+        display: none;
+    }
+
+    nav .container ul li li{
+        display: none;
+    }
+    
+    .expand {
+        height: auto;
+        overflow: visible;
+        opacity: 1;
+    }
+
+    nav h3 {
+        margin-bottom: 10px;
+        color: var(--sliderRed);
+        width: 90%;
+    }
+
+    nav > .container > ul > li > ul:has(> li) h3::after {
+        content: '';
+        height: 16px;
+        width: 36px;
+        background-image: url(SLIKE/expand_more_FILL0_wght400_GRAD0_opsz48.svg);
+        display: inline-block;
+        background-position: center;
+        margin-left: 10px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
