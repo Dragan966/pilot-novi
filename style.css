@@ -139,6 +139,16 @@ p {
         width: 318px;
         height: 96px;
     }
+
+    .logo a {
+        display: block;
+        width: 318px;
+        height: 96px;
+    }
+
+    .logo a:hover {
+        opacity: 0.3;
+    }
     
     .logo img{
         width: 318px;
@@ -256,6 +266,10 @@ nav > .container a:visited {
         padding-bottom: 20%;
     }
 
+    nav li {
+        margin-bottom: 10px;
+    }
+
     nav > .container > ul > li {
         width: 90%;
         margin-bottom: 20px;
@@ -279,6 +293,10 @@ nav > .container a:visited {
         margin-bottom: 10px;
         color: var(--sliderRed);
         width: 90%;
+    }
+
+    nav h3 a {
+        color: var(--sliderRed)!important;
     }
 
     nav > .container > ul > li > ul:has(> li) h3::after {
@@ -388,19 +406,27 @@ nav > .container a:visited {
     }
 
     nav > .container > ul > li > ul > li:hover {
-        border-top: 2px solid transparent;
-        border-bottom: 2px solid var(--sliderRed);
+        background-color: #cccccc3b;
+        border-radius: 8px;
+        color: var(--sliderRed);
+        text-decoration: underline;
+        text-decoration-color: var(--sliderRed);
+        /* color: var(--sliderRed); */
+        /* border-top: 2px solid transparent;
+        border-bottom: 2px solid var(--sliderRed); */
     }
 
     nav h4 {
         /* background-color: blue; */
         width: 50%;
+        padding: 10px 0px;
     }
 
     nav > .container > ul > li > ul > li > ul {
         height: 0;
         width: 0;
         opacity: 0;
+        display: none;
     }
 
     nav > .container > ul > li > ul > li:hover > ul {
@@ -418,15 +444,20 @@ nav > .container a:visited {
     }
 
     nav > .container > ul > li > ul > li > ul > li {
-        /* background-color: blueviolet; */
+        /* background-color: blueviolet;
         border-top: 2px solid transparent;
-        border-bottom: 2px solid transparent;
+        border-bottom: 2px solid transparent; */
+        padding: 2px 0px;
     }
 
     nav > .container > ul > li > ul > li > ul > li:hover {
         /* background-color: blueviolet; */
-        border-top: 2px solid transparent;
-        border-bottom: 2px solid var(--sliderRed);
+        /* border-top: 2px solid transparent;
+        border-bottom: 2px solid var(--sliderRed); */
+        background-color: #cccccc3b;
+        border-radius: 8px;
+        text-decoration: underline;
+        text-decoration-color: var(--sliderRed);
     }
 
     nav > .container > ul > li > h2 {
@@ -468,7 +499,19 @@ nav > .container a:visited {
         right: 34.2%;
     }
 
+    .desc.fullSizeDrop::after{
+        content: "";
+        display: none;
+    } 
 
+    .noAfter::after {
+        content: "";
+        display: none;
+    }
+
+    .desc.fullSizeDrop {
+        width: 100%;
+    }
 }
 
 /* 
