@@ -2,7 +2,7 @@ const hamburgerIconDIV = document.querySelector('.hamburgerIcon');
 const hamburgerIcon = document.querySelector('.hamburgerIcon > img');
 const navigation = document.querySelector('nav > .container > ul');
 const body = document.querySelector('body');
-const h3 = document.querySelectorAll('nav > .container > ul > li > ul:has(> li) h3');
+const h3 = document.querySelectorAll('nav h3');
 const h4 = document.querySelectorAll('nav h4');
 
 // glavna funkcionalnost hamburger menija 
