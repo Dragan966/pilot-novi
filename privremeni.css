@@ -594,26 +594,3 @@ main > .container > h1 {
     }
 }
 
-/* ======================= linksOrg ===================================  */
-
-
-.linksOrg {
-    display: flex;
-    width: 100%;
-    height: 500px;
-    /* background-color: green; */
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.linksOrg > .bigOne {
-    width: 70%;
-    height: 100%;
-    background-color: red;
-}
-
-.linksOrg > .smallOne {
-    width: 30%;
-    height: 100%;
-    background-color: green;
-}

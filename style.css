@@ -596,278 +596,6 @@ nav > .container a:visited {
     }
 }
 
-/* 
-        left: 29.1%;
-nav > .container > ul {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    width: 100%;
-    height: 101%;
-    top: 0;
-    left: -110%;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    z-index: 998;
-    padding-top: 25%;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20%;
-}
-
-nav > .container > ul a,
-nav > .container > ul a:link,
-nav > .container > ul a:visited {
-    text-decoration: none;
-    color: black;
-}
-
-nav > .container > ul > li {
-    width: 80%;
-    margin-bottom: 20px;
-}
-
-nav > .container > ul > li h2 {
-    color: var(--sliderRed);
-}
-
-nav > .container > ul > li h3 {
-    margin-bottom: 10px;
-}
-
-nav > .container > ul > li > h2 > a {
-    color: var(--sliderRed) !important;
-}
-
-nav > .container > ul > li:has(> .subMenu) h2{
-    display: flex;
-    align-items: center;
-}
-
-h2 > .material-symbols-outlined {
-    font-size: 1.5em;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-
-nav > .container > ul > li:has(> .subMenu) h2::after {
-    content: url('SLIKE/expand_more_FILL0_wght400_GRAD0_opsz48.svg');
-    display: inline-block;
-    margin-left: 5px;
-}
-
-nav > .container > ul > li ul {
-    list-style-type: none;
-    padding-left: 10px;
-    width: 80%;
-}
-
-nav > .container > ul > li ul li{
-    font-size: 1.1em;
-    margin: 5px 0px;
-}
-
-.expand {
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all 0.5s ease;
-}
-    
-.expand.shown {
-    height: auto;
-    overflow: visible;
-    opacity: 1;
-}
-
-@media only screen and (min-width: 1024px) {
-    nav {
-        border-top: 2px solid var(--navigationSilver);
-        border-bottom: 2px solid var(--navigationSilver);
-        height: 72px;
-    }
-
-    nav > .container {
-        position: relative;
-    }
-
-    nav > .container > ul {
-        position: absolute;
-        top: -1.5px;
-        left: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: none;
-        height: 72px;
-        padding: 0;
-        -webkit-transition: none;
-        transition: none;
-        overflow: visible;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
-    }
-
-    nav > .container > ul > li:has(> .subMenu) h2::after {
-        content: '';
-        display: none;
-        margin: 0;
-    }
-
-    nav > .container > ul > li h2,
-    nav > .container > ul > li > h2 > a {
-        font-size: 17px;
-        font-weight: 500;
-        color: black !important;
-    }
-
-    nav > .container > ul > li {
-        position: static;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        width: auto;
-        height: 100%;
-        margin: 0 10px;
-    } */
-
-    /* nav > .container > ul > li:hover::before{
-        content: '';
-        position: absolute;
-        top: -1.5px;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(0deg, rgba(199,54,61,0.1) 0%, transparent 20%, transparent 80%, rgba(199,54,61,0.1) 100%);
-        border-top: 2px solid var(--sliderRed);
-        border-bottom: 2px solid var(--sliderRed);
-        z-index: 1;
-    } */
-
-    /* nav > .container > ul > li:hover {
-        background: linear-gradient(0deg, rgba(199,54,61,0.4) 0%, transparent 10%);
-        border-radius: 2px;
-    }
-
-    nav > .container > ul > li:hover h2,
-    nav > .container > ul > li:hover > h2 > a {
-        color: var(--sliderRed)!important;
-    }
-
-    nav > .container > ul > li h2,
-    nav > .container > ul > li a {
-        z-index: 2;
-    }
-
-    nav > .container > ul > li .expand {
-        display: none;
-    } */
-
-    /* .subMenu {
-        display: none;
-        position: absolute;
-        top: 200px;
-        width: 1024px;
-        height: 450px;
-        background-color: aqua;
-        z-index: 999;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        overflow: visible;
-        padding-top: 20px;
-        align-content: flex-start;
-    } */
-
-    /* nav > .container > ul > li:hover .expand{
-        display: flex;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        background-color: aqua;
-        overflow: visible;
-        opacity: 1;
-    } */
-
-    /* nav > .container > ul > li:hover .subMenu{
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 68px;
-        left: 0;
-        width: 100%;
-        height: 500px;
-        background-color: white;
-        border-top: 2px solid var(--sliderRed);
-        overflow: visible;
-        opacity: 1;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        padding: 20px;
-    } */
-
-    /* nav > .container > ul > li:hover h3{
-        background-color: yellow;
-        display: flex;
-        width: 40%;
-        margin-bottom: 30px;
-    } */
-
-    /* nav > .container > ul > h3:hover + ul.expand{
-        display: flex;
-        position: absolute;
-        background-color: black;
-    } */
-
-    /* nav > .container > ul > li:hover ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        position: absolute;
-        right: 20px;
-        width: 50%;
-        height: 95%;
-        background-color: burlywood;
-    } */
-
-    /* nav > .container > ul > li:hover .expand:not(.subMenu.expand){
-        display: flex;
-        justify-content: flex-start;
-        width: 50%;
-        height: 100%;
-        background-color: green;
-    } */
-
-    /* nav > .container > ul > li:hover .expand:not(.subMenu.expand){
-        display: flex;
-        flex-direction: column;
-        background-color: aquamarine;
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 100px;
-        position: absolute;
-        opacity: 1;
-        overflow: visible;
-    } */
-
-    /* .subMenu > h3:hover + ul.expand{
-        background-color: green;
-        opacity: 1;
-    } */
-
-
-
-/* } */
-
 @media only screen and (min-width: 1280px) {
 
     nav > .container > ul > li h2,
@@ -886,5 +614,145 @@ nav > .container > ul > li ul li{
         border-image: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
         border-image-slice: 1;
         height: 72px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================================= MAIN =============================================================================== */
+
+
+
+
+
+/* ======================= linksOrg ===================================  */
+
+.linksOrg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.linksOrg .bigOne {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: white;
+}
+
+.linksOrg .bigOne a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.linksOrg .bigOne a:hover{
+   opacity: 0.8;
+}
+
+.bigOne .bigphoto {
+    width: 100%;
+    height: 100%;
+    background-image: url(SLIKE/1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bigOne .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* height: 30%; */
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 10px 0px 10px 10px;
+}
+
+.bigOne .info h1 {
+    font-size: 25px;
+    color: black;
+    font-style: italic;
+}
+
+.bigOne .info p {
+    color: black;
+}
+
+.linksOrg .smallOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* background-color: green; */
+    margin: 0 auto;
+}
+
+.smallOne .small { 
+    position: relative;
+    display: flex;
+    width: 280px;
+    height: 100px;
+    margin: 10px 5px; 
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 10px;
+}
+
+.smallOne .small > h1 { 
+    width: calc(100% - 112px);
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.smallOne a {
+    cursor: default;
+    text-decoration: none;
+}
+
+.smallOne .small .photo{
+    height: 100%;
+    width: 112px;
+    background-image: url(SLIKE/1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 3px;
+}
+
+.small .smallbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: var(--sliderRed);
+}
+
+@media only screen and (min-width: 1024px) {
+    .linksOrg {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .linksOrg .bigOne {
+        width: calc(100% - 310px);
+        height: 500px;
+        background-color: white;
+    }
+
+    .linksOrg .smallOne {
+        flex-direction: column;
     }
 }
