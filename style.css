@@ -70,7 +70,9 @@ p {
 /* ===================================== HEADER ====================================== */
 
 /* ------------- NAVIGACIJA ----------------- */
-
+header {
+    margin-bottom: 10px;
+}
         /* GORNJI DEO NAVIGACIJE*/
 .topNav { 
     margin-top: 25px;
@@ -125,7 +127,6 @@ p {
 .searchbox form {
     margin-left: 10px;
     width: 85%;
-
 }
 
 .searchbox input {
@@ -134,6 +135,58 @@ p {
     background-color: transparent;
     border: none;
 }
+
+.searchbox input::placeholder {
+    font-family: 'Playfair Display','Times New Roman', Times, serif;
+    color: gray;
+    font-weight: 500;
+}
+
+
+/* -------------------------------- */
+.mobileSearch {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.mobileSearch form { 
+    height: 40px;
+    background-color: #c7363d93;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.mobileSearch input[type=text] {
+    padding: 6px;
+    width: 82%;
+    font-size: 17px;
+    border: none;
+    border-radius: 3px; 
+}
+
+.mobileSearch button {
+    float: right;
+    background: var(--sliderRed);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    height: 85%;
+}
+
+@media only screen and (min-width: 450px) {
+    .mobileSearch form { 
+        width: 50%;
+    }
+}
+/* -------------------------------- */
+
 
 @media only screen and (min-width: 450px) {
     .logo {
@@ -167,9 +220,14 @@ p {
         width: 318px;
         height: 96px;
     }
+
 }
 
 @media only screen and (max-width: 1023px) {
+    .topNav{
+        margin-bottom: 0px;
+    }
+
     .rightCorn {
         display: flex;
         align-items: center;
@@ -177,6 +235,10 @@ p {
 }
 
 @media only screen and (min-width: 1024px) {
+    .mobileSearch { 
+        display: none;
+    }
+
     .hamburgerIcon {
         display: none;
     }
@@ -224,6 +286,7 @@ p {
 
     .socialAndLang > .lang span:hover {
         color: black;
+        text-decoration: underline;
     }
     
     .vl {
@@ -281,6 +344,10 @@ nav > .container a:visited {
 
     nav li {
         margin-bottom: 10px;
+    }
+
+    nav a {
+        text-decoration: underline!important;
     }
 
     nav > .container > ul > li {
