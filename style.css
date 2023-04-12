@@ -140,6 +140,7 @@ header {
     font-family: 'Playfair Display','Times New Roman', Times, serif;
     color: gray;
     font-weight: 500;
+    font-size: 15px;
 }
 
 
@@ -417,6 +418,7 @@ nav > .container a:visited {
         width: 100%;
         border-top: 2px solid black;
         border-bottom: 2px solid black;
+        z-index: 999;
     }
 
     nav > .container > ul > li {
@@ -885,25 +887,4 @@ nav > .container > ul > li ul li{
         border-image-slice: 1;
         height: 72px;
     }
-}
-
-main > .container {
-    background-color: gray;
-    min-height: 1000px;
-}
-
-.ajdproba {
-    display: flex;
-    flex-direction: column;
-}
-
-.ajdproba .proba:nth-child(even) {
-    background: blue;
-}
-
-.ajdproba .proba {
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    margin-bottom: 20px;
 }
