@@ -2,7 +2,8 @@ const bigPhoto = document.querySelector('.linksOrg .bigOne .bigphoto');
 const bigInfoh1 = document.querySelector('.linksOrg .bigOne .info h1');
 const bigInfoP = document.querySelector('.linksOrg .bigOne .info p');
 const small = document.querySelectorAll('.linksOrg .smallOne .small');
-
+let interval;
+let i = 1;
 
 const allLinks = [
     {
@@ -32,9 +33,71 @@ const allLinks = [
     
 ];
 
-function goBig (i) {
+const nodeAllLinks = Array.from(small);
+nodeAllLinks.forEach((element, index) => {
+    element.querySelector('h1').innerHTML = `${allLinks[index].name}`;
+    element.querySelector('.photo').style.backgroundImage = `url('${allLinks[index].photo}')`;
+    element.parentElement.setAttribute('href', `${allLinks[index].link}`);
+
+    element.addEventListener('mouseenter', () => {
+        console.log("stopirao")
+        stopchangeBigPicture();
+        goBig(index);
+    });
+
+    element.addEventListener('mouseleave', () => {
+        console.log('krece opet');
+        changeBigPicture();
+    });
+});
+
+changeBigPicture();
+
+bigPhoto.parentElement.parentElement.addEventListener('mouseenter', () => {
+    stopchangeBigPicture();
+});
+
+bigPhoto.parentElement.parentElement.addEventListener('mouseleave', () => {
+    changeBigPicture();
+});
+
+function changeBigPicture() {
+  if (!interval) {
+    interval = setInterval(linksOrg, 4500);
+  }
+}
+
+function stopchangeBigPicture() {
+  clearInterval(interval);
+  interval = null;
+}
+
+function linksOrg() {
+    goBig(i);
+    changeBar(i);
+    i++;
+    if(i > 3) {
+        i = 0;
+    }
+}
+
+function goBig(i) {
     bigPhoto.style.backgroundImage = `url('${allLinks[i].photo}')`;
     bigInfoh1.innerHTML = allLinks[i].name;
     bigInfoP.innerHTML = allLinks[i].text;
     bigPhoto.parentElement.setAttribute('href', `${allLinks[i].link}`);
+}
+
+function changeBar(num) {
+    let i = 0;
+    let intervalID = setInterval(() => {
+        i++;
+        nodeAllLinks[num].querySelector('.smallbar').style.width = i + "%";
+        if(i > 99) {
+            nodeAllLinks[num].querySelector('.smallbar').style.width = "0%";
+            clearInterval(intervalID);
+            intervalID = null;
+            i = 0;
+        }
+    }, 40);
 }

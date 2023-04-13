@@ -675,7 +675,7 @@ nav > .container a:visited {
     left: 0;
     width: 100%;
     /* height: 30%; */
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: rgba(128, 128, 128, 0.8);
     padding: 10px 0px 10px 10px;
 }
 
@@ -710,15 +710,19 @@ nav > .container a:visited {
 
 .smallOne .small > h1 { 
     width: calc(100% - 112px);
-    color: black;
+    color: var(--sliderRed);
     text-decoration: none;
     font-size: 16px;
     text-align: justify;
 }
 
 .smallOne a {
-    cursor: default;
+    /* cursor: default; */
     text-decoration: none;
+}
+
+.smallOne a:hover {
+    opacity: 0.8;
 }
 
 .smallOne .small .photo{
@@ -735,7 +739,7 @@ nav > .container a:visited {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 5px;
     background-color: var(--sliderRed);
 }
