@@ -439,8 +439,8 @@ nav > .container a:visited {
     }
 
     nav > .container > ul > li h2 {
-        font-size: 15px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 400;
         color: black;
     }
 
@@ -543,7 +543,7 @@ nav > .container a:visited {
     }
 
     nav > .container > ul > li > h2 {
-        margin: 0 20px;
+        margin: 0 12px;
         text-align: center;
     }
 
@@ -600,8 +600,8 @@ nav > .container a:visited {
 
     nav > .container > ul > li h2,
     nav > .container > ul > li > h2 > a {
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 21px;
+        font-weight: 400;
     }
 
     
@@ -810,15 +810,21 @@ nav > .container a:visited {
 .prefooterBox .pfbHeader .icon{
     width: 50px;
     height: 50px;
-    background-color: var(--simpleCardsBlue);
-    background-image: url(SLIKE/contact_phone_FILL0_wght400_GRAD0_opsz48.svg);
+    background-color: var(--sliderRed);
+    /* background-image: url(SLIKE/contact_phone_FILL0_wght400_GRAD0_opsz48.svg); */
     float: right;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.prefooterBox .pfbHeader .icon img {
+    filter: brightness(0) invert(1);
 }
 
 .prefooterBox .pfbHeader > h1{
     margin-top: 10px;
     font-size: 22px;
-    color: var(--simpleCardsBlue);
+    color: var(--sliderRed);
 }
 
 
@@ -826,6 +832,13 @@ nav > .container a:visited {
     width: 100%;
     height: 310px;
     background-color: white;
+}
+
+.prefooterBox .pfbMain a,
+.prefooterBox .pfbMain a:link,
+.prefooterBox .pfbMain a:visited {
+    color: black;
+    font-weight: 600;
 }
 
 .prefooterBox .pfbMain h2{
@@ -846,13 +859,13 @@ nav > .container a:visited {
 .prefooterBox .pfbFooter hr{
     position: absolute;
     top: 36px;
-    border: 1px solid var(--simpleCardsBlue);
+    border: 1px solid var(--sliderRed);
     width: 100%;
     z-index: -1;
 }
 
 .prefooterBox .pfbFooter a{
-    background-color: var(--simpleCardsBlue);
+    background-color: var(--sliderRed);
     padding: 20px 30px;
     border-radius: 15px;
     margin-bottom: 33px;
@@ -864,9 +877,31 @@ nav > .container a:visited {
     color: white;
     text-decoration: none;
     font-family: 'Playfair Display','Times New Roman', Times, serif; 
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 17px;
 }
 
 .prefooterBox .pfbFooter a:hover{
-    background-color: #4891cc;
+    background-color: #ce565c;
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================================= FOOTER =============================================================================== */
+
+footer {
+    width: 100%;
+    min-height: 600px;
+    background-color: var(--navigationSilver);
+}
+
+footer .container {
+    padding-top: 50px;
 }
