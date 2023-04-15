@@ -760,3 +760,113 @@ nav > .container a:visited {
         flex-direction: column;
     }
 }
+
+
+
+
+
+/* ============================= pre-footer ===================================  */
+
+
+.pre-footer {
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.prefooterBox {
+    margin: 30px 0px;
+    width: 90%;
+    height: 450px;
+    /* background-color: green; */
+}
+
+@media only screen and (min-width: 768px) {
+    .prefooterBox {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .pre-footer {
+        justify-content: space-between;
+    }
+
+    .prefooterBox {
+        width: 30%;
+    }
+}
+
+.prefooterBox .pfbHeader {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    background-color: var(--navigationSilver);
+}
+
+.prefooterBox .pfbHeader .icon{
+    width: 50px;
+    height: 50px;
+    background-color: var(--simpleCardsBlue);
+    background-image: url(SLIKE/contact_phone_FILL0_wght400_GRAD0_opsz48.svg);
+    float: right;
+}
+
+.prefooterBox .pfbHeader > h1{
+    margin-top: 10px;
+    font-size: 22px;
+    color: var(--simpleCardsBlue);
+}
+
+
+.prefooterBox .pfbMain {
+    width: 100%;
+    height: 310px;
+    background-color: white;
+}
+
+.prefooterBox .pfbMain h2{
+    margin-bottom: 10px;
+}
+
+.prefooterBox .pfbFooter{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    /* background-color: yellow; */
+    padding-top: 34px;
+}
+
+.prefooterBox .pfbFooter hr{
+    position: absolute;
+    top: 36px;
+    border: 1px solid var(--simpleCardsBlue);
+    width: 100%;
+    z-index: -1;
+}
+
+.prefooterBox .pfbFooter a{
+    background-color: var(--simpleCardsBlue);
+    padding: 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 33px;
+}
+
+.prefooterBox .pfbFooter a,
+.prefooterBox .pfbFooter a:link,
+.prefooterBox .pfbFooter a:link:visited{
+    color: white;
+    text-decoration: none;
+    font-family: 'Playfair Display','Times New Roman', Times, serif; 
+    font-weight: 700;
+}
+
+.prefooterBox .pfbFooter a:hover{
+    background-color: #4891cc;
+}

@@ -51,7 +51,8 @@ nodeAllLinks.forEach((element, index) => {
     });
 });
 
-changeBigPicture();
+// changeBar(i - 1);
+// changeBigPicture();
 
 bigPhoto.parentElement.parentElement.addEventListener('mouseenter', () => {
     stopchangeBigPicture();
@@ -63,7 +64,7 @@ bigPhoto.parentElement.parentElement.addEventListener('mouseleave', () => {
 
 function changeBigPicture() {
   if (!interval) {
-    interval = setInterval(linksOrg, 4500);
+    interval = setInterval(linksOrg, 4000);
   }
 }
 
@@ -89,15 +90,38 @@ function goBig(i) {
 }
 
 function changeBar(num) {
-    let i = 0;
-    let intervalID = setInterval(() => {
-        i++;
-        nodeAllLinks[num].querySelector('.smallbar').style.width = i + "%";
-        if(i > 99) {
-            nodeAllLinks[num].querySelector('.smallbar').style.width = "0%";
-            clearInterval(intervalID);
-            intervalID = null;
-            i = 0;
+    nodeAllLinks[num].querySelector('.smallbar').style.transition = 'width 3.5s ease-in-out';
+    nodeAllLinks[num].querySelector('.smallbar').style.width = '100%';
+  setTimeout(function() {
+    nodeAllLinks[num].querySelector('.smallbar').style.width = '0%';
+    nodeAllLinks[num].querySelector('.smallbar').style.transition = 'none';
+  }, 3500);
+}
+
+
+
+
+
+if (window.innerWidth > 1024) {
+    
+    function handleIntersection(entries) {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            changeBar(i - 1);
+            changeBigPicture();
         }
-    }, 40);
+        });
+    }
+    
+    const observer = new IntersectionObserver(handleIntersection, {
+        threshold: 1.0
+    });
+    
+    observer.observe(bigPhoto);
+
+} else {
+
+    changeBar(i - 1);
+    changeBigPicture();
+    
 }
