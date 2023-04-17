@@ -281,24 +281,6 @@ header {
         animation-timing-function: ease-in-out;
     }
 
-    @keyframes shake {
-        15% {
-            transform: rotate(-15deg);
-        }
-
-        30% {
-            transform: rotate(15deg);
-        }
-
-        45% {
-            transform: rotate(-15deg);
-        }
-
-        60% {
-            transform: rotate(0deg);
-        }
-    }
-
     .socialAndLang > .lang span {
         font-size: 13px;
         font-weight: 700;
@@ -1360,7 +1342,7 @@ nav > .container a:visited {
 
 footer {
     width: 100%;
-    min-height: 600px;
+    min-height: 730px;
     background-color: var(--navigationSilver);
 }
 
@@ -1369,6 +1351,77 @@ footer .container {
 }
 
 
+.topFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1024px) {
+    .topFooter {
+        justify-content: space-around;
+    }
+
+    .topFooter > .logo {
+        margin: 20px;
+        width: 100%;
+    }
+}
+
+.topFooter > .socialIcons > .socialBtn > a {
+    background-color: var(--navigationSilver);
+    height: 50px;
+    width: 50px;
+    margin: 0px 10px;
+}
+
+.socialIcons > .socialBtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.socialIcons > .socialBtn > a,
+.socialIcons > .socialBtn > a:visited,
+.socialIcons > .socialBtn > a:link {
+    text-decoration: none;
+}
+
+.socialIcons > .socialBtn img {
+    height: 100%;
+}
+
+.socialIcons > .socialBtn img:hover {
+    opacity: 0.6;
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    45% {
+        transform: rotate(-15deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+}
+
+footer hr {
+    margin: 20px 0px;
+    border: 1px solid #aaaaaa;
+}
+
 .socialEmbed {
     display: flex;
     width: 100%;
@@ -1376,11 +1429,22 @@ footer .container {
     flex-wrap: wrap;
 }
 
+.socialEmbed .embed {
+    width: 350px;
+    height: 400px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    margin: 20px;
+}
 
-.socialEmbed .twitterEmbed {
+footer .smallText {
+    padding: 5px;
+}
+
+/* .socialEmbed .twitterEmbed {
     height: 400px;
     width: 400px;
     overflow: hidden;
     border-radius: 20px;
     margin: 30px;
-}
+} */
