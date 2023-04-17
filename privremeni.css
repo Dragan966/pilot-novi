@@ -343,7 +343,7 @@ main > .container > h1 {
 
 /* ============================= Stats Presentation ===============  */
 
-.statsPresentation {
+/* .statsPresentation {
     position: relative;
     width: 100%;
     height: 1200px;
@@ -355,9 +355,9 @@ main > .container > h1 {
     position: absolute;
     top: -15vh;
     width: 100%;
-    height: 100vh;
+    height: 100vh; */
     /* background-color: #c7363d; */
-    overflow: hidden;
+    /* overflow: hidden;
     z-index: -5;
 }
 
@@ -366,9 +366,9 @@ main > .container > h1 {
     top: 5vh;
     left: -10vh;
     width: 200vh;
-    height: 95vh;
+    height: 95vh; */
     /* background-color: var(--navigationSilver); */
-    background-color: transparent;
+    /* background-color: transparent;
     transform: rotate(3deg);
     z-index: -4;
 }
@@ -403,14 +403,15 @@ main > .container > h1 {
 
 .statsInnerBack {
     background-color: var(--navigationSilver);
-    width: 100%;
-    height: 100%;
+    width: 100%; */
+    /* height: 100%; */
+    /* padding-top: 30px;
 }
 
-.statsInnerBack > .container {
+.statsInnerBack > .container { */
     /* height: 100%; */
     /* border: 1px solid black; */
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
@@ -420,9 +421,9 @@ main > .container > h1 {
     position: relative;
     width: 360px;
     height: 360px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
     /* background-color: rgba(255, 0, 0, 0.205); */
-}
+/* }
 
 .statsCircle > .innerCircle {
     position: absolute;
@@ -437,9 +438,9 @@ main > .container > h1 {
 .statsCircle > .stat {
     position: absolute;
     width: 14.28%;
-    height: 14.28%;
+    height: 14.28%; */
     /* border: 3px solid black; */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
     border-radius: 50%;
     transition: 0.5s ease;
@@ -494,14 +495,14 @@ main > .container > h1 {
     top: 21.42%;
     left: 21.42%;
     width: 57.6%;
-    height: 57.6%;
+    height: 57.6%; */
     /* border: 3px solid black; */
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
     /* border-radius: 50%; */
-}
+/* }
 
 .statsCircle > .center > h1{
     font-size: 45px;
@@ -515,9 +516,9 @@ main > .container > h1 {
 
 .statsText {
     width: 90%;
-    height: 100%;
+    height: 100%; */
     /* background-color: green; */
-    padding: 20px;
+    /* padding: 20px;
 }
 
 .statsText > h1 {
@@ -566,18 +567,18 @@ main > .container > h1 {
     .statsPresentation {
         height: 500px;
     }
-}
+} */
 /* =================== Simple Cards =====================  */
-
+/* 
 .simpleCards{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    width: 90%;
+    width: 90%; */
     /* background-color: green; */
-}
+/* }
 
 .cardS {
     width: 240px;
@@ -592,5 +593,5 @@ main > .container > h1 {
         flex-direction: row;
         flex-wrap: wrap;
     }
-}
+} */
 
