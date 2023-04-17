@@ -725,7 +725,25 @@ nav > .container a:visited {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
     border-radius: 50%;
-    transition: 0.5s ease;
+
+    transition: 0.3s ease;
+    z-index: 2;
+    /* top: 42.84%;
+    left: 42.84%; */
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.statsCircle > .stat > img {
+    position: relative;
+    width: 80%;
+    height: 80%;
 }
 
 .statsCircle > .stat:hover {
@@ -733,43 +751,70 @@ nav > .container a:visited {
 }
 
 .statsCircle > .stat.one {
-    top: 0%;
-    left: 42.84%;
+    /* background-image: url(SLIKE/bolt_FILL0_wght400_GRAD0_opsz48.png);
+    background-position: center;
+    background-repeat: no-repeat; */
+    /* top: 0%;
+    left: 42.84%; */
+    /* animation-name: dealingOne; */
+    /* animation-delay: 0s;
+    animation-duration: 1s; */
 }
 
 .statsCircle > .stat.two {
-    top: 13.3%;
-    right: 13.3%;
+    /* top: 13.3%;
+    right: 13.3%; */
+    /* animation-name: dealingTwo; */
+    /* animation-delay: 0.5s;
+    animation-duration: 1.5s; */
 }
 
 .statsCircle > .stat.three {
-    top: 42.84%;
-    right: 0%;
+    /* top: 42.84%;
+    right: 0%; */
+    /* animation-name: dealingThree; */
+    /* animation-delay: 1s;
+    animation-duration: 2s; */
 }
 
 .statsCircle > .stat.four {
-    right: 13.3%;
-    bottom: 13.3%;
+    /* right: 13.3%;
+    bottom: 13.3%; */
+    /* animation-name: dealingFour; */
+    /* animation-delay: 1.5s;
+    animation-duration: 2.5s; */
 }
 
 .statsCircle > .stat.five {
-    bottom: 0%;
-    left: 42.84%;
+    /* bottom: 0%;
+    left: 42.84%; */
+    /* animation-name: dealingFive; */
+    /* animation-delay: 2s;
+    animation-duration: 3s; */
 }
 
 .statsCircle > .stat.six{
-    bottom: 13.3%;
-    left: 13.3%;
+    /* bottom: 13.3%;
+    left: 13.3%; */
+    /* animation-name: dealingSix; */
+    /* animation-delay: 2.5s;
+    animation-duration: 3.5s; */
 }
 
 .statsCircle > .stat.seven {
-    top: 42.84%;
-    left: 0%;
+    /* top: 42.84%;
+    left: 0%; */
+    /* animation-name: dealingSeven; */
+    /* animation-delay: 3s;
+    animation-duration: 4s; */
 }
 
 .statsCircle > .stat.eight {
-    top: 13.3%;
-    left: 13.3%;
+    /* top: 13.3%;
+    left: 13.3%; */
+    /* animation-name: dealingEight; */
+    /* animation-delay: 3.5s;
+    animation-duration: 4.5s; */
 }
 
 .statsCircle > .center {
@@ -784,6 +829,139 @@ nav > .container a:visited {
     align-items: center;
     flex-direction: column;
     /* border-radius: 50%; */
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+@keyframes dealingOne {
+    from {
+        top: 42.84%;
+        left: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        top: 0%;
+        left: 42.84%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingTwo {
+    from {
+        top: 42.84%;
+        right: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        top: 13.3%;
+        right: 13.3%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingThree {
+    from {
+        top: 42.84%;
+        right: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        top: 42.84%;
+        right: 0%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingFour {
+    from {
+        right: 42.84%;
+        bottom: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        right: 13.3%;
+        bottom: 13.3%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingFive {
+    from {
+        bottom: 42.84%;
+        left: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        bottom: 0%;
+        left: 42.84%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingSix {
+    from {
+        bottom: 42.84%;
+        left: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        bottom: 13.3%;
+        left: 13.3%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingSeven {
+    from {
+        top: 42.84%;
+        left: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        top: 42.84%;
+        left: 0%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes dealingEight {
+    from {
+        top: 42.84%;
+        left: 42.84%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+
+    to {
+        top: 13.3%;
+        left: 13.3%;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
 }
 
 .statsCircle > .center > h1{
