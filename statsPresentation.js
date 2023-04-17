@@ -115,7 +115,7 @@ function handleIntersection(entries) {
                     circle.style[prop] = animations[index][prop];
                 }
 
-            }, index * 500);
+            }, index * 250);
             
         });
 

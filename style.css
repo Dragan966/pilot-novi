@@ -275,7 +275,28 @@ header {
     }
     
     .socialAndLang > .social img:hover {
-        opacity: 0.3;
+        opacity: 0.6;
+        animation-name: shake;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes shake {
+        15% {
+            transform: rotate(-15deg);
+        }
+
+        30% {
+            transform: rotate(15deg);
+        }
+
+        45% {
+            transform: rotate(-15deg);
+        }
+
+        60% {
+            transform: rotate(0deg);
+        }
     }
 
     .socialAndLang > .lang span {
