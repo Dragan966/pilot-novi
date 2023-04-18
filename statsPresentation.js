@@ -119,11 +119,17 @@ function handleIntersection(entries) {
             
         });
 
-        allCirclesArr[7].addEventListener('animationend', () => {
-            console.log('gotova animacija');
+        allCirclesArr[2].addEventListener('animationend', () => {
+            // console.log('gotova animacija');
             centerInfo.style.opacity = 1;
 
             startNextCircle();
+        });
+
+        allCirclesArr[7].addEventListener('animationend', () => {
+            // console.log('gotova animacija final');
+            // centerInfo.style.opacity = 1;
+            // startNextCircle();
 
             allCirclesArr.forEach((circle, index) => {
                 circle.addEventListener('mouseenter', () => {
@@ -211,11 +217,3 @@ function afterCircleAnimation() {
         INFO = 0;
     }
 }
-
-// bigPhoto.parentElement.parentElement.addEventListener('mouseenter', () => {
-//     stopchangeBigPicture();
-// });
-
-// bigPhoto.parentElement.parentElement.addEventListener('mouseleave', () => {
-//     changeBigPicture();
-// });
