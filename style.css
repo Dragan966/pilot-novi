@@ -1041,7 +1041,7 @@ nav > .container a:visited {
 
 /* ========================= simpleCards ================================  */
 
-.simpleCards{
+.simpleCards {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1052,11 +1052,65 @@ nav > .container a:visited {
 }
 
 .cardS {
+    position: relative;
     width: 240px;
     height: 120px;
     background-color: var(--simpleCardsBlue);
     border-radius: 20px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cardS .cardIcon {
+    position: absolute;
+    left: 0px;
+    width: 35%;
+    /* background-color: green; */
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease-in-out;
+}
+
+.cardText {
+    position: absolute;
+    right: 0px;
+    width: 64%;
+    height: 100%;
+    /* background-color: purple; */
+    border-radius: 0px 20px 20px 0px;
+    /* display: flex; */
+    transition: all 0.5s ease;
+}
+
+.cardIcon img {
+    filter: brightness(0) invert(1);
+}
+
+
+.cardS .cardText p {
+    font-size: 25px;
+    text-align: left;
+    margin-top: 15%;
+    color: white;
+}
+
+.simpleCards a:hover .cardIcon {
+    left: -40%;
+}
+  
+.simpleCards a:hover .cardText {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.simpleCards a:hover p {
+    text-align: center;
 }
 
 @media only screen and (min-width: 768px) {    
