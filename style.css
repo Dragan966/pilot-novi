@@ -633,6 +633,15 @@ nav > .container a:visited {
 
 
 
+main {
+    min-height: 1200px;
+}
+
+
+
+
+
+
 /* ============================= Stats Presentation ===================================  */
 
 .statsInnerBack {
@@ -1502,3 +1511,113 @@ footer .smallText {
     border-radius: 20px;
     margin: 30px;
 } */
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================== ZAPOSLENI =============================================================================== */
+
+.zaposleni-full {
+    padding: 5px;
+    overflow: hidden;
+}
+
+.zaposleni-full h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    text-decoration: underline;
+    text-decoration-color: var(--sliderRed);
+}
+
+.zaposleni-full p {
+    margin: 10px 10px 40px 10px;
+    font-size: 17px;
+}
+
+.zaposleni-full h2 {
+    color: var(--sliderRed);
+    font-size: 30px;
+}
+
+.zaposleni-full .zaposleni-team {
+    width: 100%;
+    min-height: 500px;
+    /* background-color: green; */
+    padding: 25px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.zaposleni-full .person {
+    position: relative;
+    height: 450px;
+    width: 320px;
+    background-color: #cccccc9f;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.zaposleni-full .person:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.zaposleni-full .person .person-back {
+    position: absolute;
+    top: 75px;
+    left: -480px;
+    height: 250px;
+    width: 1280px;
+    background-color: var(--sliderRed);
+    z-index: -5;
+}
+
+.zaposleni-full .person .person-pic {
+    width: 220px;
+    height: 220px;
+    border: 15px solid whitesmoke;
+    background-image: url(SLIKE/man.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.zaposleni-full .person:nth-child(odd) .person-pic {
+    background-image: url(SLIKE/women.jpg);
+}
+
+.zaposleni-full .person .person-info {
+    width: 100%;
+    height: 180px;
+    /* background-color: green; */
+}
+
+.person .person-info h2{
+    color: white;
+    text-align: center;
+}
+
+.person .person-info p{
+    text-align: center;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+    .zaposleni-full h1 {
+        font-size: 40px;
+    }
+}
