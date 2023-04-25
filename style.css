@@ -1621,3 +1621,47 @@ footer .smallText {
         font-size: 40px;
     }
 }
+
+
+
+
+
+
+
+/* ================================================== USTANOVE I TEME KOJE ISTRAZUJEMO ================================================================ */
+
+.miniMap {
+    margin-top: 30px;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.miniMap h3{
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration-color: var(--sliderRed);
+}
+
+.miniMap a,
+.miniMap a:visited,
+.miniMap a:link {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.miniMap a:hover {
+    text-decoration: underline!important;
+}
+
+.miniMap ul {
+    margin-left: 50px;
+}
+
+.miniMap li {
+    list-style: circle;
+    margin: 10px 0px;
+}
+
