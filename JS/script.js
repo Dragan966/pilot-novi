@@ -5,6 +5,13 @@ const body = document.querySelector('body');
 const h3 = document.querySelectorAll('nav h3');
 const h4 = document.querySelectorAll('nav h4');
 
+
+const relativePicturePath = hamburgerIcon.getAttribute("src");
+const searchTrim = "SLIKE/";
+const indexSearchTrim = relativePicturePath.indexOf(searchTrim);
+const prefixPictures = relativePicturePath.substring(0, indexSearchTrim + searchTrim.length);
+
+
 // glavna funkcionalnost hamburger menija 
 hamburgerIcon.addEventListener('click', mobileMenu);
 
@@ -62,10 +69,11 @@ function expand (node) {
 }
 
 function mobileMenu() {
+
     if(navigation.style.left !== '0%') {
         navigation.style.left = '0%';
         navigation.scrollTop = 0;
-        hamburgerIcon.src = 'SLIKE/close_FILL0_wght400_GRAD0_opsz48.svg';
+        hamburgerIcon.src = prefixPictures + 'close_FILL0_wght400_GRAD0_opsz48.svg';
         navigation.style.overflow = 'scroll';
         body.style.overflow = 'hidden';
 
@@ -81,7 +89,7 @@ function mobileMenu() {
         });
     } else {
         navigation.style.left = '-110%';
-        hamburgerIcon.src = 'SLIKE/menu_FILL0_wght700_GRAD200_opsz48.svg';
+        hamburgerIcon.src = prefixPictures + 'menu_FILL0_wght700_GRAD200_opsz48.svg';
         navigation.style.overflow = 'hidden';
         body.style.overflow = 'scroll';
     }
