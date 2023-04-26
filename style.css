@@ -1623,6 +1623,65 @@ footer .smallText {
 }
 
 
+.person-info p:last-of-type {
+    position: relative;
+    cursor: help;
+    padding: 4px;
+}
+
+.person-info p:last-of-type:before {
+    content: 'copy email';
+    display: none;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    min-width: 50px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.person-info p:last-of-type:before {
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.person-info p:last-of-type:before {
+    top: 100%;
+    margin-top: 6px;
+}
+
+.person-info p:last-of-type:after {
+    content: '';
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.person-info p:last-of-type:after {
+    left: 50%;
+    margin-left: -6px;
+}
+
+.person-info p:last-of-type:after {
+    top: 100%;
+    border-width: 0 6px 6px;
+    border-bottom-color: #000;
+}
+
+.person-info p:last-of-type:hover:before,
+.person-info p:last-of-type:hover:after {
+    display: block;
+    z-index: 50;
+}
 
 
 
