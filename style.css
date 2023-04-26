@@ -1665,3 +1665,46 @@ footer .smallText {
     margin: 10px 0px;
 }
 
+
+
+
+/* ================================================== staticPage ================================================================ */
+/* ========================================== Sve stranice za popunjavanje ====================================================== */
+
+.staticPage {
+    padding: 10px;
+}
+
+.staticPage > h1 {
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    text-decoration-color: var(--sliderRed);
+}
+
+.staticPagePhoto {
+    display: flex;
+    justify-content: center;
+}
+
+.staticPagePhoto img{
+    margin: 30px 0px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .staticPagePhoto img{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .staticPagePhoto img{
+        height: 100%;
+    }
+}
+
+.staticPage > p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
