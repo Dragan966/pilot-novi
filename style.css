@@ -1741,6 +1741,11 @@ footer .smallText {
     text-decoration-color: var(--sliderRed);
 }
 
+.staticPage > h2 {
+    text-align: center;
+    font-size: 28px;
+}
+
 .staticPagePhoto {
     display: flex;
     justify-content: center;
