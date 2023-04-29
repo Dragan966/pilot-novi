@@ -1,0 +1,17 @@
+[
+    {
+        "ime": "Miki",
+        "prezime": "Peric",
+        "brojNeki": 20
+    },
+    {
+        "ime": "Riki",
+        "prezime": "Peric",
+        "brojNeki": 30
+    },
+    {
+        "ime": "Viki",
+        "prezime": "Peric",
+        "brojNeki": 40
+    }
+]

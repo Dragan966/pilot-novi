@@ -1,13 +1,15 @@
-1. Logo treba promeniti: tekst treba da bude dobro tanji ovako bas bode oci 
-
-2. Ikonice  za social net su bas ruzne - ganjati neke lepse 
-
-3. Lupa za search je relativno ok, al je podebela.. generalno search box da se odradi
-
-
-
-
-
+1. lupu za search obavezno promeniti, brzina ucitavanja ide preko minut (sa simulacijom)
+2.u slajderima treba postaviti pozadinu staticnu pa onda iz skripte vuci ucitavanje (mozda-kontam da ce izgledati tecnije na sporim mrezama)
+3. vazna obavestenja na glavnoj stranici treba da bude link ka svim obavestenjima
+4. ispod slajdera one tackicke trebalo bi da se promeni kursor na ruku
+5. isto vazi ko kod 4. i na dugmad (levo desno)
+6. index strana na dnu kontakt na procitajte vise treba da vodi na kontakt stranu (il maci procitajte vise) - bolje ukinuti procitajte vise 
+7. mozda dodati u karticu naslovna i vazna obavestenja i pitanja i odgovori
+8.slajderi da se naprave kako valja
+9.nasumicno pitanje da se izvlaci na dnu stranice
+10. nasumicno obavestenje da se izvlaci (mozda je bolje zadnje obavestenje da se vuce samo-nekako ima vise smisla)
+11. search full da se sredi
+12. cirilica i latinica da ide na display none
 
 
 
