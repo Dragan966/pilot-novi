@@ -10,6 +10,7 @@
 10. nasumicno obavestenje da se izvlaci (mozda je bolje zadnje obavestenje da se vuce samo-nekako ima vise smisla)
 11. search full da se sredi
 12. cirilica i latinica da ide na display none
+13. promeniti na svim stranicama link teme koje istrazujemo -> inkluzivno obrazovanje -> pitanja i odgovori  VODI NA ZAKONSKA REGULATIVA
 
 
 

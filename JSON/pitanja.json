@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "grupa": "kojoj pripada",
+        "grupa": "prva",
         "naslov": "Pitanje broj 1",
         "tekst": ["odgovor para", "odgovor para", "odgovor para"],
         "slika": "adresa slike",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "grupa": "kojoj pripada",
+        "grupa": "prva",
         "naslov": "Pitanje broj 2",
         "tekst": ["odgovor para"],
         "slika": null,
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "grupa": "kojoj pripada",
+        "grupa": "druga",
         "naslov": "Pitanje broj 3",
         "tekst": ["odgovor para", "odgovor para", "odgovor para"],
         "slika": "adresa slike",
