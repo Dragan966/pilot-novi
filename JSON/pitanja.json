@@ -1,17 +1,42 @@
 [
     {
-        "ime": "Miki",
-        "prezime": "Peric",
-        "brojNeki": 20
+        "id": 1,
+        "grupa": "kojoj pripada",
+        "naslov": "Pitanje broj 1",
+        "tekst": ["odgovor para", "odgovor para", "odgovor para"],
+        "slika": "adresa slike",
+        "datum": "datum objave"
     },
     {
-        "ime": "Riki",
-        "prezime": "Peric",
-        "brojNeki": 30
+        "id": 2,
+        "grupa": "kojoj pripada",
+        "naslov": "Pitanje broj 2",
+        "tekst": ["odgovor para"],
+        "slika": null,
+        "datum": "datum objave"
     },
     {
-        "ime": "Viki",
-        "prezime": "Peric",
-        "brojNeki": 40
+        "id": 3,
+        "grupa": "kojoj pripada",
+        "naslov": "Pitanje broj 3",
+        "tekst": ["odgovor para", "odgovor para", "odgovor para"],
+        "slika": "adresa slike",
+        "datum": "datum objave"
+    },
+    {
+        "id": 4,
+        "grupa": "kojoj pripada",
+        "naslov": "Pitanje broj 4",
+        "tekst": ["odgovor para", "odgovor para"],
+        "slika": "adresa slike",
+        "datum": "datum objave"
+    },
+    {
+        "id": 5,
+        "grupa": "kojoj pripada",
+        "naslov": "Pitanje broj 5",
+        "tekst": ["odgovor para", "odgovor para"],
+        "slika": "adresa slike",
+        "datum": "datum objave"
     }
 ]
