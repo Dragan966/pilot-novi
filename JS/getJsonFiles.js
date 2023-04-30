@@ -66,7 +66,7 @@ const getJSON = (resource) => {
 
 
 const currentPathName = window.location.pathname;
-// const currentPathNameArray = currentPathName.substring(1).split('/');
+const currentPathNameArray = currentPathName.substring(1).split('/');
 // console.log(currentPathNameArray);
 
 
@@ -83,8 +83,8 @@ if(currentPathName.includes('index')){
   showJSONbyId('id', 'pitanja.json', 'pitanje');
 
 } else if(currentPathName.includes('Pitanja-i-odgovori')){
-
-  // showJSONbyId('grupa', 'izdvajamo.json', 'izdvajamo');
+  // ovde nece raditi 100% 
+  // showJSONbyId('grupa', 'izdvajamo.json', 'izdvajamo', currentPathNameArray[currentPathNameArray.length - 1]);
 
 } else if(currentPathName.includes('izdvajamo')){
 
@@ -184,8 +184,8 @@ function linkPrefix() {
 }
 
 
-function showJSONbyId(key, jsonFile, type) {
-  const query = queryParameters(key);
+function showJSONbyId(key, jsonFile, type, query = queryParameters(key)) {
+  // const query = queryParameters(key);
 
   getJSON(linkPrefix() + 'JSON/' + jsonFile).then(data => {
     console.log('promise 1 resolved:', data);
