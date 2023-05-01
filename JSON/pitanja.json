@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "grupa": "prva",
+        "grupa": "Inkluzivno-obrazovanje",
         "naslov": "Pitanje broj 1",
         "tekst": ["odgovor para", "odgovor para", "odgovor para"],
         "slika": null,
-        "datum": "datum objave"
+        "datum": "1.1.2010."
     },
     {
         "id": 2,
@@ -13,23 +13,25 @@
         "naslov": "Pitanje broj 2",
         "tekst": ["odgovor para"],
         "slika": null,
-        "datum": "datum objave"
+        "datum": "1.1.2020."
     },
     {
         "id": 3,
-        "grupa": "druga",
+        "grupa": "Inkluzivno-obrazovanje",
         "naslov": "Pitanje broj 3",
-        "tekst": ["odgovor para", "odgovor para", "odgovor para"],
+        "tekst": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tortor non quam posuere, id consectetur neque maximus. Morbi vestibulum aliquam eros, fermentum placerat turpis finibus in.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tortor non quam posuere, id consectetur neque maximus. Morbi vestibulum aliquam eros, fermentum placerat turpis finibus in.", 
+                "odgovor para"],
         "slika": null,
-        "datum": "datum objave"
+        "datum": "10.1.2010."
     },
     {
         "id": 4,
-        "grupa": "kojoj pripada",
+        "grupa": "Inkluzivno-obrazovanje",
         "naslov": "Pitanje broj 4",
         "tekst": ["odgovor para", "odgovor para"],
         "slika": null,
-        "datum": "datum objave"
+        "datum": "1.5.2010."
     },
     {
         "id": 5,
@@ -37,6 +39,6 @@
         "naslov": "Pitanje broj 5",
         "tekst": ["odgovor para", "odgovor para"],
         "slika": null,
-        "datum": "datum objave"
+        "datum": "1.1.2012."
     }
 ]

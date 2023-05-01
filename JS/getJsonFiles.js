@@ -28,8 +28,25 @@ const currentPathNameArray = currentPathName.substring(1).split('/');
 
 
 if(currentPathName.includes('index')){
+  let izdvajamo, obavestenja, pitanja;
+  getJSON('JSON/izdvajamo.json').then(data => {
 
+    izdvajamo = data;
 
+    return getJSON('JSON/obavestenja.json');
+  }).then(data => {
+
+    obavestenja = data;
+
+    return getJSON('JSON/pitanja.json');
+  }).then(data => {
+
+    pitanja = data;
+    showPrefooter(pitanja, obavestenja);
+
+  }).catch(err => {
+    console.log('promise rejected:', err);
+  });
 
 } else if(currentPathName.includes('sva-obavestenja')){
   //ovo bi trebalo bit OK
@@ -155,3 +172,29 @@ function showJSONbyId(key, jsonFile, type, query = queryParameters(key)) {
 
 }
 
+function showPrefooter(pitanja, obavestenja) {
+  const pitanjeh2 = document.querySelector("body > main > div:nth-child(3) > div.pre-footer > div:nth-child(2) > div.pfbMain > h2");
+  const pitanjeP = document.querySelector("body > main > div:nth-child(3) > div.pre-footer > div:nth-child(2) > div.pfbMain > p");
+
+  const obavestenjeh2 = document.querySelector("body > main > div:nth-child(3) > div.pre-footer > div:nth-child(3) > div.pfbMain > h2");
+  const obavestenjeP = document.querySelector("body > main > div:nth-child(3) > div.pre-footer > div:nth-child(3) > div.pfbMain > p");
+
+
+  insertPrefooter(pitanja[getRandomInt(pitanja.length)], pitanjeh2, pitanjeP, 'sva-pitanja-i-odgovori.html');
+  insertPrefooter(obavestenja[obavestenja.length - 1], obavestenjeh2, obavestenjeP, 'sva-obavestenja.html');
+}
+
+function insertPrefooter(obj, naslov, para, link) {
+  const fullText = obj.tekst.join(' ');
+  console.log(fullText);
+  const words = fullText.split(' ');
+  const first40Words = words.slice(0, 40);
+  const first40WordsStr = first40Words.join(' ');
+
+  naslov.innerHTML = obj.naslov;
+  para.innerHTML = first40WordsStr + '...<br><br>' + `<a href="${link}?id=${obj.id}">Procitajte vise...</a>`;
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
