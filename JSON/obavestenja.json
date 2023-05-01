@@ -1,17 +1,42 @@
 [
     {
-        "ime": "Miki",
-        "prezime": "Peric",
-        "brojNeki": 20
+        "id": 1,
+        "grupa": null,
+        "naslov": "Obavestenje broj 1",
+        "tekst": ["ide neki tekst para", "ide neki tekst para", "ide neki tekst para"],
+        "slika": null,
+        "datum": "datum objave"
     },
     {
-        "ime": "Riki",
-        "prezime": "Peric",
-        "brojNeki": 30
+        "id": 2,
+        "grupa": null,
+        "naslov": "Obavestenje broj 2",
+        "tekst": ["ide neki tekst para"],
+        "slika": null,
+        "datum": "datum objave"
     },
     {
-        "ime": "Viki",
-        "prezime": "Peric",
-        "brojNeki": 40
+        "id": 3,
+        "grupa": null,
+        "naslov": "Obavestenje broj 3",
+        "tekst": ["ide neki tekst para", "ide neki tekst para", "ide neki tekst para"],
+        "slika": null,
+        "datum": "datum objave"
+    },
+    {
+        "id": 4,
+        "grupa": null,
+        "naslov": "Obavestenje broj 4",
+        "tekst": ["ide neki tekst para", "ide neki tekst para"],
+        "slika": null,
+        "datum": "datum objave"
+    },
+    {
+        "id": 5,
+        "grupa": null,
+        "naslov": "Obavestenje broj 5",
+        "tekst": ["ide neki tekst para", "ide neki tekst para"],
+        "slika": null,
+        "datum": "datum objave"
     }
 ]

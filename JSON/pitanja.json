@@ -4,12 +4,12 @@
         "grupa": "prva",
         "naslov": "Pitanje broj 1",
         "tekst": ["odgovor para", "odgovor para", "odgovor para"],
-        "slika": "adresa slike",
+        "slika": null,
         "datum": "datum objave"
     },
     {
         "id": 2,
-        "grupa": "prva",
+        "grupa": "Inkluzivno-obrazovanje",
         "naslov": "Pitanje broj 2",
         "tekst": ["odgovor para"],
         "slika": null,
@@ -20,7 +20,7 @@
         "grupa": "druga",
         "naslov": "Pitanje broj 3",
         "tekst": ["odgovor para", "odgovor para", "odgovor para"],
-        "slika": "adresa slike",
+        "slika": null,
         "datum": "datum objave"
     },
     {
@@ -28,15 +28,15 @@
         "grupa": "kojoj pripada",
         "naslov": "Pitanje broj 4",
         "tekst": ["odgovor para", "odgovor para"],
-        "slika": "adresa slike",
+        "slika": null,
         "datum": "datum objave"
     },
     {
         "id": 5,
-        "grupa": "kojoj pripada",
+        "grupa": "Inkluzivno-obrazovanje",
         "naslov": "Pitanje broj 5",
         "tekst": ["odgovor para", "odgovor para"],
-        "slika": "adresa slike",
+        "slika": null,
         "datum": "datum objave"
     }
 ]

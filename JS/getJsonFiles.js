@@ -1,46 +1,3 @@
-// const getJSON = (resource) => {
-
-//     return new Promise((resolve, reject) => {
-//       const request = new XMLHttpRequest();
-  
-//       request.addEventListener('readystatechange', () => {
-    
-//         if(request.readyState === 4 && request.status === 200){
-//           const data = JSON.parse(request.responseText);
-//           resolve(data);
-//         } else if (request.readyState === 4){
-//           reject('error-request-status: '+ request + request.status);
-//         }
-    
-//       });
-      
-//       request.open('GET', resource);
-//       request.send();
-//     });
-  
-//   };
-  
-//   getJSON('../JSON/izdvajamo.json').then(data => {
-//     console.log('promise 1 resolved:', data);
-//     return getJSON('../JSON/obavestenja.json');
-//   }).then(data => {
-//     console.log('promise 2 resolved:', data);
-//     return getJSON('../JSON/pitanja.json');
-//   }).then(data => {
-//     console.log('promise 3 resolved:', data);
-//   }).catch(err => {
-//     console.log('promise rejected:', err);
-//   });
-
-
-//   if(window.location.href.includes('sva-pitanja-i-odgovori')){
-    
-//   } else if (window.location.href.includes('Pitanja-i-odgovori')) {
-
-//   } else if (window.location.href.includes('index')){
-    
-//   }
-
 const getJSON = (resource) => {
 
   return new Promise((resolve, reject) => {
@@ -75,20 +32,20 @@ if(currentPathName.includes('index')){
 
 
 } else if(currentPathName.includes('sva-obavestenja')){
-
-  // showJSONbyId('id', 'obavestenja.json', 'obavestenja');
+  //ovo bi trebalo bit OK
+  showJSONbyId('id', 'obavestenja.json', 'obavestenja');
 
 } else if(currentPathName.includes('sva-pitanja-i-odgovori')){
   //ovo je OK
   showJSONbyId('id', 'pitanja.json', 'pitanje');
 
 } else if(currentPathName.includes('Pitanja-i-odgovori')){
-  // ovde nece raditi 100% 
-  // showJSONbyId('grupa', 'izdvajamo.json', 'izdvajamo', currentPathNameArray[currentPathNameArray.length - 1]);
+  //ovo bi trebalo bit OK
+  showJSONbyId('grupa', 'pitanja.json', 'pitanje', currentPathNameArray[currentPathNameArray.length - 2]);
 
 } else if(currentPathName.includes('izdvajamo')){
-
-  // showJSONbyId('id', 'izdvajamo.json', 'izdvajamo');
+  //ovo bi trebalo bit OK
+  showJSONbyId('id', 'izdvajamo.json', 'izdvajamo');
 
 } else if(currentPathName.includes('search-stranica')){
   //stranice jos nema
@@ -98,21 +55,8 @@ if(currentPathName.includes('index')){
 }
 
 
-
-
-
-
-
-
-// getJSON('../JSON/pitanja.json').then(data => {
-//       console.log('promise 1 resolved:', data);
-//       data.forEach(obj => onePost(obj, '-pitanje'));
-//     }).catch(err => {
-//       console.log('promise rejected:', err);
-//     });
-
-
 function onePost(obj, type) {
+
   const jsonContainer = document.querySelector('.jsonContainer');
 
   //div.objavaJSON
@@ -132,7 +76,7 @@ function onePost(obj, type) {
     const slika = document.createElement('div');
     slika.classList.add('slikaJSON' + type);
     const img = document.createElement('img');
-    img.setAttribute('src', obj.slika);
+    img.setAttribute('src', linkPrefix() + 'SLIKE/' + obj.slika);
     slika.appendChild(img);
     post.appendChild(slika);
   }
@@ -145,7 +89,7 @@ function onePost(obj, type) {
     para.textContent = t;
     tekst.appendChild(para);
   });
- 
+
   //div.datumJSON
   const datum = document.createElement('div');
   datum.classList.add('datumJSON' + type);
@@ -156,6 +100,7 @@ function onePost(obj, type) {
 
   post.appendChild(tekst);
   jsonContainer.appendChild(post);
+
 }
 
 
@@ -185,17 +130,23 @@ function linkPrefix() {
 
 
 function showJSONbyId(key, jsonFile, type, query = queryParameters(key)) {
-  // const query = queryParameters(key);
-
   getJSON(linkPrefix() + 'JSON/' + jsonFile).then(data => {
-    console.log('promise 1 resolved:', data);
-    
     const res = data.filter( d => d[key] == query);
 
-    if(res.length) {
-      res.forEach(r => onePost(r, '-' + type))
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+      if(res.length) {
+        res.forEach(r => onePost(r, '-' + type))
+      } else {
+        data.forEach(obj => onePost(obj, '-' + type));
+      }
     } else {
-      data.forEach(obj => onePost(obj, '-' + type));
+      document.addEventListener("DOMContentLoaded", function() {
+        if(res.length) {
+          res.forEach(r => onePost(r, '-' + type))
+        } else {
+          data.forEach(obj => onePost(obj, '-' + type));
+        }
+      });
     }
 
   }).catch(err => {
@@ -203,3 +154,4 @@ function showJSONbyId(key, jsonFile, type, query = queryParameters(key)) {
   });
 
 }
+
