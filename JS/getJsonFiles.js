@@ -1,3 +1,382 @@
+const navLokacije = [
+  {
+    name: 'Насловнa',
+    link: 'index.html'
+  },
+  {
+    name: 'Надлежности',
+    link: 'nadleznosti.html'
+  },
+  {
+    name: 'Запослени',
+    link: 'zaposleni.html'
+  },
+  {
+    name: 'Саветници спољни сарадници',
+    link: 'savetnici-spoljni-saradnici.html'
+  },
+  {
+    name: 'Издвајамо',
+    link: 'izdvajamo.html'
+  },
+  {
+    name: 'Сва питања и одговори',
+    link: 'sva-pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Сва обавештења',
+    link: 'sva-obavestenja.html'
+  },
+  {
+    name: 'Ариље - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Arilje.html'
+  },
+  {
+    name: 'Ариље - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Arilje.html'
+  },
+  {
+    name: 'Ариље - Средње школе',
+    link: 'Ustanove/Srednje-skole/Arilje.html'
+  },
+  {
+    name: 'Ариље - Општинa',
+    link: 'Ustanove/Opstine/Arilje.html'
+  },
+  {
+    name: 'Бајина Башта - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Bajina-Basta.html'
+  },
+  {
+    name: 'Бајина Башта - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Bajina-Basta.html'
+  },
+  {
+    name: 'Бајина Башта - Средње школе',
+    link: 'Ustanove/Srednje-skole/Bajina-Basta.html'
+  },
+  {
+    name: 'Бајина Башта - Општинa',
+    link: 'Ustanove/Opstine/Bajina-Basta.html'
+  },
+  {
+    name: 'Косјерић - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Kosjeric.html'
+  },
+  {
+    name: 'Косјерић - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Kosjeric.html'
+  },
+  {
+    name: 'Косјерић - Средње школе',
+    link: 'Ustanove/Srednje-skole/Kosjeric.html'
+  },
+  {
+    name: 'Косјерић - Општинa',
+    link: 'Ustanove/Opstine/Kosjeric.html'
+  },
+  {
+    name: 'Нова Варош - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Nova-Varos.html'
+  },
+  {
+    name: 'Нова Варош - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Nova-Varos.html'
+  },
+  {
+    name: 'Нова Варош - Средње школе',
+    link: 'Ustanove/Srednje-skole/Nova-Varos.html'
+  },
+  {
+    name: 'Нова Варош - Општинa',
+    link: 'Ustanove/Opstine/Nova-Varos.html'
+  },
+  {
+    name: 'Пожега - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Pozega.html'
+  },
+  {
+    name: 'Пожега - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Pozega.html'
+  },
+  {
+    name: 'Пожега - Средње школе',
+    link: 'Ustanove/Srednje-skole/Pozega.html'
+  },
+  {
+    name: 'Пожега - Општинa',
+    link: 'Ustanove/Opstine/Pozega.html'
+  },
+  {
+    name: 'Пољопривредна школа са домом ученика "Љубо Мићић" Пожега',
+    link: 'Ustanove/Domovi-ucenika/Ljubo-Micic-Pozega.html'
+  },
+  {
+    name: 'Прибој - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Priboj.html'
+  },
+  {
+    name: 'Прибој - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Priboj.html'
+  },
+  {
+    name: 'Прибој - Средње школе',
+    link: 'Ustanove/Srednje-skole/Priboj.html'
+  },
+  {
+    name: 'Прибој - Општинa',
+    link: 'Ustanove/Opstine/Priboj.html'
+  },
+  {
+    name: 'Пријепоље - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Prijepolje.html'
+  },
+  {
+    name: 'Пријепоље - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Prijepolje.html'
+  },
+  {
+    name: 'Пријепоље - Средње школе',
+    link: 'Ustanove/Srednje-skole/Prijepolje.html'
+  },
+  {
+    name: 'Пријепоље - Општинa',
+    link: 'Ustanove/Opstine/Prijepolje.html'
+  },
+  {
+    name: 'Сјеница - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Sjenica.html'
+  },
+  {
+    name: 'Сјеница - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Sjenica.html'
+  },
+  {
+    name: 'Сјеница - Средње школе',
+    link: 'Ustanove/Srednje-skole/Sjenica.html'
+  },
+  {
+    name: 'Сјеница - Општинa',
+    link: 'Ustanove/Opstine/Sjenica.html'
+  },
+  {
+    name: 'Ужице - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Uzice.html'
+  },
+  {
+    name: 'Ужице - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Uzice.html'
+  },
+  {
+    name: 'Ужице - Средње школе',
+    link: 'Ustanove/Srednje-skole/Uzice.html'
+  },
+  {
+    name: 'Ужице - Општинa',
+    link: 'Ustanove/Opstine/Uzice.html'
+  },
+  {
+    name: 'Дом ученика средњих школа Ужице',
+    link: 'Ustanove/Domovi-ucenika/Dom-ucenika-srednjih-skola-Uzice.html'
+  },
+  {
+    name: 'Чајетина - Предшколске установе',
+    link: 'Ustanove/Predskolske-ustanove/Cajetina.html'
+  },
+  {
+    name: 'Чајетина - Основне школе',
+    link: 'Ustanove/Osnovne-skole/Cajetina.html'
+  },
+  {
+    name: 'Чајетина - Средње школе',
+    link: 'Ustanove/Srednje-skole/Cajetina.html'
+  },
+  {
+    name: 'Чајетина - Општинa',
+    link: 'Ustanove/Opstine/Cajetina.html'
+  },
+  {
+    name: 'Број деце и ученика у установама',
+    link: 'Ustanove/Broj-dece-i-ucenika-u-ustanovama.html'
+  },
+  {
+    name: 'Инклузивно образовање - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Inkluzivno-obrazovanje/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Инклузивно образовање - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Inkluzivno-obrazovanje/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Инклузивно образовање - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Inkluzivno-obrazovanje/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Инклузивно образовање - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Inkluzivno-obrazovanje/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Превенција насиља - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Prevencija-nasilja/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Превенција насиља - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Prevencija-nasilja/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Превенција насиља - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Prevencija-nasilja/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Превенција насиља - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Prevencija-nasilja/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Развојно планирање - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Razvojno-planiranje/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Развојно планирање - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Razvojno-planiranje/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Развојно планирање - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Razvojno-planiranje/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Развојно планирање - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Razvojno-planiranje/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Стандарди у образовању - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Standardi-u-obrazovanju/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Стандарди у образовању - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Standardi-u-obrazovanju/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Стандарди у образовању - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Standardi-u-obrazovanju/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Стандарди у образовању - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Standardi-u-obrazovanju/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Самовредновање и вредновање установа - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Samovrednovanje-i-vrednovanje-ustanova/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Самовредновање и вредновање установа - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Samovrednovanje-i-vrednovanje-ustanova/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Самовредновање и вредновање установа - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Samovrednovanje-i-vrednovanje-ustanova/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Самовредновање и вредновање установа - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Samovrednovanje-i-vrednovanje-ustanova/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Стручно-педагошки надзор - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Strucno-predagoski-nadzor/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Стручно-педагошки надзор - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Strucno-predagoski-nadzor/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Стручно-педагошки надзор - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Strucno-predagoski-nadzor/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Стручно-педагошки надзор - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Strucno-predagoski-nadzor/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Стручно усавршавање и стицање звања - Законска регулатива',
+    link: 'Teme-koje-istrazujemo/Strucno-usavrsavanje-i-sticanje-zvanja/Zakonska-regulativa.html'
+  },
+  {
+    name: 'Стручно усавршавање и стицање звања - Додатни извори знања',
+    link: 'Teme-koje-istrazujemo/Strucno-usavrsavanje-i-sticanje-zvanja/Dodatni-izvori-znanja.html'
+  },
+  {
+    name: 'Стручно усавршавање и стицање звања - Наша искуства и примери добре праксе',
+    link: 'Teme-koje-istrazujemo/Strucno-usavrsavanje-i-sticanje-zvanja/Nasa-iskustva-i-primeri-dobre-prakse.html'
+  },
+  {
+    name: 'Стручно усавршавање и стицање звања - Питања и одговори',
+    link: 'Teme-koje-istrazujemo/Strucno-usavrsavanje-i-sticanje-zvanja/Pitanja-i-odgovori.html'
+  },
+  {
+    name: 'Календар образовно-васпитног рада за основне школе',
+    link: 'Aktuelno/Kalendar-obrazovno-vaspitnog-rada/Za-osnovne-skole.html'
+  },
+  {
+    name: 'Календар образовно-васпитног рада за средње школе',
+    link: 'Aktuelno/Kalendar-obrazovno-vaspitnog-rada/Za-srednje-skole.html'
+  },
+  {
+    name: 'Упис у предшколску установу',
+    link: 'Aktuelno/Upis-u-skolu/Upis-u-predskolsku-ustanovu.html'
+  },
+  {
+    name: 'Упис у основну школу',
+    link: 'Aktuelno/Upis-u-skolu/Upis-u-osnovnu-skolu.html'
+  },
+  {
+    name: 'Упис у средњу школу',
+    link: 'Aktuelno/Upis-u-skolu/Upis-u-srednju-skolu.html'
+  },
+  {
+    name: 'Упис ученика из иностранства',
+    link: 'Aktuelno/Upis-u-skolu/Upis-ucenika-iz-inostranstva.html'
+  },
+  {
+    name: 'Пробни завршни испит',
+    link: 'Aktuelno/Zavrsni-ispit/Probni-zavrsni-ispit.html'
+  },
+  {
+    name: 'Завршни испит',
+    link: 'Aktuelno/Zavrsni-ispit/Zavrsni-ispit.html'
+  },
+  {
+    name: 'Пробна државна матура',
+    link: 'Aktuelno/Drzavna-matura/Probna-drzavna-matura.html'
+  },
+  {
+    name: 'Државна матура',
+    link: 'Aktuelno/Drzavna-matura/Drzavna-matura.html'
+  },
+  {
+    name: 'Национална и међународна истраживања',
+    link: 'nacionalna-istazivanja.html'
+  },
+  {
+    name: 'Слободна радна места',
+    link: 'Zaposljavanje-u-prosveti/Slobodna-radna-mesta.html'
+  },
+  {
+    name: 'Технолошки вишкови и запослени са непуном нормом',
+    link: 'Zaposljavanje-u-prosveti/Tehnoloski-viskovi-i-zaposleni-sa-nepunom-normom.html'
+  },
+  {
+    name: 'Нострификација докумената',
+    link: 'Zaposljavanje-u-prosveti/Nostrifikacija-dokumenata.html'
+  },
+  {
+    name: 'Прописи у образовању',
+    link: 'propisi-u-obrazovanju.html'
+  },
+  {
+    name: 'Контакт',
+    link: 'kontakt.html'
+  }
+]
+
 const getJSON = (resource) => {
 
   return new Promise((resolve, reject) => {
@@ -20,24 +399,19 @@ const getJSON = (resource) => {
 
 };
 
-
-
 const currentPathName = window.location.pathname;
 const currentPathNameArray = currentPathName.substring(1).split('/');
 // console.log(currentPathNameArray);
 
 
+let izdvajamo, obavestenja, pitanja;
+
 if(currentPathName.includes('index')){
-  let izdvajamo, obavestenja, pitanja;
   getJSON('JSON/izdvajamo.json').then(data => {
-
     izdvajamo = data;
-
     return getJSON('JSON/obavestenja.json');
   }).then(data => {
-
     obavestenja = data;
-
     return getJSON('JSON/pitanja.json');
   }).then(data => {
 
@@ -65,10 +439,20 @@ if(currentPathName.includes('index')){
   showJSONbyId('id', 'izdvajamo.json', 'izdvajamo');
 
 } else if(currentPathName.includes('search-stranica')){
-  //stranice jos nema
-  //treba da se proveri ako nema dodatak sta onda
+  getJSON('JSON/izdvajamo.json').then(data => {
+    izdvajamo = data;
+    return getJSON('JSON/obavestenja.json');
+  }).then(data => {
+    obavestenja = data;
+    return getJSON('JSON/pitanja.json');
+  }).then(data => {
+
+    pitanja = data;
 
 
+  }).catch(err => {
+    console.log('promise rejected:', err);
+  });
 }
 
 
@@ -197,4 +581,53 @@ function insertPrefooter(obj, naslov, para, link) {
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+function prevodjenje(text) {
+  const cirilica = {
+    'а': 'a',
+    'б': 'b',
+    'в': 'v',
+    'г': 'g',
+    'д': 'd',
+    'ђ': 'dj',
+    'е': 'e',
+    'ж': 'z',
+    'з': 'z',
+    'и': 'i',
+    'ј': 'j',
+    'к': 'k',
+    'л': 'l',
+    'љ': 'lj',
+    'м': 'm',
+    'н': 'n',
+    'њ': 'nj',
+    'о': 'o',
+    'п': 'p',
+    'р': 'r',
+    'с': 's',
+    'т': 't',
+    'ћ': 'c',
+    'у': 'u',
+    'ф': 'f',
+    'х': 'h',
+    'ц': 'c',
+    'ч': 'c',
+    'џ': 'dz',
+    'ш': 's'
+  };
+  
+  let latinicaText = '';
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+    latinicaText += cirilica[char.toLowerCase()] || char;
+  }
+  return latinicaText;
+}
+
+
+function Lokacija(name, link) {
+  this.name = [name];
+  this.name.push(prevodjenje(name));
+  this.link = link;
 }
