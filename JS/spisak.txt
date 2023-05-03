@@ -6,9 +6,9 @@ OK --- 1. lupu za search obavezno promeniti, brzina ucitavanja ide preko minut (
 6. index strana na dnu kontakt na procitajte vise treba da vodi na kontakt stranu (il maci procitajte vise) - bolje ukinuti procitajte vise 
 7. mozda dodati u karticu naslovna i vazna obavestenja i pitanja i odgovori
 8.slajderi da se naprave kako valja
-9.nasumicno pitanje da se izvlaci na dnu stranice
-10. nasumicno obavestenje da se izvlaci (mozda je bolje zadnje obavestenje da se vuce samo-nekako ima vise smisla)
-11. search full da se sredi
+OK --- 9.nasumicno pitanje da se izvlaci na dnu stranice
+OK --- 10. nasumicno obavestenje da se izvlaci (mozda je bolje zadnje obavestenje da se vuce samo-nekako ima vise smisla)
+OK --- 11. search full da se sredi
 12. cirilica i latinica da ide na display none
 13. promeniti na svim stranicama link teme koje istrazujemo -> inkluzivno obrazovanje -> pitanja i odgovori  VODI NA ZAKONSKA REGULATIVA
 
