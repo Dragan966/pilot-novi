@@ -375,7 +375,14 @@ const navLokacije = [
     name: 'Контакт',
     link: 'kontakt.html'
   }
-]
+];
+
+let navLokacijeFull = [];
+
+navLokacije.forEach(element => {
+  navLokacijeFull.push(new Lokacija(element.name, element.link));
+});
+// console.log(navLokacijeFull);
 
 const getJSON = (resource) => {
 
@@ -438,17 +445,34 @@ if(currentPathName.includes('index')){
   //ovo bi trebalo bit OK
   showJSONbyId('id', 'izdvajamo.json', 'izdvajamo');
 
-} else if(currentPathName.includes('search-stranica')){
+} else if(currentPathName.includes('searchResults')){
   getJSON('JSON/izdvajamo.json').then(data => {
     izdvajamo = data;
+
+    izdvajamo.forEach(element => {
+      navLokacijeFull.push(new Lokacija(element.naslov, 'izdvajamo.html?id=' + element.id));
+    });
+    // console.log(navLokacijeFull);
+
     return getJSON('JSON/obavestenja.json');
   }).then(data => {
     obavestenja = data;
+
+    obavestenja.forEach(element => {
+      navLokacijeFull.push(new Lokacija(element.naslov, 'sva-obavestenja.html?id=' + element.id));
+    });
+    // console.log(navLokacijeFull);
+
     return getJSON('JSON/pitanja.json');
   }).then(data => {
-
+    //ovo bi trebalo bit OK
     pitanja = data;
 
+    pitanja.forEach(element => {
+      navLokacijeFull.push(new Lokacija(element.naslov, 'sva-pitanja-i-odgovori.html?id=' + element.id));
+    });
+    // console.log(navLokacijeFull);
+    searchLogic();
 
   }).catch(err => {
     console.log('promise rejected:', err);
@@ -504,6 +528,24 @@ function onePost(obj, type) {
 
 }
 
+function searchOneResult(element) {
+  const jsonContainer = document.querySelector('.jsonContainer');
+
+  //div.searchResult
+  const post = document.createElement('div');
+  post.classList.add('searchResult');
+
+  //searchLink - <a><h2>
+  const searchLink = document.createElement('a');
+  const h2 = document.createElement('h2');
+  h2.textContent = element.name[0];
+  searchLink.appendChild(h2);
+  searchLink.setAttribute('href', element.link);
+
+  post.appendChild(searchLink);
+
+  jsonContainer.appendChild(post);
+}
 
 function queryParameters(parameter) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -614,13 +656,19 @@ function prevodjenje(text) {
     'ц': 'c',
     'ч': 'c',
     'џ': 'dz',
-    'ш': 's'
+    'ш': 's',
+    'đ': 'dj',
+    'ž': 'z',
+    'ć': 'c',
+    'č': 'c',
+    'ž': 'z',
+    'š': 's',
   };
   
   let latinicaText = '';
   for (let i = 0; i < text.length; i++) {
     const char = text[i];
-    latinicaText += cirilica[char.toLowerCase()] || char;
+    latinicaText += cirilica[char.toLowerCase()] || char.toLowerCase();
   }
   return latinicaText;
 }
@@ -630,4 +678,20 @@ function Lokacija(name, link) {
   this.name = [name];
   this.name.push(prevodjenje(name));
   this.link = link;
+}
+
+function searchLogic() {
+  const searchWord = document.querySelector('#search-word');
+  let word = prevodjenje(queryParameters('key'));
+
+
+  if(queryParameters('key')) {
+    const results = navLokacijeFull.filter(element => element.name[1].includes(word));
+    searchWord.innerHTML = queryParameters('key') + `  (${results.length} резултата)`;
+    results.forEach(element => {
+      searchOneResult(element);
+    });
+  } else {
+    searchWord.innerHTML =  'непознат унос  (0 резултата)';
+  }
 }
