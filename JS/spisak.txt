@@ -1,4 +1,4 @@
-1. lupu za search obavezno promeniti, brzina ucitavanja ide preko minut (sa simulacijom)
+OK --- 1. lupu za search obavezno promeniti, brzina ucitavanja ide preko minut (sa simulacijom)
 2.u slajderima treba postaviti pozadinu staticnu pa onda iz skripte vuci ucitavanje (mozda-kontam da ce izgledati tecnije na sporim mrezama)
 3. vazna obavestenja na glavnoj stranici treba da bude link ka svim obavestenjima
 4. ispod slajdera one tackicke trebalo bi da se promeni kursor na ruku

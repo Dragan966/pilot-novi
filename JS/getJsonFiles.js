@@ -688,9 +688,22 @@ function searchLogic() {
   if(queryParameters('key')) {
     const results = navLokacijeFull.filter(element => element.name[1].includes(word));
     searchWord.innerHTML = queryParameters('key') + `  (${results.length} резултата)`;
-    results.forEach(element => {
-      searchOneResult(element);
-    });
+
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+      results.forEach(element => {
+        searchOneResult(element);
+      });
+    } else {
+      document.addEventListener("DOMContentLoaded", function() {
+        results.forEach(element => {
+          searchOneResult(element);
+        });
+      });
+    }
+
+    // results.forEach(element => {
+    //   searchOneResult(element);
+    // });
   } else {
     searchWord.innerHTML =  'непознат унос  (0 резултата)';
   }
