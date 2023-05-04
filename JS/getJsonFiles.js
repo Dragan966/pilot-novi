@@ -418,12 +418,12 @@ const pitanjaLink = 'https://miki-peric.github.io/JSONtest/pitanja.json';
 let izdvajamo, obavestenja, pitanja;
 
 if(currentPathName.includes('index')){
-  getJSON('JSON/izdvajamo.json').then(data => {
+  getJSON(izdvajamoLink).then(data => {
     izdvajamo = data;
-    return getJSON('JSON/obavestenja.json');
+    return getJSON(obavestenjaLink);
   }).then(data => {
     obavestenja = data;
-    return getJSON('JSON/pitanja.json');
+    return getJSON(pitanjaLink);
   }).then(data => {
 
     pitanja = data;
@@ -435,22 +435,22 @@ if(currentPathName.includes('index')){
 
 } else if(currentPathName.includes('sva-obavestenja')){
   //ovo bi trebalo bit OK
-  showJSONbyId('id', 'obavestenja.json', 'obavestenja');
+  showJSONbyId('id', obavestenjaLink, 'obavestenja');
 
 } else if(currentPathName.includes('sva-pitanja-i-odgovori')){
   //ovo je OK
-  showJSONbyId('id', 'pitanja.json', 'pitanje');
+  showJSONbyId('id', pitanjaLink, 'pitanje');
 
 } else if(currentPathName.includes('Pitanja-i-odgovori')){
   //ovo bi trebalo bit OK
-  showJSONbyId('grupa', 'pitanja.json', 'pitanje', currentPathNameArray[currentPathNameArray.length - 2]);
+  showJSONbyId('grupa', pitanjaLink, 'pitanje', currentPathNameArray[currentPathNameArray.length - 2]);
 
 } else if(currentPathName.includes('izdvajamo')){
   //ovo bi trebalo bit OK
-  showJSONbyId('id', 'izdvajamo.json', 'izdvajamo');
+  showJSONbyId('id', izdvajamoLink, 'izdvajamo');
 
 } else if(currentPathName.includes('searchResults')){
-  getJSON('JSON/izdvajamo.json').then(data => {
+  getJSON(izdvajamoLink).then(data => {
     izdvajamo = data;
 
     izdvajamo.forEach(element => {
@@ -458,7 +458,7 @@ if(currentPathName.includes('index')){
     });
     // console.log(navLokacijeFull);
 
-    return getJSON('JSON/obavestenja.json');
+    return getJSON(obavestenjaLink);
   }).then(data => {
     obavestenja = data;
 
@@ -467,7 +467,7 @@ if(currentPathName.includes('index')){
     });
     // console.log(navLokacijeFull);
 
-    return getJSON('JSON/pitanja.json');
+    return getJSON(pitanjaLink);
   }).then(data => {
     //ovo bi trebalo bit OK
     pitanja = data;
@@ -577,7 +577,8 @@ function linkPrefix() {
 
 
 function showJSONbyId(key, jsonFile, type, query = queryParameters(key)) {
-  getJSON(linkPrefix() + 'JSON/' + jsonFile).then(data => {
+  // getJSON(linkPrefix() + 'JSON/' + jsonFile).then(data => {
+  getJSON(jsonFile).then(data => {
     const res = data.filter( d => d[key] == query);
 
     if (document.readyState === "interactive" || document.readyState === "complete") {
