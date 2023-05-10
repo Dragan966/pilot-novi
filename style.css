@@ -284,6 +284,7 @@ header {
     }
 
     .socialAndLang > .lang span {
+        display: none;
         font-size: 13px;
         font-weight: 700;
         color: var(--simpleCardsBlue);
@@ -295,7 +296,8 @@ header {
     }
     
     .vl {
-        display: inline;
+        display: none;
+        /* display: inline; */
         margin: 0 5px;
         border-left: 2px solid var(--simpleCardsBlue);
         height: 10px;
