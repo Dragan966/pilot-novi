@@ -102,6 +102,11 @@ function mobileMenu() {
 
 function searchlinkPrefix() {
     const currentPathName = window.location.pathname;
+    console.log('window.pathname ' + window.location.pathname);
+    console.log('window.location ' + window.location);
+    href = window.location.href;
+    probaIndex = window.location.href.indexOf('pilot-novi');
+    console.log('proba: ' + href.slice(probaIndex + 10))
     const currentPathNameArray = currentPathName.substring(1).split('/');
   
     let pom = '';
@@ -133,7 +138,7 @@ if (window.innerWidth < 1024) {
 } else {
     const searchBtnBig = document.querySelector("body > header > div > div.rightCorn > div.searchbox > div");
     const searchInputBig = document.querySelector("body > header > div > div.rightCorn > div.searchbox > input[type=text]");
-
+    console.log(searchlinkPrefix() + 'searchResults.html?key=' + searchInputBig.value);
     searchBtnBig.addEventListener('click', () => {
         if(searchInputBig.value.length){
             window.location.href = searchlinkPrefix() + 'searchResults.html?key=' + searchInputBig.value;

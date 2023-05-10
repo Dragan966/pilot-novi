@@ -410,7 +410,7 @@ const currentPathName = window.location.pathname;
 const currentPathNameArray = currentPathName.substring(1).split('/');
 // console.log(currentPathNameArray);
 
-const izdvajamoLink = 'https://miki-peric.github.io/JSONtest/izdvajamo.json';
+const izdvajamoLink = 'https://miki-peric.github.io/JSONtest/izdvajamo.jsonk';
 const obavestenjaLink = 'https://miki-peric.github.io/JSONtest/obavestenja.json';
 const pitanjaLink = 'https://miki-peric.github.io/JSONtest/pitanja.json';
 
