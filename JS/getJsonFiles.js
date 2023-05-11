@@ -410,7 +410,7 @@ const currentPathName = window.location.pathname;
 const currentPathNameArray = currentPathName.substring(1).split('/');
 // console.log(currentPathNameArray);
 
-const izdvajamoLink = 'https://miki-peric.github.io/JSONtest/izdvajamo.jsonk';
+const izdvajamoLink = 'https://miki-peric.github.io/JSONtest/izdvajamo.json';
 const obavestenjaLink = 'https://miki-peric.github.io/JSONtest/obavestenja.json';
 const pitanjaLink = 'https://miki-peric.github.io/JSONtest/pitanja.json';
 
@@ -427,7 +427,16 @@ if(currentPathName.includes('index')){
   }).then(data => {
 
     pitanja = data;
-    showPrefooter(pitanja, obavestenja);
+
+    if (document.readyState === "interactive" || document.readyState === "complete") {
+      showPrefooter(pitanja, obavestenja);
+      showMainSlider(izdvajamo);
+    } else {
+      document.addEventListener("DOMContentLoaded", function() {
+        showPrefooter(pitanja, obavestenja);
+        showMainSlider(izdvajamo);
+      });
+    }
 
   }).catch(err => {
     console.log('promise rejected:', err);
@@ -776,4 +785,25 @@ function duplicates(array) {
         }  
     }
   }
+}
+
+function showMainSlider(niz) {
+  const slides = document.querySelectorAll('.sliderMain .slideContent');
+  const slidesArr = Array.from(slides);
+  console.log(slidesArr);
+  slidesArr.forEach((slide, index) => {
+    const header = slide.querySelector('h1 a');
+    header.textContent = niz[niz.length - index - 1].naslov;
+    header.href = '#' + (index + 1);
+
+    const paragraph = slide.querySelector('p');
+    //OVDE DODATI F-JU ZA SKRACIVANJE TEKSTA!!!!
+    paragraph.innerHTML = niz[niz.length - index - 1].tekst[0];
+
+    const h3 = slide.querySelector('h3');
+    h3.innerHTML = 'Датум објаве: ' + niz[niz.length - index - 1].datum;
+
+    const photo = slide.querySelector('.sliderPhotoPlace');
+    // photo.style.backgroundImage = `url('SLIKE/${niz[niz.length - index - 1].slika}')`;
+  });
 }
