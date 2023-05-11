@@ -1847,7 +1847,7 @@ footer .smallText {
     margin-bottom: 10px;
 }
 
-.zaposleni-full .person:nth-child(odd) .person-pic {
+.zaposleni-full .person .person-pic.w {
     background-image: url(SLIKE/women.jpg);
 }
 
