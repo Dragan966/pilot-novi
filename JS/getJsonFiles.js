@@ -790,7 +790,7 @@ function duplicates(array) {
 function showMainSlider(niz) {
   const slides = document.querySelectorAll('.sliderMain .slideContent');
   const slidesArr = Array.from(slides);
-  console.log(slidesArr);
+
   slidesArr.forEach((slide, index) => {
     const header = slide.querySelector('h1 a');
     header.textContent = niz[niz.length - index - 1].naslov;
