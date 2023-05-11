@@ -871,6 +871,10 @@ main {
         position: relative;
         width: 40%;
         height: 100%;
+        /* mozda v */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     .sliderMain .slideContent > .sliderPhoto {
