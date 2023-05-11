@@ -735,6 +735,10 @@ main {
     background-color: transparent;
 }
 
+.mainDot:hover {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 767px) {
     .sliderMain-container {
         height: 650px;
@@ -773,6 +777,7 @@ main {
     .sliderMain-LeftBtn:hover,
     .sliderMain-RightBtn:hover {
         background-color: rgba(128, 128, 128, 0.473);
+        cursor: pointer;
     }
 
     .sliderMain-dots {
@@ -888,6 +893,10 @@ main {
         height: 400px;
         box-shadow: 10px 10px #CCCCCC;
         transition: all 1s ease-out;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 
     .sliderMain .slideContent > .sliderPhoto > .sliderPhotoPlace:hover {

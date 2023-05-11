@@ -632,7 +632,7 @@ function insertPrefooter(obj, naslov, para, link) {
   const first40WordsStr = first40Words.join(' ');
 
   naslov.innerHTML = obj.naslov;
-  para.innerHTML = first40WordsStr + '...<br><br>' + `<a href="${link}?id=${obj.id}">Procitajte vise...</a>`;
+  para.innerHTML = first40WordsStr + '...<br><br>' + `<a href="${link}?id=${obj.id}">Прочитајте више...</a>`;
 }
 
 function getRandomInt(max) {
@@ -737,13 +737,13 @@ function searchLogic() {
 }
 
 function similarity(s1, s2) {
-  var longer = s1;
-  var shorter = s2;
+  let longer = s1;
+  let shorter = s2;
   if (s1.length < s2.length) {
     longer = s2;
     shorter = s1;
   }
-  var longerLength = longer.length;
+  let longerLength = longer.length;
   if (longerLength == 0) {
     return 1.0;
   }
@@ -754,15 +754,15 @@ function editDistance(s1, s2) {
   s1 = s1.toLowerCase();
   s2 = s2.toLowerCase();
 
-  var costs = new Array();
-  for (var i = 0; i <= s1.length; i++) {
-    var lastValue = i;
-    for (var j = 0; j <= s2.length; j++) {
+  let costs = new Array();
+  for (let i = 0; i <= s1.length; i++) {
+    let lastValue = i;
+    for (let j = 0; j <= s2.length; j++) {
       if (i == 0)
         costs[j] = j;
       else {
         if (j > 0) {
-          var newValue = costs[j - 1];
+          let newValue = costs[j - 1];
           if (s1.charAt(i - 1) != s2.charAt(j - 1))
             newValue = Math.min(Math.min(newValue, lastValue),
               costs[j]) + 1;
@@ -794,16 +794,52 @@ function showMainSlider(niz) {
   slidesArr.forEach((slide, index) => {
     const header = slide.querySelector('h1 a');
     header.textContent = niz[niz.length - index - 1].naslov;
-    header.href = '#' + (index + 1);
+    header.href = 'izdvajamo.html?id=' + (niz.length - index);
 
     const paragraph = slide.querySelector('p');
-    //OVDE DODATI F-JU ZA SKRACIVANJE TEKSTA!!!!
-    paragraph.innerHTML = niz[niz.length - index - 1].tekst[0];
+    let paraText = niz[niz.length - index - 1].tekst[0];
+
+    if(window.innerWidth < 450) {
+      paraText = limitParagraph(paraText, 250);
+    } else if(window.innerWidth < 768) {
+      paraText = limitParagraph(paraText, 400);
+    } else if(window.innerWidth < 1024) {
+      paraText = limitParagraph(paraText, 600);
+    } else if(window.innerWidth < 1280) {
+      paraText = limitParagraph(paraText, 350);
+    } else {
+      paraText = limitParagraph(paraText, 500);
+    }
+    paragraph.innerHTML = paraText;
 
     const h3 = slide.querySelector('h3');
     h3.innerHTML = 'Датум објаве: ' + niz[niz.length - index - 1].datum;
 
     const photo = slide.querySelector('.sliderPhotoPlace');
-    // photo.style.backgroundImage = `url('SLIKE/${niz[niz.length - index - 1].slika}')`;
+    const photoLink = niz[niz.length - index - 1].slika;
+
+    if(photoLink) {
+      photo.style.backgroundImage = `url('SLIKE/${photoLink}')`;
+    } else {
+      photo.style.backgroundImage = `url('SLIKE/nullPicture.jpg')`;
+    }
+
   });
+}
+
+function limitParagraph(text, limit) {
+  const sufix = '...';
+
+  if (text.length <= limit) {
+    return text + sufix;
+  }
+
+  const shortText = text.substring(0, limit);
+  const lastSpace = shortText.lastIndexOf(' ');
+
+  if (lastSpace === -1) {
+    return shortText + sufix;
+  }
+
+  return shortText.substring(0, lastSpace) + sufix;
 }
