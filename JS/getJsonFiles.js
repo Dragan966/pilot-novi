@@ -420,7 +420,9 @@ const getJSON = async (resource) => {
   return data;
 };
 
-
+getJSON('https://miki-peric.github.io/JSONtest/izdvajamo.json')
+  .then(data => console.log('resolved:', data))
+  .catch(err => console.log('rejected:', err.message));
 
 
 const currentPathName = window.location.pathname;
