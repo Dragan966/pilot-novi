@@ -436,7 +436,7 @@ const pitanjaLink = 'https://miki-peric.github.io/JSONtest/pitanja.json';
 
 let izdvajamo, obavestenja, pitanja;
 
-if(currentPathName.includes('index')){
+if(currentPathName.includes('index') || currentPathName === '/pilot-novi/'){
   getJSON(izdvajamoLink).then(data => {
     izdvajamo = data;
     return getJSON(obavestenjaLink);
