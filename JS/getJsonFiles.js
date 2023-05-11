@@ -384,27 +384,44 @@ navLokacije.forEach(element => {
 });
 // console.log(navLokacijeFull);
 
-const getJSON = (resource) => {
+// ============================================================ STARI JSON GET XML HTTP REQUEST
+// const getJSON = (resource) => {
 
-  return new Promise((resolve, reject) => {
-    const request = new XMLHttpRequest();
+//   return new Promise((resolve, reject) => {
+//     const request = new XMLHttpRequest();
 
-    request.addEventListener('readystatechange', () => {
+//     request.addEventListener('readystatechange', () => {
   
-      if(request.readyState === 4 && request.status === 200){
-        const data = JSON.parse(request.responseText);
-        resolve(data);
-      } else if (request.readyState === 4){
-        reject('error-request-status: '+ request + request.status);
-      }
+//       if(request.readyState === 4 && request.status === 200){
+//         const data = JSON.parse(request.responseText);
+//         resolve(data);
+//       } else if (request.readyState === 4){
+//         reject('error-request-status: '+ request + request.status);
+//       }s
   
-    });
+//     });
     
-    request.open('GET', resource);
-    request.send();
-  });
+//     request.open('GET', resource);
+//     request.send();
+//   });
 
+// };
+// =======================================================================
+
+
+const getJSON = async (resource) => {
+  let response = await fetch(resource);
+
+  if(response.status !== 200){
+    throw new Error('cannot fetch the data');
+  }
+
+  let data = await response.json();
+  return data;
 };
+
+
+
 
 const currentPathName = window.location.pathname;
 const currentPathNameArray = currentPathName.substring(1).split('/');
