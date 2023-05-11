@@ -676,8 +676,10 @@ main {
     display: flex;
     flex-direction: row;
     left: 0px;
-    transition: left 1s ease;
+    transition: left 0.5s ease;
 }
+
+
 
 .slide {
     /* background-color: red; */
@@ -786,6 +788,10 @@ main {
 
     .mainDot {
         margin: 0px 20px;
+    }
+
+    .sliderMain-fullwidth {
+        transition: left 1s ease;
     }
 }
 
