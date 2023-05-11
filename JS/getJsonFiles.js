@@ -462,19 +462,19 @@ if(currentPathName.includes('index') || currentPathName === '/pilot-novi/'){
   });
 
 } else if(currentPathName.includes('sva-obavestenja')){
-  //ovo bi trebalo bit OK
+  //OK
   showJSONbyId('id', obavestenjaLink, 'obavestenja');
 
 } else if(currentPathName.includes('sva-pitanja-i-odgovori')){
-  //ovo je OK
+  //OK
   showJSONbyId('id', pitanjaLink, 'pitanje');
 
 } else if(currentPathName.includes('Pitanja-i-odgovori')){
-  //ovo bi trebalo bit OK
+  //ovo bi trebalo bit OK?
   showJSONbyId('grupa', pitanjaLink, 'pitanje', currentPathNameArray[currentPathNameArray.length - 2]);
 
 } else if(currentPathName.includes('izdvajamo')){
-  //ovo bi trebalo bit OK
+  //OK
   showJSONbyId('id', izdvajamoLink, 'izdvajamo');
 
 } else if(currentPathName.includes('searchResults')){

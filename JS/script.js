@@ -111,7 +111,7 @@ function searchlinkPrefix() {
   
     let pom = '';
   
-    for(let i = 1; i < currentPathNameArray.length; i++) {
+    for(let i = 1; i < currentPathNameArray.length - 1; i++) {
       pom += '../'
     }
   
