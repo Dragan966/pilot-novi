@@ -871,10 +871,10 @@ main {
         position: relative;
         width: 40%;
         height: 100%;
-        /* mozda v */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    }
+
+    .sliderMain .slideContent > .slideText > h1 {
+        margin-top: 20px;
     }
 
     .sliderMain .slideContent > .sliderPhoto {
