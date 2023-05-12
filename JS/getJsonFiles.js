@@ -425,6 +425,7 @@ const currentPathName = window.location.pathname;
 const currentPathNameArray = currentPathName.substring(1).split('/');
 // console.log(currentPathNameArray);
 
+//----------------------PUTANJA KA JSON FAJLOVIMA-----------------------------
 const izdvajamoLink = 'https://miki-peric.github.io/JSONtest/izdvajamo.json';
 const obavestenjaLink = 'https://miki-peric.github.io/JSONtest/obavestenja.json';
 const pitanjaLink = 'https://miki-peric.github.io/JSONtest/pitanja.json';
