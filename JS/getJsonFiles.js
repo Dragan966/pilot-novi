@@ -469,6 +469,7 @@ if(currentPathName.includes('index') || currentPathName === '/pilot-novi/'){
 
 } else if(currentPathName.includes('Pitanja-i-odgovori')){
   //ovo bi trebalo bit OK?
+  console.log("OVO: " + currentPathNameArray[currentPathNameArray.length - 2]);
   showJSONbyId('grupa', pitanjaLink, 'pitanje', currentPathNameArray[currentPathNameArray.length - 2]);
 
 } else if(currentPathName.includes('izdvajamo')){
