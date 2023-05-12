@@ -12,8 +12,14 @@ OK --- 11. search full da se sredi
 OK cirilica i latinica da ide na display none
 OK promeniti na svim stranicama link teme koje istrazujemo -> inkluzivno obrazovanje -> pitanja i odgovori  VODI NA ZAKONSKA REGULATIVA
 14. linksOrg promeniti slike i prvi je i dalje loremipsum
-15. izbrisati sve slike iz SLIKE (naravno one koje nisu potrebne samo)
-
+15. izbrisati sve slike iz SLIKE (naravno one koje nisu potrebne samo) ====================> samo maci one slike sa webp i bacit neke klasicne
+16. za izdvajamo CSS
+17. za pitanja i odgvori CSS
+18. teme koje istrazujemo treba ubaciti na sve strane pitanja i odgovori da se vuce iz JSON fajla
+19. teme koje istrazujemo treba ubaciti na sve strane NASA ISKUSTVA I PRIMERI DOBRE PRAKSE - uh to bas treba videti sta i kako
+20. zaposljavanje u prosveti je ovaj nesto bio u folu da se gase pod strane al MOZDA (verovatno ostaviti)
+21. kontakt stranu sam unosim (kako je krenulo sam cu sve unositi)
+22. slajder sa klizacom ispod (realno sto da ne), i jedan sa tajmerom 
 
 
 
