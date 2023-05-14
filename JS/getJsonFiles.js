@@ -433,7 +433,7 @@ const pitanjaLink = 'https://miki-peric.github.io/JSONtest/pitanja.json';
 
 let izdvajamo, obavestenja, pitanja;
 
-if(currentPathName.includes('index') || currentPathName === '/pilot-novi/'){
+if(currentPathName.includes('index') || currentPathName === '/pilot-novi/') {
   getJSON(izdvajamoLink).then(data => {
     izdvajamo = data;
     return getJSON(obavestenjaLink);
@@ -460,24 +460,27 @@ if(currentPathName.includes('index') || currentPathName === '/pilot-novi/'){
     console.log('promise rejected:', err);
   });
 
-} else if(currentPathName.includes('sva-obavestenja')){
+} else if(currentPathName.includes('sva-obavestenja')) {
   //OK
   showJSONbyId('id', obavestenjaLink, 'obavestenja');
 
-} else if(currentPathName.includes('sva-pitanja-i-odgovori')){
+} else if(currentPathName.includes('sva-pitanja-i-odgovori')) {
   //OK
   showJSONbyId('id', pitanjaLink, 'pitanje');
 
-} else if(currentPathName.includes('Pitanja-i-odgovori')){
-  //ovo bi trebalo bit OK?
-  console.log("OVO: " + currentPathNameArray[currentPathNameArray.length - 2]);
+} else if(currentPathName.includes('Pitanja-i-odgovori')) {
+  //OK
   showJSONbyId('grupa', pitanjaLink, 'pitanje', currentPathNameArray[currentPathNameArray.length - 2]);
 
-} else if(currentPathName.includes('izdvajamo')){
+} else if(currentPathName.includes('izdvajamo')) {
   //OK
   showJSONbyId('id', izdvajamoLink, 'izdvajamo');
 
-} else if(currentPathName.includes('searchResults')){
+} else if(currentPathName.includes('Nasa-iskustva-i-primeri-dobre-prakse')) {
+  //OK
+  showJSONbyId('grupa', izdvajamoLink, 'izdvajamo', currentPathNameArray[currentPathNameArray.length - 2]);
+
+} else if(currentPathName.includes('searchResults')) {
   getJSON(izdvajamoLink).then(data => {
     izdvajamo = data;
 
