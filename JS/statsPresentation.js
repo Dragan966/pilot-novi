@@ -234,7 +234,14 @@ const observer = new IntersectionObserver(handleIntersection, {
     threshold: 1.0,
 });
   
-observer.observe(statsCircle);
+// observer.observe(statsCircle);
+
+let isEdge = /Edg/.test(navigator.userAgent);
+if (isEdge) {
+    animateCircles();
+} else {
+    observer.observe(statsCircle);
+}
 
 function startNextCircle() {
     if (!intervalInfo) {

@@ -1,6 +1,49 @@
 const basicSliders = document.querySelectorAll('.basicSlider');
 const basicSliderArr = Array.from(basicSliders);
 
+const linksForCarousel = [
+    {
+        slika: 'SLIKE/min-prosvete.jpg',
+        link: 'https://prosveta.gov.rs/'
+    },
+    {
+        slika: 'SLIKE/azuov.jpg',
+        link: 'https://zuov.gov.rs/'
+    },
+    {
+        slika: 'SLIKE/zzvko.jpg',
+        link: 'https://ceo.edu.rs/'
+    },
+    {
+        slika: 'SLIKE/mss.jpg',
+        link: 'https://mojasrednjaskola.gov.rs/'
+    },
+    {
+        slika: 'SLIKE/cuvam-te.jpg',
+        link: 'https://cuvamte.gov.rs/'
+    },
+    {
+        slika: 'SLIKE/mss.jpg',
+        link: 'https://mojasrednjaskola.gov.rs/'
+    },
+    {
+        slika: 'SLIKE/zzvko.jpg',
+        link: 'https://ceo.edu.rs/'
+    },
+    {
+        slika: 'SLIKE/rcu.jpg',
+        link: 'https://www.rcu-uzice.rs/'
+    },
+    {
+        slika: 'SLIKE/azuov.jpg',
+        link: 'https://zuov.gov.rs/'
+    },
+    {
+        slika: 'SLIKE/min-prosvete.jpg',
+        link: 'https://prosveta.gov.rs/'
+    }
+]
+
 basicSliderArr.forEach(slider => {
     const frame = slider.querySelector('.basicSliderFrame');
     const sliderFull = slider.querySelector('.basicSliderFull');
@@ -42,9 +85,15 @@ basicSliderArr.forEach(slider => {
         positions.push(positions[i - 1] + step);
     }
     positions.push(frame.scrollWidth - frame.clientWidth);
-    console.log(positions);
 
     if(slider.classList.contains('carouselEffect')){
+        const bSlideLinks = slider.querySelectorAll('.b-slide a');
+        const bSlideLinksArr = Array.from(bSlideLinks);
+        bSlideLinksArr.forEach((bs, index) => {
+            bs.style.backgroundImage = `url(${linksForCarousel[index].slika})`;
+            bs.href = linksForCarousel[index].link;
+        });
+
         startCarousel();
 
         sliderFull.addEventListener('touchstart', (e) => {
@@ -69,7 +118,6 @@ basicSliderArr.forEach(slider => {
 
     frame.addEventListener('scroll', (e) => {
         progressBar.style.width  = getScrollPercentage() + '%';
-        console.log(frame.scrollLeft);
     })
 
     sliderFull.addEventListener('mousedown', (e) => {
@@ -175,21 +223,17 @@ basicSliderArr.forEach(slider => {
     }
 
     function startCarousel() {
-        console.log('KRENUO');
         if (!intervalSlider) {
             intervalSlider = setInterval(carouselEffect, 1500);
         }
-        console.log(intervalSlider);
     }
       
     function stopCarousel() {
-        console.log('STOP');
         clearInterval(intervalSlider);
         intervalSlider = null;
     }
 
     function carouselEffect() {
-        console.log('pozvan');
         if(getScrollPercentage() >= 0) {
             slideAnimation(positions[currentSlide(frame.scrollLeft + 1) + 1]);
         } else if(getScrollPercentage() == 100) {

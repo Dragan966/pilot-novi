@@ -447,12 +447,12 @@ if(currentPathName.includes('index') || currentPathName === '/pilot-novi/') {
     if (document.readyState === "interactive" || document.readyState === "complete") {
       showPrefooter(pitanja, obavestenja);
       showMainSlider(izdvajamo);
-      //ovde treba da se doda za slider za vazna obavestenja
+      showOtherSlider(obavestenja);
     } else {
       document.addEventListener("DOMContentLoaded", function() {
         showPrefooter(pitanja, obavestenja);
         showMainSlider(izdvajamo);
-        //ovde treba da se doda za slider za vazna obavestenja
+        showOtherSlider(obavestenja);
       });
     }
 
@@ -849,8 +849,11 @@ function showMainSlider(niz) {
   });
 }
 
-function limitParagraph(text, limit) {
-  const sufix = '...';
+function limitParagraph(text, limit, dots = 1) {
+  let sufix = '...';
+  if(!dots) {
+    sufix = '';
+  }
 
   if (text.length <= limit) {
     return text + sufix;
@@ -864,4 +867,20 @@ function limitParagraph(text, limit) {
   }
 
   return shortText.substring(0, lastSpace) + sufix;
+}
+
+function showOtherSlider(niz) {
+  const slide = document.querySelectorAll('.basicSliderCon .b-slide');
+  const slideArr = Array.from(slide);
+
+  slideArr.forEach((slide, index) => {
+    const date = slide.querySelector('.backgroundDate p a');
+    const para = slide.querySelector('.frontText p');
+    const link = slide.querySelector('.linkObavestenje a');
+
+    date.textContent = niz[niz.length - 1 - index].datum;
+    date.href = 'sva-obavestenja.html?id=' + (niz.length - index);
+    link.href = 'sva-obavestenja.html?id=' + (niz.length - index);
+    para.innerHTML = limitParagraph(niz[niz.length - 1 - index].naslov, 200, false);
+  });
 }

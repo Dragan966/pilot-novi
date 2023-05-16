@@ -33,6 +33,8 @@ const allLinks = [
     
 ];
 
+goBig(0);
+
 const nodeAllLinks = Array.from(small);
 nodeAllLinks.forEach((element, index) => {
     element.querySelector('h1').innerHTML = `${allLinks[index].name}`;
