@@ -610,6 +610,8 @@ function linkPrefix() {
 function showJSONbyId(key, jsonFile, type, query = queryParameters(key)) {
   // getJSON(linkPrefix() + 'JSON/' + jsonFile).then(data => {
   getJSON(jsonFile).then(data => {
+    data = data.reverse();
+
     const res = data.filter( d => d[key] == query);
 
     if (document.readyState === "interactive" || document.readyState === "complete") {

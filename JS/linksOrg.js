@@ -9,25 +9,25 @@ const allLinks = [
     {
         name: 'Prva',
         text: 'Prva tekst neki ssdas',
-        photo: 'SLIKE/1.webp',
+        photo: 'SLIKE/1-stock.jpg',
         link: '#prvi',
     },
     {
         name: 'Druga',
         text: 'Druga tekst neki ssdas',
-        photo: 'SLIKE/2.webp',
+        photo: 'SLIKE/2-stock.jpg',
         link: '#drugi',
     },
     {
         name: 'Treca',
         text: 'Treca tekst neki ssdas',
-        photo: 'SLIKE/3.webp',
+        photo: 'SLIKE/3-stock.jpg',
         link: '#treci',
     },
     {
         name: 'Cetvrta',
         text: 'Cetvrta tekst neki ssdas',
-        photo: 'SLIKE/4.webp',
+        photo: 'SLIKE/4-stock.jpg',
         link: '#cetvrti',
     },
     

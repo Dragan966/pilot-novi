@@ -5,7 +5,6 @@
 }
 
 
-
 /* -------------------------- PODESAVANJA OKO FONTOVA ---------------------------  */
 * {
     font-family: 'Playfair Display','Times New Roman', Times, serif;
@@ -907,7 +906,7 @@ main {
         width: 95%;
         height: 400px;
         box-shadow: 10px 10px #CCCCCC;
-        transition: all 1s ease-out;
+        /* transition: all 1s ease-out; */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -1673,7 +1672,7 @@ main {
 .bigOne .bigphoto {
     width: 100%;
     height: 100%;
-    background-image: url(SLIKE/1.webp);
+    /* background-image: url(SLIKE/1.webp); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1741,7 +1740,7 @@ main {
 .smallOne .small .photo{
     height: 100%;
     width: 112px;
-    background-image: url(SLIKE/1.webp);
+    /* background-image: url(SLIKE/1.webp); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2233,6 +2232,106 @@ footer .smallText {
     margin: 10px 0px;
 }
 
+/* ================================================== JSON stranice ============================================================= */
+
+.jsonContainer {
+    padding: 10px;
+}
+
+.jsonContainer > h1 {
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    text-decoration-color: var(--sliderRed);
+}
+
+.objavaJSON-obavestenja,
+.objavaJSON-izdvajamo,
+.objavaJSON-pitanje {
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.naslovJSON-obavestenja {
+    font-size: 23px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: var(--sliderRed);
+    margin-bottom: 20px;
+}
+
+.naslovJSON-obavestenja h1 {
+    font-size: 40px;
+}
+
+.naslovJSON-izdvajamo {
+    font-size: 23px;
+    text-align: center;
+    color: var(--sliderRed);
+    margin-bottom: 20px;
+}
+
+.naslovJSON-izdvajamo h1 {
+    font-size: 40px;
+}
+
+.naslovJSON-pitanje {
+    font-size: 23px;
+    text-align: left;
+    color: whitesmoke;
+    background-color: var(--simpleCardsBlue);
+    margin-bottom: 20px;
+}
+
+.naslovJSON-pitanje h1 {
+    font-size: 40px;
+}
+
+.tekstJSON-obavestenja,
+.tekstJSON-izdvajamo,
+.tekstJSON-pitanje {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.datumJSON-obavestenja,
+.datumJSON-izdvajamo,
+.datumJSON-pitanje {
+    font-weight: 700;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.slikaJSON-obavestenja,
+.slikaJSON-izdvajamo,
+.slikaJSON-pitanje {
+    display: flex;
+    justify-content: center;
+}
+
+.slikaJSON-obavestenja img,
+.slikaJSON-izdvajamo img,
+.slikaJSON-pitanje img {
+    margin: 30px 0px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .slikaJSON-obavestenja img,
+    .slikaJSON-izdvajamo img,
+    .slikaJSON-pitanje img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .slikaJSON-obavestenja img,
+    .slikaJSON-izdvajamo img,
+    .slikaJSON-pitanje img {
+        height: 100%;
+    }
+}
+
 
 
 
@@ -2245,14 +2344,14 @@ footer .smallText {
 
 .staticPage > h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
     text-decoration: underline;
     text-decoration-color: var(--sliderRed);
 }
 
 .staticPage > h2 {
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .staticPagePhoto {
@@ -2279,5 +2378,5 @@ footer .smallText {
 .staticPage > p {
     margin-top: 30px;
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 20px;
 }
