@@ -2294,6 +2294,13 @@ footer .smallText {
     text-align: justify;
 }
 
+.tekstJSON-obavestenja p,
+.tekstJSON-izdvajamo p,
+.tekstJSON-pitanje p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .datumJSON-obavestenja,
 .datumJSON-izdvajamo,
 .datumJSON-pitanje {
